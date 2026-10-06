@@ -4,4 +4,5 @@
  */
 
 export * from './completion-status';
+export * from './tool-select';
 export * from './stop-button';
