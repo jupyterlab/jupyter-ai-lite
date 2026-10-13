@@ -37,7 +37,7 @@ export function createSettingsButtonControl(
   );
 
   return {
-    id: 'jupyternaut-settings',
+    id: 'jupyternaut-lite-settings',
     component: SettingsButton,
     personaId: DEFAULT_PERSONA.username,
     rank: 20

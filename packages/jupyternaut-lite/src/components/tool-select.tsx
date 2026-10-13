@@ -359,7 +359,7 @@ export function createToolSelectControl(
   );
 
   return {
-    id: 'jupyternaut-tool-select',
+    id: 'jupyternaut-lite-tool-select',
     component: ToolSelectControl,
     personaId: DEFAULT_PERSONA.username,
     rank: 10
