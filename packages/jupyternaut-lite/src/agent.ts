@@ -5,7 +5,6 @@
 
 import { createMCPClient, type MCPClient } from '@ai-sdk/mcp';
 import {
-  createExecuteCommandApprovalPolicy,
   type IAgentSettings,
   type ISkillRegistry,
   type ISkillSummary,
@@ -969,9 +968,12 @@ ${richOutputWorkflowInstruction}${this._additionalInstructions ? `\n\n${this._ad
       // The policy reads the setting at each tool call, so a change of the
       // commands requiring approval does not need a rebuild of the agent.
       toolApproval: {
-        execute_command: createExecuteCommandApprovalPolicy(
-          () => this._agentSettings?.config.commandsRequiringApproval ?? []
-        )
+        execute_command: (input: { commandId: string }) =>
+          this._agentSettings?.config.commandsRequiringApproval.includes(
+            input.commandId
+          )
+            ? 'user-approval'
+            : undefined
       }
     });
   }

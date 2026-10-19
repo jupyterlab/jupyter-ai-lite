@@ -7,7 +7,7 @@ The package is a JupyterLab extension that provides:
 - `IToolRegistry`: the tools a persona offers to a model, with the built-in `discover_commands`, `execute_command`, `browser_fetch`, `discover_skills` and `load_skill` tools
 - `ISkillRegistry`: the agent skills loaded from the skills paths or registered by extensions
 - `IAgentSettings`: the settings shared by the personas (`@jupyter-ai/agent-lite:settings`): the commands that require an approval, the commands whose outputs render in the chat, the trusted MIME types and the skills paths
-- helpers: `getToolInputSchema`, `parseToolInput`, `createExecuteCommandApprovalPolicy`, `extractMimeBundles`, `requestApiKey` and `forwardAuthCode` (OpenRouter sign-in), `getAppAttribution`
+- helpers: `getToolInputSchema`, `parseToolInput`, `extractMimeBundles`, `requestApiKey` and `forwardAuthCode` (OpenRouter sign-in), `getAppAttribution`
 
 The package has no dependency on the AI SDK.
 

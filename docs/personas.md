@@ -14,10 +14,11 @@
   - `trustedMimeTypesForAutoRender`: the MIME types marked as trusted when those outputs render
   - `skillsPaths`: the directories that hold agent skills
 
+  The `execute_command` tool does not ask for approval itself: the agent reads `settings.config.commandsRequiringApproval` before each call of the tool and asks the user when the command is listed (Jupyternaut uses the `toolApproval` option of the AI SDK for this).
+
 The package also exports helpers:
 
 - `getToolInputSchema(tool)` and `parseToolInput(name, tool, input)`: the JSON schema of the input of a tool, and the parsed input of a tool call. A tool is an `ITool`: an object with a `description`, an `inputSchema` (a [zod](https://zod.dev) schema or an [AI SDK](https://ai-sdk.dev) JSON schema object), an `execute` function and an optional `metadata.title`. AI SDK tool objects have this shape.
-- `createExecuteCommandApprovalPolicy(() => settings.config.commandsRequiringApproval)`: the approval policy of the `execute_command` tool, a function `(input) => 'user-approval' | undefined` for agents that handle approvals at the agent level (the `toolApproval` option of the AI SDK). The callback runs at each tool call, so settings changes apply.
 - `extractMimeBundles(output, trustedMimeTypes)`: the rich outputs of a JupyterLab command, as chat MIME bundles.
 - `requestApiKey(options)` and `forwardAuthCode()`: the [OpenRouter](./openrouter.md) sign-in flow. The extension runs the forwarder plugin, so a persona only calls `requestApiKey`.
 - `getAppAttribution()`: the application name and URL sent to the providers that support attribution.

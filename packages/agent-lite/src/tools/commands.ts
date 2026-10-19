@@ -152,23 +152,9 @@ export function createDiscoverCommandsTool(
 }
 
 /**
- * Create the approval policy for the execute command tool, to be used with the
- * `toolApproval` option of a `generateText`/`streamText` call or agent.
- * The commands returned by `commandsRequiringApproval` need approval.
- */
-export function createExecuteCommandApprovalPolicy(
-  commandsRequiringApproval: () => readonly string[]
-): (input: { commandId: string; args?: any }) => 'user-approval' | undefined {
-  return input =>
-    commandsRequiringApproval().includes(input.commandId)
-      ? 'user-approval'
-      : undefined;
-}
-
-/**
  * Create a tool to execute a specific JupyterLab command.
- * Approval for the commands that require it is handled at the agent level via
- * `createExecuteCommandApprovalPolicy`.
+ * The tool does not ask for approval: the agent checks the commands listed
+ * in `commandsRequiringApproval` of the agent settings before each call.
  */
 export function createExecuteCommandTool(
   commands: CommandRegistry,

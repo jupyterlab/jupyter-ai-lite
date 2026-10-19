@@ -26,7 +26,6 @@ export { forwardAuthCode, requestApiKey } from './oauth/openrouter';
 export { ToolRegistry } from './tools/tool-registry';
 export {
   createDiscoverCommandsTool,
-  createExecuteCommandApprovalPolicy,
   createExecuteCommandTool
 } from './tools/commands';
 export { createDiscoverSkillsTool, createLoadSkillTool } from './tools/skills';
