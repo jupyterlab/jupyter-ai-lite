@@ -13,7 +13,7 @@ import type {
  * THE TOOL REGISTRY
  */
 /**
- * The options a tool call receives, a subset of the AI SDK tool call options.
+ * The options a persona passes to a tool call.
  */
 export interface IToolCallOptions {
   toolCallId: string;
@@ -23,9 +23,11 @@ export interface IToolCallOptions {
 }
 
 /**
- * A tool a persona offers to a model. AI SDK tool objects have this shape, so
- * they register unchanged. The input schema is a zod schema or an AI SDK JSON
- * schema object: see `getToolInputSchema` and `parseToolInput`.
+ * A tool a persona offers to a model: a description, the schema of its input
+ * (a zod schema or an object with a `jsonSchema` field, see
+ * `getToolInputSchema` and `parseToolInput`), the function that runs it and
+ * optional metadata such as a title. The tools of the AI SDK have this shape,
+ * so they register unchanged.
  */
 export interface ITool<TInput = any, TOutput = unknown> {
   description?: string | ((options: { context: unknown }) => string);
