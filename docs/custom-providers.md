@@ -132,7 +132,7 @@ In AI SDK terms, this can be either:
 - **Provider-defined tools** (declared as provider tools in AI SDK), or
 - **Provider-executed tools** (tool helpers exposed directly by provider SDKs).
 
-In `jupyter-ai-lite`, provider-hosted web tools are wired through
+In Jupyternaut (`@jupyter-ai/jupyternaut-lite`), provider-hosted web tools are wired through
 `IProviderInfo.providerToolCapabilities`. This means custom providers can opt in
 without relying on hardcoded provider IDs.
 

@@ -2,7 +2,7 @@
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open standard that enables AI assistants to connect to external tools and data sources.
 
-With `jupyter-ai-lite`, you can connect to remote MCP servers to extend the AI's capabilities with additional tools.
+With Jupyter AI Lite, you can connect to remote MCP servers to extend the AI's capabilities with additional tools.
 
 ## Configuring an MCP Server
 
@@ -18,7 +18,7 @@ Once connected, the MCP server's tools will be available to the AI assistant in 
 
 ## Example MCP Servers
 
-Here are some publicly available remote MCP servers you can use with `jupyter-ai-lite`:
+Here are some publicly available remote MCP servers you can use with Jupyter AI Lite:
 
 ### DeepWiki
 
@@ -40,11 +40,11 @@ The GitMCP server enables the AI to fetch and understand code from GitHub reposi
 
 The MCP ecosystem is growing rapidly, with directories of available servers at places like the [MCP Servers Repository](https://github.com/modelcontextprotocol/servers).
 
-However, be aware that **most MCP servers listed in these directories will not work** with `jupyter-ai-lite` due to browser constraints explained below.
+However, be aware that **most MCP servers listed in these directories will not work** with Jupyter AI Lite due to browser constraints explained below.
 
 ## Browser Constraints
 
-Since `jupyter-ai-lite` runs entirely in the browser, it can only connect to MCP servers that meet two requirements:
+Since Jupyter AI Lite runs entirely in the browser, it can only connect to MCP servers that meet two requirements:
 
 1. **Streamable HTTP transport**: The server must support the [Streamable HTTP transport](https://modelcontextprotocol.io/specification/2025-03-26/basic/transports#streamable-http) defined in the MCP specification. The vast majority of MCP servers are designed to run locally using the stdio transport, which is inaccessible from a browser.
 
@@ -63,7 +63,7 @@ If you want to add custom tools, the practical approach is to provide new Jupyte
 How it works at a high level:
 
 1. Create or install a JupyterLab extension that registers one or more commands (for example, `my-extension:run-my-tool`).
-2. `jupyter-ai-lite` exposes JupyterLab commands to the model through its command tools (`discover_commands` and `execute_command`).
+2. Jupyternaut exposes JupyterLab commands to the model through the command tools of `@jupyter-ai/agent-lite` (`discover_commands` and `execute_command`).
 3. The AI can discover your command and execute it with arguments, so the command effectively becomes an AI-usable tool.
 4. If needed, require manual confirmation for specific command IDs using the **Commands Requiring Approval** setting.
 

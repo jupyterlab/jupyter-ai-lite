@@ -3,16 +3,9 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import { getProviderModelInfo } from '../providers/model-info';
-import type {
-  IProviderConfig,
-  IProviderParameters,
-  IProviderRegistry,
-  IProviderToolCapabilities
-} from '../tokens';
 import type { TranslationBundle } from '@jupyterlab/translation';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import Delete from '@mui/icons-material/Delete';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import {
@@ -43,6 +36,14 @@ import {
   Typography
 } from '@mui/material';
 import React from 'react';
+
+import { getProviderModelInfo } from '../providers/model-info';
+import type {
+  IProviderConfig,
+  IProviderParameters,
+  IProviderRegistry,
+  IProviderToolCapabilities
+} from '../tokens';
 
 /**
  * Default parameter values for provider configuration

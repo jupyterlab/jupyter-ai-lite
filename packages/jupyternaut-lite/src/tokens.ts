@@ -43,20 +43,20 @@ export namespace CommandIds {
 }
 
 /**
- * Public interface for a persona handler attached to a chat session.
+ * Public interface for a persona attached to a chat session.
  *
- * A persona handler links an `IAgentManager` to an `IChatModel`, listening for
+ * A persona links an `IAgentManager` to an `IChatModel`, listening for
  * persona mentions and generating AI responses. Third-party extensions can
- * consume `IPersonaHandlerRegistry` to obtain `IPersonaHandler` instances and
- * interact with the agent (e.g. to read the active provider or update tools).
+ * consume `IPersonaRegistry` to obtain `IPersona` instances and interact
+ * with the agent (e.g. to read the active provider or update tools).
  */
 export interface IPersona {
   /**
-   * The agent manager used by this handler to generate AI responses.
+   * The agent manager used by this persona to generate AI responses.
    */
   readonly agentManager: IAgentManager;
   /**
-   * The chat model this handler is attached to.
+   * The chat model this persona is attached to.
    */
   readonly model: IChatModel;
   /**
@@ -74,7 +74,7 @@ export interface IPersona {
    */
   requireMention: boolean;
   /**
-   * Dispose of the handler and release its resources.
+   * Dispose of the persona and release its resources.
    */
   dispose(): void;
   /**
@@ -122,7 +122,7 @@ export interface IPersonaRegistryOptions {
    */
   persona: IUser;
   /**
-   * The agent settings model, used to process attachments in persona.
+   * The Jupyternaut settings model, used to process attachments in persona.
    */
   settingsModel: IAISettingsModel;
   /**
@@ -702,10 +702,10 @@ export interface ITokenUsage {
 
 /**
  * The secrets namespace of the provider API keys, and the id of the plugin
- * that signs it. The stored API keys of users use this namespace, so it must
- * not change.
+ * that signs it. The stored API keys of users use this namespace: changing
+ * it hides them.
  */
-export const SECRETS_NAMESPACE = '@jupyternaut/agent:providers';
+export const SECRETS_NAMESPACE = '@jupyter-ai/jupyternaut-lite:agent-manager';
 /**
  * The string that replaces a secret key in settings.
  */

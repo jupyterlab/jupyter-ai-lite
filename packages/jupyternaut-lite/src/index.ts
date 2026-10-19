@@ -4,6 +4,19 @@
  */
 
 import {
+  getAppAttribution,
+  requestApiKey,
+  IAgentSettings,
+  IToolRegistry,
+  ISkillRegistry
+} from '@jupyter-ai/agent-lite';
+
+import {
+  IPersonaSessionRegistry,
+  PersonaSessionRegistry
+} from '@jupyter-ai/persona-manager';
+
+import {
   IChatTracker,
   IChatPanel,
   IChatCommandRegistry,
@@ -33,19 +46,6 @@ import { IStatusBar } from '@jupyterlab/statusbar';
 import { ITranslator, nullTranslator } from '@jupyterlab/translation';
 
 import { IFormRendererRegistry, settingsIcon } from '@jupyterlab/ui-components';
-
-import {
-  IPersonaSessionRegistry,
-  PersonaSessionRegistry
-} from '@jupyter-ai/persona-manager';
-
-import {
-  getAppAttribution,
-  requestApiKey,
-  IAgentSettings,
-  IToolRegistry,
-  ISkillRegistry
-} from '@jupyter-ai/agent-lite';
 
 import { IComponentsRendererFactory } from 'jupyter-chat-components';
 
@@ -95,10 +95,10 @@ import {
   IPersonaRegistry,
   IProviderRegistry,
   SECRETS_NAMESPACE,
-  SECRETS_REPLACEMENT
+  SECRETS_REPLACEMENT,
+  type IAISecretsAccess,
+  type IConnectAccountOptions
 } from './tokens';
-
-import type { IAISecretsAccess, IConnectAccountOptions } from './tokens';
 
 // The settings widget is created on activation so the layout restorer can track it.
 // eslint-disable-next-line jupyter/prefer-lazy-imports
@@ -307,12 +307,12 @@ const genericProviderPlugin: JupyterFrontEndPlugin<void> = {
 };
 
 /**
- * Provides the persona handler registry without any IChatTracker dependency,
- * so it can be consumed by the toolbar factory without creating a plugin cycle.
+ * Provides the persona registry without any IChatTracker dependency, so it
+ * can be consumed by the toolbar factory without creating a plugin cycle.
  */
 const personaRegistry: JupyterFrontEndPlugin<IPersonaRegistry> = {
   id: '@jupyter-ai/jupyternaut-lite:registry',
-  description: 'Registry mapping chat models to their persona handlers',
+  description: 'Registry mapping chat models to their personas',
   autoStart: true,
   provides: IPersonaRegistry,
   requires: [IAISettingsModel, IAgentSettings],
@@ -335,12 +335,12 @@ const personaRegistry: JupyterFrontEndPlugin<IPersonaRegistry> = {
 };
 
 /**
- * Connects the persona handler registry to the chat tracker, creating a
- * PersonaHandler for each chat widget that is opened.
+ * Connects the persona registry to the chat tracker, creating a Persona for
+ * each chat widget that is opened.
  */
 const persona: JupyterFrontEndPlugin<void> = {
   id: '@jupyter-ai/jupyternaut-lite:plugin',
-  description: 'Attach persona handlers to chat widgets as they are opened',
+  description: 'Attach personas to chat widgets as they are opened',
   autoStart: true,
   requires: [IPersonaRegistry, IAgentManagerFactory, IAISettingsModel],
   optional: [
@@ -488,7 +488,7 @@ const chatComponentsCallbacks: JupyterFrontEndPlugin<void> = {
 };
 
 /**
- * Clear chat command plugin.
+ * Mention chat command plugin.
  */
 const mentionCommandPlugin: JupyterFrontEndPlugin<void> = {
   id: '@jupyter-ai/jupyternaut-lite:mention',
@@ -556,7 +556,6 @@ const agentManagerFactory: JupyterFrontEndPlugin<IAgentManagerFactory> =
 
     return {
       // The secrets manager requires the plugin id to be the namespace.
-      // eslint-disable-next-line jupyter/plugin-id-convention
       id: SECRETS_NAMESPACE,
       description: 'Provide the AI agent manager',
       autoStart: true,
@@ -707,7 +706,7 @@ const settingsPanelPlugin: JupyterFrontEndPlugin<void> = {
 };
 
 /**
- * Built-in completion providers plugin
+ * Settings model plugin.
  */
 const settingsModel: JupyterFrontEndPlugin<IAISettingsModel> = {
   id: '@jupyter-ai/jupyternaut-lite:settings-model',

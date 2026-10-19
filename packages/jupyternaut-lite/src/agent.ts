@@ -4,6 +4,14 @@
  */
 
 import { createMCPClient, type MCPClient } from '@ai-sdk/mcp';
+import {
+  createExecuteCommandApprovalPolicy,
+  type IAgentSettings,
+  type ISkillRegistry,
+  type ISkillSummary,
+  type ITool,
+  type IToolRegistry
+} from '@jupyter-ai/agent-lite';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { PromiseDelegate } from '@lumino/coreutils';
 import { ISignal, Signal } from '@lumino/signaling';
@@ -26,20 +34,12 @@ import {
 import { IMcpManager } from 'jupyter-mcp-manager';
 import { ISecretsManager } from 'jupyter-secrets-manager';
 
-import { createModel } from './providers/models';
 import { getEffectiveContextWindow } from './providers/model-info';
+import { createModel } from './providers/models';
 import {
   createProviderTools,
   type IProviderCustomSettings
 } from './providers/provider-tools';
-import {
-  createExecuteCommandApprovalPolicy,
-  type IAgentSettings,
-  type ISkillRegistry,
-  type ISkillSummary,
-  type ITool,
-  type IToolRegistry
-} from '@jupyter-ai/agent-lite';
 import {
   type IAgentManager,
   type IAgentManagerFactory,
@@ -966,6 +966,8 @@ ${richOutputWorkflowInstruction}${this._additionalInstructions ? `\n\n${this._ad
         )
       }),
       stopWhen: isStepCount(maxTurns),
+      // The policy reads the setting at each tool call, so a change of the
+      // commands requiring approval does not need a rebuild of the agent.
       toolApproval: {
         execute_command: createExecuteCommandApprovalPolicy(
           () => this._agentSettings?.config.commandsRequiringApproval ?? []
@@ -1257,7 +1259,7 @@ ${richOutputWorkflowInstruction}${this._additionalInstructions ? `\n\n${this._ad
       if (!token) {
         // This should never happen, the secrets manager should be disabled.
         console.error(
-          '@jupyter-ai/jupyternaut-lite::AgentManager error: the settings manager token is not set.\nYou should disable the the secrets manager from the AI settings.'
+          '@jupyter-ai/jupyternaut-lite:AgentManager error: the secrets manager token is not set.\nYou should disable the secrets manager from the AI settings.'
         );
         apiKey = '';
       } else {

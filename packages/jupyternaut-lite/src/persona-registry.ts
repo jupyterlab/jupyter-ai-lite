@@ -4,14 +4,11 @@
  */
 
 import type { IChatModel } from '@jupyter/chat';
-
-import type { IAgentManager } from './tokens';
-
 import { ISignal, Signal } from '@lumino/signaling';
 
 import { Persona } from './persona';
-
 import type {
+  IAgentManager,
   IPersona,
   IPersonaRegistry,
   IPersonaRegistryOptions

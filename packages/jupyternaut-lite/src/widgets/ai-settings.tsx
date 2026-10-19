@@ -3,20 +3,10 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import { getEffectiveContextWindow } from '../providers/model-info';
-import { SECRETS_REPLACEMENT } from '../tokens';
-import type {
-  IAgentManagerFactory,
-  IAIConfig,
-  IAISecretsAccess,
-  IAISettingsModel,
-  IProviderConfig,
-  IProviderRegistry
-} from '../tokens';
 import type { IAgentConfig, IAgentSettings } from '@jupyter-ai/agent-lite';
 import { IThemeManager } from '@jupyterlab/apputils';
-import { ReactWidget } from '@jupyterlab/ui-components';
 import type { TranslationBundle } from '@jupyterlab/translation';
+import { ReactWidget } from '@jupyterlab/ui-components';
 import { Debouncer } from '@lumino/polling';
 import Add from '@mui/icons-material/Add';
 import CheckCircle from '@mui/icons-material/CheckCircle';
@@ -55,6 +45,16 @@ import {
 } from '@mui/material';
 import React, { useEffect, useMemo, useState } from 'react';
 
+import { getEffectiveContextWindow } from '../providers/model-info';
+import {
+  SECRETS_REPLACEMENT,
+  type IAgentManagerFactory,
+  type IAIConfig,
+  type IAISecretsAccess,
+  type IAISettingsModel,
+  type IProviderConfig,
+  type IProviderRegistry
+} from '../tokens';
 import { ProviderConfigDialog } from './provider-config-dialog';
 
 /**
@@ -169,7 +169,7 @@ const AISettingsComponent: React.FC<IAISettingsComponentProps> = ({
   }
 
   const [config, setConfig] = useState(model.config || {});
-  const [agentConfig, setKitConfig] = useState(agentSettings.config);
+  const [agentConfig, setAgentConfig] = useState(agentSettings.config);
   const [theme, setTheme] = useState(() => createJupyterLabTheme(themeManager));
   const [activeTab, setActiveTab] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -206,10 +206,10 @@ const AISettingsComponent: React.FC<IAISettingsComponentProps> = ({
   }, [model]);
 
   useEffect(() => {
-    const onKitChanged = () => setKitConfig(agentSettings.config);
-    agentSettings.changed.connect(onKitChanged);
+    const onAgentSettingsChanged = () => setAgentConfig(agentSettings.config);
+    agentSettings.changed.connect(onAgentSettingsChanged);
     return () => {
-      agentSettings.changed.disconnect(onKitChanged);
+      agentSettings.changed.disconnect(onAgentSettingsChanged);
     };
   }, [agentSettings]);
 

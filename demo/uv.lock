@@ -793,7 +793,7 @@ requires-dist = [
     { name = "jupyternaut-lite", specifier = "==0.20.1" },
     { name = "notebook", marker = "extra == 'jupyter'", specifier = ">=7.5.0" },
 ]
-provides-extras = ["docs", "jupyter"]
+provides-extras = ["docs", "jupyter", "test"]
 
 [[package]]
 name = "jupyter-ai-lite-demo"

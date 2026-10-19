@@ -3,11 +3,12 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import { ReactWidget } from '@jupyterlab/ui-components';
 import type { TranslationBundle } from '@jupyterlab/translation';
+import { ReactWidget } from '@jupyterlab/ui-components';
+import React, { useEffect, useState } from 'react';
+
 import { jupyternautIcon } from '../icons';
 import type { IAISettingsModel } from '../tokens';
-import React, { useEffect, useState } from 'react';
 
 const COMPLETION_STATUS_CLASS = 'jp-ai-completion-status';
 const COMPLETION_DISABLED_CLASS = 'jp-ai-completion-disabled';

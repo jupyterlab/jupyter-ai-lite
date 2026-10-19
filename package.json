@@ -25,9 +25,9 @@
     "stylelint": "jlpm stylelint:check --fix",
     "stylelint:check": "stylelint --cache \"**/style/**/*.css\"",
     "sync:model-info": "jlpm workspace @jupyter-ai/jupyternaut-lite run sync:model-info",
-    "watch": "run-p watch:agent-lite watch:jupyternaut",
+    "watch": "run-p watch:agent-lite watch:jupyternaut-lite",
     "watch:agent-lite": "jlpm workspace @jupyter-ai/agent-lite run watch",
-    "watch:jupyternaut": "jlpm workspace @jupyter-ai/jupyternaut-lite run watch"
+    "watch:jupyternaut-lite": "jlpm workspace @jupyter-ai/jupyternaut-lite run watch"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",

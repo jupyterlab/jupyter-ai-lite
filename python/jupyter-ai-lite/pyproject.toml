@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0"]
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyter_ai_lite"
+name = "jupyter-ai-lite"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
@@ -44,6 +44,7 @@ jupyter = [
     "jupyterlite>=0.8.0",
     "notebook>=7.5.0"
 ]
+test = []
 docs = [
     "jupyter-book",
 ]

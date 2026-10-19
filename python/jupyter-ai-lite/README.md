@@ -46,4 +46,4 @@ pip uninstall jupyter-ai-lite jupyternaut-lite jupyter-ai-agent-lite
 
 ## Contributing
 
-See [CONTRIBUTING](../../CONTRIBUTING.md)
+See [CONTRIBUTING](https://github.com/jupyterlite/ai/blob/main/CONTRIBUTING.md)

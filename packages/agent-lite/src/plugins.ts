@@ -156,7 +156,7 @@ const skillsPlugin: JupyterFrontEndPlugin<void> = {
       return normalized;
     };
 
-    let currentSkillsPaths = settings.config.skillsPaths;
+    let currentSkillsPaths: string[] = [];
     let currentSkillDisposables = new DisposableSet();
 
     const loadAndRegister = async () => {
@@ -247,6 +247,7 @@ const skillsPlugin: JupyterFrontEndPlugin<void> = {
     }
 
     await settings.ready;
+    currentSkillsPaths = settings.config.skillsPaths;
     loadAndRegister().catch(error =>
       console.warn('Failed to load skills on activation:', error)
     );

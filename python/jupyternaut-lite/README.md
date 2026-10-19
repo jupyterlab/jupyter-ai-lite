@@ -43,9 +43,9 @@ For detailed usage instructions, including how to configure AI providers, see th
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyternaut-lite
+pip uninstall jupyternaut-lite jupyter-ai-agent-lite
 ```
 
 ## Contributing
 
-See [CONTRIBUTING](../../CONTRIBUTING.md)
+See [CONTRIBUTING](https://github.com/jupyterlite/ai/blob/main/CONTRIBUTING.md)

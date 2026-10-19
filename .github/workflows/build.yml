@@ -57,7 +57,7 @@ jobs:
           path: |
             dist/jupyter_ai_lite*
             dist/jupyter_ai_agent_lite*
-            dist/jupyternaut*
+            dist/jupyternaut_lite*
           if-no-files-found: error
 
   test_isolated:

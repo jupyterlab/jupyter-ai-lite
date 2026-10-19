@@ -66,9 +66,9 @@ in the settings editor), for example `sendWithShiftEnter`.
 ### Settings
 
 The settings ids change, and the settings are not migrated: enter the providers, the
-model choice and the settings of the Behavior tab again. The API keys stored in the
-secrets manager are kept. With the secrets manager disabled, the API keys stored in the
-settings must be entered again.
+model choice and the settings of the Behavior tab again. The namespace of the API keys
+in the secrets manager changes too (`@jupyter-ai/jupyternaut-lite:agent-manager`), so
+the API keys must be entered again as well.
 
 | Settings of `@jupyternaut/persona:settings-model`                                                                                                                              | New id                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
@@ -98,15 +98,16 @@ the identifier:
 The plugins of `@jupyternaut/persona` are now provided by `@jupyter-ai/jupyternaut-lite`, and
 the registries, the skills and the shared settings by `@jupyter-ai/agent-lite`:
 
-| Before                                            | After                                    |
-| ------------------------------------------------- | ---------------------------------------- |
-| `@jupyternaut/persona:tool-registry`              | `@jupyter-ai/agent-lite:tool-registry`   |
-| `@jupyternaut/persona:skill-registry`             | `@jupyter-ai/agent-lite:skill-registry`  |
-| `@jupyternaut/persona:skills`                     | `@jupyter-ai/agent-lite:skills`          |
-| `@jupyternaut/persona:openrouter-auth`            | `@jupyter-ai/agent-lite:openrouter-auth` |
-| (new)                                             | `@jupyter-ai/agent-lite:settings`        |
-| `@jupyternaut/persona:diff-manager`               | Removed                                  |
-| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut-lite:<name>`    |
+| Before                                            | After                                        |
+| ------------------------------------------------- | -------------------------------------------- |
+| `@jupyternaut/persona:tool-registry`              | `@jupyter-ai/agent-lite:tool-registry`       |
+| `@jupyternaut/persona:skill-registry`             | `@jupyter-ai/agent-lite:skill-registry`      |
+| `@jupyternaut/persona:skills`                     | `@jupyter-ai/agent-lite:skills`              |
+| `@jupyternaut/persona:openrouter-auth`            | `@jupyter-ai/agent-lite:openrouter-auth`     |
+| (new)                                             | `@jupyter-ai/agent-lite:settings`            |
+| `@jupyternaut/persona:diff-manager`               | Removed                                      |
+| `@jupyternaut/agent:providers`                    | `@jupyter-ai/jupyternaut-lite:agent-manager` |
+| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut-lite:<name>`        |
 
 If you were disabling or deferring any of these plugins, for example in a custom
 `jupyter-lite.json` file, you will need to update the plugin IDs as follows:
@@ -136,7 +137,7 @@ packages:
 | `IToolRegistry`, `ISkillRegistry`, `ITool` from `@jupyternaut/agent`                                                          | `@jupyter-ai/agent-lite` (tokens `@jupyter-ai/agent-lite:IToolRegistry` and `@jupyter-ai/agent-lite:ISkillRegistry`) |
 | `IAISettingsModel` from `@jupyternaut/agent`, for the shared settings (command approvals, MIME rendering, skills paths)       | `IAgentSettings` from `@jupyter-ai/agent-lite`                                                                       |
 | `IAISettingsModel`, `IProviderRegistry`, `IAgentManagerFactory`, the providers and the AI SDK agent from `@jupyternaut/agent` | `@jupyter-ai/jupyternaut-lite` (tokens `@jupyter-ai/jupyternaut-lite:I...`)                                          |
-| `IPersonaRegistry` from `@jupyternaut/persona`                                                                                | `@jupyter-ai/jupyternaut-lite`                                                                                       |
+| `IPersonaRegistry` from `@jupyternaut/persona` (token `@jupyternaut/persona:IPersonaHandlerRegistry`)                         | `@jupyter-ai/jupyternaut-lite` (token `@jupyter-ai/jupyternaut-lite:IPersonaRegistry`)                               |
 | The `IAgentManager` and `IDiffManager` tokens                                                                                 | Removed                                                                                                              |
 
 Update the imports accordingly:
@@ -151,6 +152,9 @@ a shared singleton. See [Building an in-browser persona](./personas.md).
 
 The chat username of the persona stays `jupyternaut-frontend`, so the mention
 `@jupyternaut-frontend` still works.
+
+The translation domain `jupyterlite_ai` is split into `jupyter_ai_agent_lite` and
+`jupyternaut_lite`: language packs must be updated accordingly.
 
 ## `v0.19.0` to `v0.20.0`
 

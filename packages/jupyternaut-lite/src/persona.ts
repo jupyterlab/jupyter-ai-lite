@@ -4,38 +4,33 @@
  */
 
 import {
+  extractMimeBundles,
+  type IAgentSettings
+} from '@jupyter-ai/agent-lite';
+import {
   IAttachment,
   IMessage,
   IChatModel,
   IUser,
   INewMessage
 } from '@jupyter/chat';
-
 import type { IDocumentManager } from '@jupyterlab/docmanager';
+import { ISignal, Signal } from '@lumino/signaling';
+import type { ModelMessage, UserContent } from 'ai';
 
-import type {
-  IAgentManager,
-  IAISettingsModel,
-  IProviderRegistry
-} from './tokens';
-
-import {
-  extractMimeBundles,
-  type IAgentSettings
-} from '@jupyter-ai/agent-lite';
+import { processAttachments } from './process-attachments';
 import {
   modelSupportsAudio,
   modelSupportsImages,
   modelSupportsPdf
 } from './providers/model-info';
-
-import { ISignal, Signal } from '@lumino/signaling';
-
-import type { ModelMessage, UserContent } from 'ai';
-
-import { processAttachments } from './process-attachments';
-
-import { DEFAULT_PERSONA, type IPersona } from './tokens';
+import {
+  DEFAULT_PERSONA,
+  type IAgentManager,
+  type IAISettingsModel,
+  type IPersona,
+  type IProviderRegistry
+} from './tokens';
 
 type ToolStatus =
   | 'in_progress'
@@ -96,7 +91,7 @@ function formatToolOutput(outputData: unknown): string {
  * Links an IAgentManager to an IChatModel for the Jupyternaut persona.
  *
  * Monitors new messages arriving on the chat model and responds when the
- * persona trigger string is mentioned. The handler and its agent stay alive
+ * persona trigger string is mentioned. The persona and its agent stay alive
  * as long as the associated chat widget is open, so conversation history is
  * preserved across multiple mentions.
  */
@@ -177,7 +172,7 @@ export class Persona implements IPersona {
       await this._respond(
         body || message.body,
         message.attachments,
-        // Model (provider in this @jupyternaut) explicitly targeted in metadata (jupyter-ai compatibility)
+        // Model (provider in Jupyternaut) explicitly targeted in metadata (jupyter-ai compatibility)
         (message.metadata as any)?.model?.id
       );
     }

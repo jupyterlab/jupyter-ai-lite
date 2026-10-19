@@ -8,11 +8,11 @@ import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createMistral } from '@ai-sdk/mistral';
 import { createOpenAI } from '@ai-sdk/openai';
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
-
-import { BUILT_IN_PROVIDER_MODEL_INFO } from './generated-model-info';
 import { getAppAttribution } from '@jupyter-ai/agent-lite';
-import type { IModelOptions } from './models';
+
 import type { IProviderInfo } from '../tokens';
+import { BUILT_IN_PROVIDER_MODEL_INFO } from './generated-model-info';
+import type { IModelOptions } from './models';
 
 const OPENROUTER_API_URL = 'https://openrouter.ai/api/v1';
 

@@ -3,9 +3,6 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import { createCompletionModel } from '../providers/models';
-import { IProviderRegistry, SECRETS_NAMESPACE } from '../tokens';
-import type { IAISettingsModel } from '../tokens';
 import {
   CompletionHandler,
   IInlineCompletionContext,
@@ -15,6 +12,13 @@ import {
 import { NotebookPanel } from '@jupyterlab/notebook';
 import { generateText, type LanguageModel } from 'ai';
 import { ISecretsManager } from 'jupyter-secrets-manager';
+
+import { createCompletionModel } from '../providers/models';
+import {
+  IProviderRegistry,
+  SECRETS_NAMESPACE,
+  type IAISettingsModel
+} from '../tokens';
 
 /**
  * Configuration interface for provider-specific completion behavior
@@ -176,7 +180,7 @@ export class AICompletionProvider implements IInlineCompletionProvider {
       if (!token) {
         // This should never happen, the secrets manager should be disabled.
         console.error(
-          '@jupyter-ai/jupyternaut-lite::AICompletionProvider error: the settings manager token is not set.\nYou should disable the secrets manager from the AI settings.'
+          '@jupyter-ai/jupyternaut-lite:AICompletionProvider error: the secrets manager token is not set.\nYou should disable the secrets manager from the AI settings.'
         );
         apiKey = '';
       } else {

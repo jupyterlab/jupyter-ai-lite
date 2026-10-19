@@ -3,9 +3,10 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import type { IAIConfig, IAISettingsModel, IProviderConfig } from '../tokens';
-import { VDomModel } from '@jupyterlab/ui-components';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
+import { VDomModel } from '@jupyterlab/ui-components';
+
+import type { IAIConfig, IAISettingsModel, IProviderConfig } from '../tokens';
 
 const PLUGIN_ID = '@jupyter-ai/jupyternaut-lite:settings-model';
 
