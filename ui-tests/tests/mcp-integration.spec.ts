@@ -21,9 +21,9 @@ test.use({
       fetchNews: 'false',
       doNotDisturbMode: true
     },
-    '@jupyter-ai/jupyternaut:settings-model': {
+    '@jupyter-ai/jupyternaut-persona:settings-model': {
       ...DEFAULT_GENERIC_PROVIDER_SETTINGS[
-        '@jupyter-ai/jupyternaut:settings-model'
+        '@jupyter-ai/jupyternaut-persona:settings-model'
       ],
       toolsEnabled: true,
       // To nudge the (relatively small) model to call the tools

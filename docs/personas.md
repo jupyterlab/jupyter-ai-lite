@@ -1,6 +1,6 @@
 # Building an in-browser persona
 
-[Jupyter AI](https://github.com/jupyterlab/jupyter-ai) personas run on the Jupyter server. The `jupyter-ai-persona-kit` package is a kit to build personas that run in the browser instead, so they also work in JupyterLite. [Jupyternaut](https://pypi.org/project/jupyternaut/), in this repository, is built on it. A persona built on the kit lives in its own repository and does not depend on Jupyternaut.
+[Jupyter AI](https://github.com/jupyterlab/jupyter-ai) personas run on the Jupyter server. The `jupyter-ai-persona-kit` package is a kit to build personas that run in the browser instead, so they also work in JupyterLite. [Jupyternaut](https://pypi.org/project/jupyternaut-persona/), in this repository, is built on it. A persona built on the kit lives in its own repository and does not depend on Jupyternaut.
 
 ## What the kit provides
 
@@ -57,7 +57,7 @@ The kit follows the `0.x` convention: a new minor version may change the API. Th
 
 ## Registering a persona in the chat
 
-The chat and its persona selector come from [jupyterlab-chat](https://github.com/jupyterlab/jupyter-chat) and `@jupyter-ai/persona-manager`. A persona attaches to each chat panel from `IChatTracker`, registers itself in the chat with `IPersonaSessionRegistry` (`registerFrontendPersona`), answers the messages addressed to it, and publishes its state (model, usage, processing). The Jupyternaut plugins in `packages/jupyternaut/src/index.ts` are the reference implementation. A kit-owned helper for this glue is planned.
+The chat and its persona selector come from [jupyterlab-chat](https://github.com/jupyterlab/jupyter-chat) and `@jupyter-ai/persona-manager`. A persona attaches to each chat panel from `IChatTracker`, registers itself in the chat with `IPersonaSessionRegistry` (`registerFrontendPersona`), answers the messages addressed to it, and publishes its state (model, usage, processing). The Jupyternaut plugins in `packages/jupyternaut-persona/src/index.ts` are the reference implementation. A kit-owned helper for this glue is planned.
 
 ## Developing against this repository
 

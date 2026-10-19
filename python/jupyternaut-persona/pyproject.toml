@@ -3,7 +3,7 @@ requires = ["hatchling>=1.5.0", "jupyter-builder>=1.2.2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyternaut"
+name = "jupyternaut-persona"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
@@ -61,24 +61,24 @@ docs = [
 ]
 
 [tool.hatch.version]
-path = "jupyternaut/_version.py"
+path = "jupyternaut_persona/_version.py"
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["jupyternaut/labextension"]
+artifacts = ["jupyternaut_persona/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyternaut/labextension" = "share/jupyter/labextensions/@jupyter-ai/jupyternaut"
-"install.json" = "share/jupyter/labextensions/@jupyter-ai/jupyternaut/install.json"
+"jupyternaut_persona/labextension" = "share/jupyter/labextensions/@jupyter-ai/jupyternaut-persona"
+"install.json" = "share/jupyter/labextensions/@jupyter-ai/jupyternaut-persona/install.json"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "jupyternaut/labextension/static/style.js",
-    "jupyternaut/labextension/package.json",
+    "jupyternaut_persona/labextension/static/style.js",
+    "jupyternaut_persona/labextension/package.json",
 ]
-skip-if-exists = ["jupyternaut/labextension/static/style.js"]
+skip-if-exists = ["jupyternaut_persona/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -89,7 +89,7 @@ path = "../.."
 npm = ["jlpm"]
 build_cmd = "build:prod"
 editable_build_cmd = "build"
-build_dir = "jupyternaut/labextension"
+build_dir = "jupyternaut_persona/labextension"
 path = "../.."
 
 [tool.check-wheel-contents]

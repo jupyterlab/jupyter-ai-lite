@@ -1,4 +1,4 @@
-# jupyternaut
+# jupyternaut-persona
 
 The Jupyternaut persona of [Jupyter AI](https://github.com/jupyterlab/jupyter-ai), running in the browser.
 
@@ -25,13 +25,13 @@ You can try the extension in your browser using JupyterLite:
 To install the extension, execute:
 
 ```bash
-pip install jupyternaut
+pip install jupyternaut-persona
 ```
 
 To install requirements (JupyterLab, JupyterLite and Notebook):
 
 ```bash
-pip install jupyternaut[jupyter]
+pip install jupyternaut-persona[jupyter]
 ```
 
 ## Documentation
@@ -43,7 +43,7 @@ For detailed usage instructions, including how to configure AI providers, see th
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyternaut
+pip uninstall jupyternaut-persona
 ```
 
 ## Contributing

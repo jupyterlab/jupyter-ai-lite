@@ -20,7 +20,7 @@ export default defineConfig([
       'ui-tests',
       'demo',
       'python/jupyter-ai-persona-kit/jupyter_ai_persona_kit',
-      'python/jupyternaut/jupyternaut'
+      'python/jupyternaut-persona/jupyternaut'
     ]
   },
   js.configs.recommended,

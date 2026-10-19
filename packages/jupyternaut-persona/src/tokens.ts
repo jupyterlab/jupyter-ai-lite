@@ -34,7 +34,7 @@ export const DEFAULT_PERSONA: IUser = {
  * Command IDs namespace
  */
 export namespace CommandIds {
-  export const openSettings = '@jupyter-ai/jupyternaut:open-settings';
+  export const openSettings = '@jupyter-ai/jupyternaut-persona:open-settings';
 }
 
 /**
@@ -86,7 +86,7 @@ export interface IPersona {
 /**
  * Registry mapping chat models to their persona.
  *
- * Provided by `@jupyter-ai/jupyternaut`. Other extensions can consume this token to
+ * Provided by `@jupyter-ai/jupyternaut-persona`. Other extensions can consume this token to
  * access the agent manager associated with a given chat.
  */
 export interface IPersonaRegistry {
@@ -135,7 +135,7 @@ export interface IPersonaRegistryOptions {
 }
 
 export const IPersonaRegistry = new Token<IPersonaRegistry>(
-  '@jupyter-ai/jupyternaut:IPersonaRegistry'
+  '@jupyter-ai/jupyternaut-persona:IPersonaRegistry'
 );
 
 /* THE LLM PROVIDER REGISTRY */
@@ -361,7 +361,7 @@ export interface IProviderRegistry {
  * Token for the provider registry.
  */
 export const IProviderRegistry = new Token<IProviderRegistry>(
-  '@jupyter-ai/jupyternaut:IProviderRegistry',
+  '@jupyter-ai/jupyternaut-persona:IProviderRegistry',
   'Registry for AI providers'
 );
 
@@ -433,7 +433,7 @@ export interface IAISettingsModel extends VDomRenderer.IModel {
  * Token for the AI settings model.
  */
 export const IAISettingsModel = new Token<IAISettingsModel>(
-  '@jupyter-ai/jupyternaut:IAISettingsModel'
+  '@jupyter-ai/jupyternaut-persona:IAISettingsModel'
 );
 
 /* THE AGENT MANAGER */
@@ -666,7 +666,7 @@ export interface IAgentManagerFactory {
  * Token for the agent manager factory.
  */
 export const IAgentManagerFactory = new Token<IAgentManagerFactory>(
-  '@jupyter-ai/jupyternaut:IAgentManagerFactory'
+  '@jupyter-ai/jupyternaut-persona:IAgentManagerFactory'
 );
 
 /**

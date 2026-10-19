@@ -8,7 +8,7 @@ To install the extension, execute:
 pip install jupyter-ai-lite
 ```
 
-`jupyter-ai-lite` installs the [Jupyternaut](https://pypi.org/project/jupyternaut/) persona (`jupyternaut`) and the [persona kit](./personas.md) it is built on (`jupyter-ai-persona-kit`).
+`jupyter-ai-lite` installs the [Jupyternaut](https://pypi.org/project/jupyternaut-persona/) persona (`jupyternaut-persona`) and the [persona kit](./personas.md) it is built on (`jupyter-ai-persona-kit`).
 
 ## Install with Jupyter dependencies
 
@@ -23,7 +23,7 @@ pip install jupyter-ai-lite[jupyter]
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyter-ai-lite jupyternaut jupyter-ai-persona-kit
+pip uninstall jupyter-ai-lite jupyternaut-persona jupyter-ai-persona-kit
 ```
 
 ## Upgrade

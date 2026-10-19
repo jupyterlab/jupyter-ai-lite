@@ -36,7 +36,7 @@ async function openOpenRouterDialog(
 ): Promise<Locator> {
   await page.evaluate(async () => {
     await window.jupyterapp.commands.execute(
-      '@jupyter-ai/jupyternaut:open-settings'
+      '@jupyter-ai/jupyternaut-persona:open-settings'
     );
   });
   await page.getByRole('button', { name: 'Add Provider' }).click();
@@ -382,7 +382,7 @@ test.describe('#openrouterAppAttribution', () => {
     autoGoto: false,
     mockSettings: {
       ...galata.DEFAULT_SETTINGS,
-      '@jupyter-ai/jupyternaut:settings-model': {
+      '@jupyter-ai/jupyternaut-persona:settings-model': {
         defaultProvider: 'openrouter-test',
         providers: [
           {

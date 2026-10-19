@@ -43,7 +43,7 @@ jlpm sync:model-info
 ```
 
 This script fetches the latest metadata, rewrites
-`packages/jupyternaut/src/providers/generated-model-info.ts`, then runs `prettier` and `eslint`
+`packages/jupyternaut-persona/src/providers/generated-model-info.ts`, then runs `prettier` and `eslint`
 on the generated file. The command will warn if `models.dev` does not expose a
 matching entry for one of our built-in model IDs.
 
@@ -96,13 +96,13 @@ jlpm docs:build
 
 ```bash
 pip uninstall jupyter-ai-lite
-pip uninstall jupyternaut
+pip uninstall jupyternaut-persona
 pip uninstall jupyter-ai-persona-kit
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter-builder develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlinks named `@jupyter-ai/persona-kit` and `@jupyter-ai/jupyternaut`
+folder is located. Then you can remove the symlinks named `@jupyter-ai/persona-kit` and `@jupyter-ai/jupyternaut-persona`
 within that folder.
 
 ## Packaging the extension

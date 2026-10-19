@@ -6,38 +6,37 @@ follow to update Jupyter AI Lite from one version to another.
 ## `v0.20.0` to `v0.21.0`
 
 ```{warning}
-Jupyter AI Lite 0.21.0 renames all the packages, moves the chat to `jupyterlab-chat` and
+Jupyter AI Lite 0.21.0 renames the packages, moves the chat to `jupyterlab-chat` and
 changes the settings ids. Please read the following sections carefully to check if you
 are impacted by these changes.
 ```
 
 ### Packages
 
-The packages are renamed, under the `@jupyter-ai` scope on npm. The `@jupyternaut/agent`
-library is split into a kit to build in-browser personas and the Jupyternaut persona
-([#393](https://github.com/jupyterlite/ai/pull/393)):
+The npm packages move to the `@jupyter-ai` scope, and the `@jupyternaut/agent` library
+is split into a kit to build in-browser personas and the Jupyternaut persona
+([#393](https://github.com/jupyterlite/ai/pull/393)). On PyPI, `jupyterlite-ai` becomes
+`jupyter-ai-lite` and `jupyternaut-persona` keeps its name:
 
-| Before                                                     | After                                                                                                                              |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `jupyterlite-ai` (PyPI)                                    | `jupyter-ai-lite` (PyPI)                                                                                                           |
-| `jupyternaut-persona` (PyPI), `@jupyternaut/persona` (npm) | `jupyternaut` (PyPI), `@jupyter-ai/jupyternaut` (npm)                                                                              |
-| `@jupyternaut/agent` (npm)                                 | `jupyter-ai-persona-kit` (PyPI), `@jupyter-ai/persona-kit` (npm), and `@jupyter-ai/jupyternaut` for the AI SDK agent and providers |
+| Before                                                     | After                                                                                                                                      |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `jupyterlite-ai` (PyPI)                                    | `jupyter-ai-lite` (PyPI)                                                                                                                   |
+| `jupyternaut-persona` (PyPI), `@jupyternaut/persona` (npm) | `jupyternaut-persona` (PyPI), `@jupyter-ai/jupyternaut-persona` (npm)                                                                      |
+| `@jupyternaut/agent` (npm)                                 | `jupyter-ai-persona-kit` (PyPI), `@jupyter-ai/persona-kit` (npm), and `@jupyter-ai/jupyternaut-persona` for the AI SDK agent and providers |
 
-`jupyter-ai-lite` is a meta package: it installs `jupyternaut`, which installs
+`jupyter-ai-lite` is a meta package: it installs `jupyternaut-persona`, which installs
 `jupyter-ai-persona-kit`.
 
-`pip` does not remove the old packages when you install the new ones. If the old and the
-new extensions load together, the API keys stay locked in the secrets manager. Remove the
-old packages first:
+`pip` does not remove `jupyterlite-ai` when you install `jupyter-ai-lite`, and the old
+package still ships the `@jupyterlite/ai` extension. Remove it first:
 
 ```bash
-pip uninstall jupyterlite-ai jupyternaut-persona
+pip uninstall jupyterlite-ai
 pip install jupyter-ai-lite
 ```
 
-If you have `jupyter-ai-jupyternaut` (the Jupyternaut persona that runs on the server),
-remove it before the install: the two packages install the same labextension folder,
-`@jupyter-ai/jupyternaut`.
+`jupyternaut-persona` is upgraded in place, so its old extension `@jupyternaut/persona`
+is removed with the upgrade.
 
 ### Chat
 
@@ -75,12 +74,12 @@ settings must be entered again.
 
 | Settings of `@jupyternaut/persona:settings-model`                                                                                                                              | New id                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| `providers`, `defaultProvider`, `activeCompleterProvider`, `useSameProviderForChatAndCompleter`, `systemPrompt`, `completionSystemPrompt`, `toolsEnabled`, `useSecretsManager` | `@jupyter-ai/jupyternaut:settings-model`                                  |
+| `providers`, `defaultProvider`, `activeCompleterProvider`, `useSameProviderForChatAndCompleter`, `systemPrompt`, `completionSystemPrompt`, `toolsEnabled`, `useSecretsManager` | `@jupyter-ai/jupyternaut-persona:settings-model`                          |
 | `commandsRequiringApproval`, `commandsAutoRenderMimeBundles`, `trustedMimeTypesForAutoRender`, `skillsPaths`                                                                   | `@jupyter-ai/persona-kit:settings`, shared by all the in-browser personas |
 | `codeExecution`, `contextAwareness`, `diffDisplayMode`, `showCellDiff`, `showFileDiff`                                                                                         | Removed (unused)                                                          |
 
 The identifier of the inline completion provider changes from
-`@jupyternaut/persona:completer` to `@jupyter-ai/jupyternaut:completer`. If you
+`@jupyternaut/persona:completer` to `@jupyter-ai/jupyternaut-persona:completer`. If you
 configured it in the `@jupyterlab/completer-extension:inline-completer` settings, update
 the identifier:
 
@@ -88,7 +87,7 @@ the identifier:
 {
   "providers": {
 -   "@jupyternaut/persona:completer": {
-+   "@jupyter-ai/jupyternaut:completer": {
++   "@jupyter-ai/jupyternaut-persona:completer": {
       "enabled": true,
       "timeout": 5000
     }
@@ -98,7 +97,7 @@ the identifier:
 
 ### Plugin IDs
 
-The plugins of `@jupyternaut/persona` are now provided by `@jupyter-ai/jupyternaut`, and
+The plugins of `@jupyternaut/persona` are now provided by `@jupyter-ai/jupyternaut-persona`, and
 the registries, the skills and the shared settings by `@jupyter-ai/persona-kit`:
 
 | Before                                            | After                                     |
@@ -109,7 +108,7 @@ the registries, the skills and the shared settings by `@jupyter-ai/persona-kit`:
 | `@jupyternaut/persona:openrouter-auth`            | `@jupyter-ai/persona-kit:openrouter-auth` |
 | (new)                                             | `@jupyter-ai/persona-kit:settings`        |
 | `@jupyternaut/persona:diff-manager`               | Removed                                   |
-| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut:<name>`          |
+| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut-persona:<name>`  |
 
 If you were disabling or deferring any of these plugins, for example in a custom
 `jupyter-lite.json` file, you will need to update the plugin IDs as follows:
@@ -138,8 +137,8 @@ packages:
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `IToolRegistry`, `ISkillRegistry`, `ITool` from `@jupyternaut/agent`                                                          | `@jupyter-ai/persona-kit` (tokens `@jupyter-ai/persona-kit:IToolRegistry` and `@jupyter-ai/persona-kit:ISkillRegistry`) |
 | `IAISettingsModel` from `@jupyternaut/agent`, for the shared settings (command approvals, MIME rendering, skills paths)       | `IPersonaKitSettings` from `@jupyter-ai/persona-kit`                                                                    |
-| `IAISettingsModel`, `IProviderRegistry`, `IAgentManagerFactory`, the providers and the AI SDK agent from `@jupyternaut/agent` | `@jupyter-ai/jupyternaut` (tokens `@jupyter-ai/jupyternaut:I...`)                                                       |
-| `IPersonaRegistry` from `@jupyternaut/persona`                                                                                | `@jupyter-ai/jupyternaut`                                                                                               |
+| `IAISettingsModel`, `IProviderRegistry`, `IAgentManagerFactory`, the providers and the AI SDK agent from `@jupyternaut/agent` | `@jupyter-ai/jupyternaut-persona` (tokens `@jupyter-ai/jupyternaut-persona:I...`)                                       |
+| `IPersonaRegistry` from `@jupyternaut/persona`                                                                                | `@jupyter-ai/jupyternaut-persona`                                                                                       |
 | The `IAgentManager` and `IDiffManager` tokens                                                                                 | Removed                                                                                                                 |
 
 Update the imports accordingly:

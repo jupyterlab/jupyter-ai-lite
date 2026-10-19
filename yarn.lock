@@ -2364,9 +2364,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyter-ai/jupyternaut@workspace:packages/jupyternaut":
+"@jupyter-ai/jupyternaut-persona@workspace:packages/jupyternaut-persona":
   version: 0.0.0-use.local
-  resolution: "@jupyter-ai/jupyternaut@workspace:packages/jupyternaut"
+  resolution: "@jupyter-ai/jupyternaut-persona@workspace:packages/jupyternaut-persona"
   dependencies:
     "@ai-sdk/anthropic": ^4.0.57
     "@ai-sdk/google": ^4.0.75

@@ -37,7 +37,7 @@ jobs:
 
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/persona-kit.*OK"
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-persona.*OK"
           python -m jupyterlab.browser_check
 
       - name: Package the extension
@@ -46,9 +46,9 @@ jobs:
 
           pip install build
           python -m build python/jupyter-ai-persona-kit --outdir dist
-          python -m build python/jupyternaut --outdir dist
+          python -m build python/jupyternaut-persona --outdir dist
           python -m build python/jupyter-ai-lite --outdir dist
-          pip uninstall -y "jupyter_ai_lite" "jupyternaut" "jupyter_ai_persona_kit" jupyterlab
+          pip uninstall -y "jupyter_ai_lite" "jupyternaut_persona" "jupyter_ai_persona_kit" jupyterlab
 
       - name: Upload extension packages
         uses: actions/upload-artifact@v7
@@ -83,11 +83,11 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_persona_kit*.whl jupyternaut*.whl jupyter_ai_lite*.whl
+          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_persona_kit*.whl jupyternaut_persona*.whl jupyter_ai_lite*.whl
 
           jupyter labextension list
           jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/persona-kit.*OK"
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-persona.*OK"
           python -m jupyterlab.browser_check --no-browser-test
 
   test_kit_alone:

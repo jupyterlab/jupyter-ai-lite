@@ -1,5 +1,5 @@
 {
-  "name": "@jupyter-ai/jupyternaut",
+  "name": "@jupyter-ai/jupyternaut-persona",
   "version": "0.20.1",
   "description": "The Jupyternaut persona for JupyterLab and JupyterLite: AI chat and code completions in the browser",
   "keywords": [
@@ -25,12 +25,12 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jupyterlite/ai.git",
-    "directory": "packages/jupyternaut"
+    "directory": "packages/jupyternaut-persona"
   },
   "scripts": {
-    "build": "echo 'Building @jupyter-ai/jupyternaut' && jlpm build:lib && jlpm build:labextension:dev",
-    "build:dev": "echo 'Building @jupyter-ai/jupyternaut' && jlpm build:lib && jlpm build:labextension:dev",
-    "build:prod": "echo 'Building @jupyter-ai/jupyternaut' && jlpm clean && jlpm build:lib:prod && jlpm build:labextension",
+    "build": "echo 'Building @jupyter-ai/jupyternaut-persona' && jlpm build:lib && jlpm build:labextension:dev",
+    "build:dev": "echo 'Building @jupyter-ai/jupyternaut-persona' && jlpm build:lib && jlpm build:labextension:dev",
+    "build:prod": "echo 'Building @jupyter-ai/jupyternaut-persona' && jlpm clean && jlpm build:lib:prod && jlpm build:labextension",
     "build:labextension": "jupyter-builder build .",
     "build:labextension:dev": "jupyter-builder build --development True .",
     "build:lib": "tsc --sourceMap",
@@ -103,7 +103,7 @@
   },
   "jupyterlab": {
     "extension": true,
-    "outputDir": "../../python/jupyternaut/jupyternaut/labextension",
+    "outputDir": "../../python/jupyternaut-persona/jupyternaut_persona/labextension",
     "schemaDir": "schema",
     "sharedPackages": {
       "@emotion/react": {

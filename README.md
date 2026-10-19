@@ -34,11 +34,11 @@ pip install jupyter-ai-lite[jupyter]
 
 ## Packages
 
-| Package                                                   | npm                       | Description                                                                            |
-| --------------------------------------------------------- | ------------------------- | -------------------------------------------------------------------------------------- |
-| [`jupyter-ai-persona-kit`](python/jupyter-ai-persona-kit) | `@jupyter-ai/persona-kit` | A kit to build in-browser personas: tools, skills, shared settings and sign-in helpers |
-| [`jupyternaut`](python/jupyternaut)                       | `@jupyter-ai/jupyternaut` | The Jupyternaut persona: AI chat and code completions with the AI SDK providers        |
-| [`jupyter-ai-lite`](python/jupyter-ai-lite)               |                           | A meta package that installs both                                                      |
+| Package                                                   | npm                               | Description                                                                            |
+| --------------------------------------------------------- | --------------------------------- | -------------------------------------------------------------------------------------- |
+| [`jupyter-ai-persona-kit`](python/jupyter-ai-persona-kit) | `@jupyter-ai/persona-kit`         | A kit to build in-browser personas: tools, skills, shared settings and sign-in helpers |
+| [`jupyternaut-persona`](python/jupyternaut-persona)       | `@jupyter-ai/jupyternaut-persona` | The Jupyternaut persona: AI chat and code completions with the AI SDK providers        |
+| [`jupyter-ai-lite`](python/jupyter-ai-lite)               |                                   | A meta package that installs both                                                      |
 
 See [Building an in-browser persona](docs/personas.md) to build a persona on the kit in another repository.
 
@@ -51,7 +51,7 @@ For detailed usage instructions, including how to configure AI providers, see th
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyter-ai-lite jupyternaut jupyter-ai-persona-kit
+pip uninstall jupyter-ai-lite jupyternaut-persona jupyter-ai-persona-kit
 ```
 
 ## Contributing
