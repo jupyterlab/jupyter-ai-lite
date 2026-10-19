@@ -763,54 +763,8 @@ wheels = [
 ]
 
 [[package]]
-name = "jupyter-ai-lite"
-source = { directory = "../python/jupyter-ai-lite" }
-dependencies = [
-    { name = "jupyternaut-persona" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "jupyter-book", marker = "extra == 'docs'" },
-    { name = "jupyterlab", marker = "extra == 'jupyter'", specifier = ">=4.5.0" },
-    { name = "jupyterlite", marker = "extra == 'jupyter'", specifier = ">=0.8.0" },
-    { name = "jupyternaut-persona", specifier = "==0.20.1" },
-    { name = "notebook", marker = "extra == 'jupyter'", specifier = ">=7.5.0" },
-]
-provides-extras = ["docs", "jupyter"]
-
-[[package]]
-name = "jupyter-ai-lite-demo"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "ipywidgets" },
-    { name = "jupyter-ai-lite" },
-    { name = "jupyter-ai-persona-kit" },
-    { name = "jupyterlab" },
-    { name = "jupyterlab-day" },
-    { name = "jupyterlab-night" },
-    { name = "jupyterlite-core" },
-    { name = "jupyterlite-pyodide-kernel" },
-    { name = "jupyternaut-persona" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "ipywidgets", specifier = ">=8.1.7" },
-    { name = "jupyter-ai-lite", directory = "../python/jupyter-ai-lite" },
-    { name = "jupyter-ai-persona-kit", directory = "../python/jupyter-ai-persona-kit" },
-    { name = "jupyterlab", specifier = ">=4.5.0" },
-    { name = "jupyterlab-day", specifier = ">=0.2.0" },
-    { name = "jupyterlab-night", specifier = ">=0.5.2" },
-    { name = "jupyterlite-core", specifier = ">=0.8.5" },
-    { name = "jupyterlite-pyodide-kernel", specifier = ">=0.8.5" },
-    { name = "jupyternaut-persona", directory = "../python/jupyternaut-persona" },
-]
-
-[[package]]
-name = "jupyter-ai-persona-kit"
-source = { directory = "../python/jupyter-ai-persona-kit" }
+name = "jupyter-ai-agent-lite"
+source = { directory = "../python/jupyter-ai-agent-lite" }
 dependencies = [
     { name = "jupyterlab-ai-commands" },
 ]
@@ -823,6 +777,52 @@ requires-dist = [
     { name = "notebook", marker = "extra == 'jupyter'", specifier = ">=7.5.0" },
 ]
 provides-extras = ["docs", "jupyter", "test"]
+
+[[package]]
+name = "jupyter-ai-lite"
+source = { directory = "../python/jupyter-ai-lite" }
+dependencies = [
+    { name = "jupyternaut-lite" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "jupyter-book", marker = "extra == 'docs'" },
+    { name = "jupyterlab", marker = "extra == 'jupyter'", specifier = ">=4.5.0" },
+    { name = "jupyterlite", marker = "extra == 'jupyter'", specifier = ">=0.8.0" },
+    { name = "jupyternaut-lite", specifier = "==0.20.1" },
+    { name = "notebook", marker = "extra == 'jupyter'", specifier = ">=7.5.0" },
+]
+provides-extras = ["docs", "jupyter"]
+
+[[package]]
+name = "jupyter-ai-lite-demo"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "ipywidgets" },
+    { name = "jupyter-ai-agent-lite" },
+    { name = "jupyter-ai-lite" },
+    { name = "jupyterlab" },
+    { name = "jupyterlab-day" },
+    { name = "jupyterlab-night" },
+    { name = "jupyterlite-core" },
+    { name = "jupyterlite-pyodide-kernel" },
+    { name = "jupyternaut-lite" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "ipywidgets", specifier = ">=8.1.7" },
+    { name = "jupyter-ai-agent-lite", directory = "../python/jupyter-ai-agent-lite" },
+    { name = "jupyter-ai-lite", directory = "../python/jupyter-ai-lite" },
+    { name = "jupyterlab", specifier = ">=4.5.0" },
+    { name = "jupyterlab-day", specifier = ">=0.2.0" },
+    { name = "jupyterlab-night", specifier = ">=0.5.2" },
+    { name = "jupyterlite-core", specifier = ">=0.8.5" },
+    { name = "jupyterlite-pyodide-kernel", specifier = ">=0.8.5" },
+    { name = "jupyternaut-lite", directory = "../python/jupyternaut-lite" },
+]
 
 [[package]]
 name = "jupyter-ai-persona-manager"
@@ -1171,10 +1171,10 @@ wheels = [
 ]
 
 [[package]]
-name = "jupyternaut-persona"
-source = { directory = "../python/jupyternaut-persona" }
+name = "jupyternaut-lite"
+source = { directory = "../python/jupyternaut-lite" }
 dependencies = [
-    { name = "jupyter-ai-persona-kit" },
+    { name = "jupyter-ai-agent-lite" },
     { name = "jupyter-ai-persona-manager" },
     { name = "jupyter-chat-components" },
     { name = "jupyter-mcp-manager" },
@@ -1186,7 +1186,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastmcp", marker = "extra == 'test'", specifier = ">=3.2.3,<4" },
-    { name = "jupyter-ai-persona-kit", specifier = "==0.20.1" },
+    { name = "jupyter-ai-agent-lite", specifier = "==0.20.1" },
     { name = "jupyter-ai-persona-manager", specifier = ">=0.3.0a0,<0.4" },
     { name = "jupyter-book", marker = "extra == 'docs'" },
     { name = "jupyter-chat-components", specifier = ">=0.7.0,<0.8" },

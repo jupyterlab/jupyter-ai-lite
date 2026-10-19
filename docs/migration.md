@@ -14,29 +14,27 @@ are impacted by these changes.
 ### Packages
 
 The npm packages move to the `@jupyter-ai` scope, and the `@jupyternaut/agent` library
-is split into a kit to build in-browser personas and the Jupyternaut persona
-([#393](https://github.com/jupyterlite/ai/pull/393)). On PyPI, `jupyterlite-ai` becomes
-`jupyter-ai-lite` and `jupyternaut-persona` keeps its name:
+is split into `@jupyter-ai/agent-lite`, the building blocks of in-browser personas, and
+the Jupyternaut persona ([#393](https://github.com/jupyterlite/ai/pull/393)). On PyPI,
+`jupyterlite-ai` becomes `jupyter-ai-lite` and `jupyternaut-persona` becomes
+`jupyternaut-lite`:
 
-| Before                                                     | After                                                                                                                                      |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `jupyterlite-ai` (PyPI)                                    | `jupyter-ai-lite` (PyPI)                                                                                                                   |
-| `jupyternaut-persona` (PyPI), `@jupyternaut/persona` (npm) | `jupyternaut-persona` (PyPI), `@jupyter-ai/jupyternaut-persona` (npm)                                                                      |
-| `@jupyternaut/agent` (npm)                                 | `jupyter-ai-persona-kit` (PyPI), `@jupyter-ai/persona-kit` (npm), and `@jupyter-ai/jupyternaut-persona` for the AI SDK agent and providers |
+| Before                                                     | After                                                                                                                                 |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `jupyterlite-ai` (PyPI)                                    | `jupyter-ai-lite` (PyPI)                                                                                                              |
+| `jupyternaut-persona` (PyPI), `@jupyternaut/persona` (npm) | `jupyternaut-lite` (PyPI), `@jupyter-ai/jupyternaut-lite` (npm)                                                                       |
+| `@jupyternaut/agent` (npm)                                 | `jupyter-ai-agent-lite` (PyPI), `@jupyter-ai/agent-lite` (npm), and `@jupyter-ai/jupyternaut-lite` for the AI SDK agent and providers |
 
-`jupyter-ai-lite` is a meta package: it installs `jupyternaut-persona`, which installs
-`jupyter-ai-persona-kit`.
+`jupyter-ai-lite` is a meta package: it installs `jupyternaut-lite`, which installs
+`jupyter-ai-agent-lite`.
 
-`pip` does not remove `jupyterlite-ai` when you install `jupyter-ai-lite`, and the old
-package still ships the `@jupyterlite/ai` extension. Remove it first:
+`pip` does not remove the old packages when you install `jupyter-ai-lite`, and they still
+ship the `@jupyterlite/ai` and `@jupyternaut/persona` extensions. Remove them first:
 
 ```bash
-pip uninstall jupyterlite-ai
+pip uninstall jupyterlite-ai jupyternaut-persona
 pip install jupyter-ai-lite
 ```
-
-`jupyternaut-persona` is upgraded in place, so its old extension `@jupyternaut/persona`
-is removed with the upgrade.
 
 ### Chat
 
@@ -72,14 +70,14 @@ model choice and the settings of the Behavior tab again. The API keys stored in 
 secrets manager are kept. With the secrets manager disabled, the API keys stored in the
 settings must be entered again.
 
-| Settings of `@jupyternaut/persona:settings-model`                                                                                                                              | New id                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| `providers`, `defaultProvider`, `activeCompleterProvider`, `useSameProviderForChatAndCompleter`, `systemPrompt`, `completionSystemPrompt`, `toolsEnabled`, `useSecretsManager` | `@jupyter-ai/jupyternaut-persona:settings-model`                          |
-| `commandsRequiringApproval`, `commandsAutoRenderMimeBundles`, `trustedMimeTypesForAutoRender`, `skillsPaths`                                                                   | `@jupyter-ai/persona-kit:settings`, shared by all the in-browser personas |
-| `codeExecution`, `contextAwareness`, `diffDisplayMode`, `showCellDiff`, `showFileDiff`                                                                                         | Removed (unused)                                                          |
+| Settings of `@jupyternaut/persona:settings-model`                                                                                                                              | New id                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `providers`, `defaultProvider`, `activeCompleterProvider`, `useSameProviderForChatAndCompleter`, `systemPrompt`, `completionSystemPrompt`, `toolsEnabled`, `useSecretsManager` | `@jupyter-ai/jupyternaut-lite:settings-model`                            |
+| `commandsRequiringApproval`, `commandsAutoRenderMimeBundles`, `trustedMimeTypesForAutoRender`, `skillsPaths`                                                                   | `@jupyter-ai/agent-lite:settings`, shared by all the in-browser personas |
+| `codeExecution`, `contextAwareness`, `diffDisplayMode`, `showCellDiff`, `showFileDiff`                                                                                         | Removed (unused)                                                         |
 
 The identifier of the inline completion provider changes from
-`@jupyternaut/persona:completer` to `@jupyter-ai/jupyternaut-persona:completer`. If you
+`@jupyternaut/persona:completer` to `@jupyter-ai/jupyternaut-lite:completer`. If you
 configured it in the `@jupyterlab/completer-extension:inline-completer` settings, update
 the identifier:
 
@@ -87,7 +85,7 @@ the identifier:
 {
   "providers": {
 -   "@jupyternaut/persona:completer": {
-+   "@jupyter-ai/jupyternaut-persona:completer": {
++   "@jupyter-ai/jupyternaut-lite:completer": {
       "enabled": true,
       "timeout": 5000
     }
@@ -97,18 +95,18 @@ the identifier:
 
 ### Plugin IDs
 
-The plugins of `@jupyternaut/persona` are now provided by `@jupyter-ai/jupyternaut-persona`, and
-the registries, the skills and the shared settings by `@jupyter-ai/persona-kit`:
+The plugins of `@jupyternaut/persona` are now provided by `@jupyter-ai/jupyternaut-lite`, and
+the registries, the skills and the shared settings by `@jupyter-ai/agent-lite`:
 
-| Before                                            | After                                     |
-| ------------------------------------------------- | ----------------------------------------- |
-| `@jupyternaut/persona:tool-registry`              | `@jupyter-ai/persona-kit:tool-registry`   |
-| `@jupyternaut/persona:skill-registry`             | `@jupyter-ai/persona-kit:skill-registry`  |
-| `@jupyternaut/persona:skills`                     | `@jupyter-ai/persona-kit:skills`          |
-| `@jupyternaut/persona:openrouter-auth`            | `@jupyter-ai/persona-kit:openrouter-auth` |
-| (new)                                             | `@jupyter-ai/persona-kit:settings`        |
-| `@jupyternaut/persona:diff-manager`               | Removed                                   |
-| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut-persona:<name>`  |
+| Before                                            | After                                    |
+| ------------------------------------------------- | ---------------------------------------- |
+| `@jupyternaut/persona:tool-registry`              | `@jupyter-ai/agent-lite:tool-registry`   |
+| `@jupyternaut/persona:skill-registry`             | `@jupyter-ai/agent-lite:skill-registry`  |
+| `@jupyternaut/persona:skills`                     | `@jupyter-ai/agent-lite:skills`          |
+| `@jupyternaut/persona:openrouter-auth`            | `@jupyter-ai/agent-lite:openrouter-auth` |
+| (new)                                             | `@jupyter-ai/agent-lite:settings`        |
+| `@jupyternaut/persona:diff-manager`               | Removed                                  |
+| `@jupyternaut/persona:<name>` (the other plugins) | `@jupyter-ai/jupyternaut-lite:<name>`    |
 
 If you were disabling or deferring any of these plugins, for example in a custom
 `jupyter-lite.json` file, you will need to update the plugin IDs as follows:
@@ -118,7 +116,7 @@ If you were disabling or deferring any of these plugins, for example in a custom
   "jupyter-lite-schema-version": 0,
   "jupyter-config-data": {
 -   "disabledExtensions": ["@jupyternaut/persona:skills"]
-+   "disabledExtensions": ["@jupyter-ai/persona-kit:skills"]
++   "disabledExtensions": ["@jupyter-ai/agent-lite:skills"]
   }
 }
 ```
@@ -133,23 +131,23 @@ If you were disabling or deferring any of these plugins, for example in a custom
 The exports of `@jupyternaut/agent` and `@jupyternaut/persona` move to the two new
 packages:
 
-| Before                                                                                                                        | After                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `IToolRegistry`, `ISkillRegistry`, `ITool` from `@jupyternaut/agent`                                                          | `@jupyter-ai/persona-kit` (tokens `@jupyter-ai/persona-kit:IToolRegistry` and `@jupyter-ai/persona-kit:ISkillRegistry`) |
-| `IAISettingsModel` from `@jupyternaut/agent`, for the shared settings (command approvals, MIME rendering, skills paths)       | `IPersonaKitSettings` from `@jupyter-ai/persona-kit`                                                                    |
-| `IAISettingsModel`, `IProviderRegistry`, `IAgentManagerFactory`, the providers and the AI SDK agent from `@jupyternaut/agent` | `@jupyter-ai/jupyternaut-persona` (tokens `@jupyter-ai/jupyternaut-persona:I...`)                                       |
-| `IPersonaRegistry` from `@jupyternaut/persona`                                                                                | `@jupyter-ai/jupyternaut-persona`                                                                                       |
-| The `IAgentManager` and `IDiffManager` tokens                                                                                 | Removed                                                                                                                 |
+| Before                                                                                                                        | After                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `IToolRegistry`, `ISkillRegistry`, `ITool` from `@jupyternaut/agent`                                                          | `@jupyter-ai/agent-lite` (tokens `@jupyter-ai/agent-lite:IToolRegistry` and `@jupyter-ai/agent-lite:ISkillRegistry`) |
+| `IAISettingsModel` from `@jupyternaut/agent`, for the shared settings (command approvals, MIME rendering, skills paths)       | `IAgentSettings` from `@jupyter-ai/agent-lite`                                                                       |
+| `IAISettingsModel`, `IProviderRegistry`, `IAgentManagerFactory`, the providers and the AI SDK agent from `@jupyternaut/agent` | `@jupyter-ai/jupyternaut-lite` (tokens `@jupyter-ai/jupyternaut-lite:I...`)                                          |
+| `IPersonaRegistry` from `@jupyternaut/persona`                                                                                | `@jupyter-ai/jupyternaut-lite`                                                                                       |
+| The `IAgentManager` and `IDiffManager` tokens                                                                                 | Removed                                                                                                              |
 
 Update the imports accordingly:
 
 ```diff
 -import { IToolRegistry } from '@jupyternaut/agent';
-+import { IToolRegistry } from '@jupyter-ai/persona-kit';
++import { IToolRegistry } from '@jupyter-ai/agent-lite';
 ```
 
-An extension that only adds tools or skills depends on the kit, consumed as a shared
-singleton. See [Building an in-browser persona](./personas.md).
+An extension that only adds tools or skills depends on `@jupyter-ai/agent-lite`, consumed as
+a shared singleton. See [Building an in-browser persona](./personas.md).
 
 The chat username of the persona stays `jupyternaut-frontend`, so the mention
 `@jupyternaut-frontend` still works.

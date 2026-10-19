@@ -13,7 +13,7 @@ import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
-import { IProviderRegistry } from '@jupyter-ai/jupyternaut-persona';
+import { IProviderRegistry } from '@jupyter-ai/jupyternaut-lite';
 import { createOpenAI } from '@ai-sdk/openai';
 
 const plugin: JupyterFrontEndPlugin<void> = {
@@ -65,15 +65,15 @@ The provider configuration object requires the following properties:
   prompt caching
 - `factory`: Function that creates and returns a language model (the registry automatically wraps it for chat usage)
 
-A provider that supports app attribution can get the application `name` and `url` with the `getAppAttribution` function of `@jupyter-ai/persona-kit`. See [App attribution](./openrouter.md#app-attribution) to set them.
+A provider that supports app attribution can get the application `name` and `url` with the `getAppAttribution` function of `@jupyter-ai/agent-lite`. See [App attribution](./openrouter.md#app-attribution) to set them.
 
-The provider registry token must be the same object in the Jupyternaut extension and in the provider extension. The provider extension consumes `@jupyter-ai/jupyternaut-persona` as a shared singleton in its `package.json`, and its Python package depends on `jupyternaut-persona`:
+The provider registry token must be the same object in the Jupyternaut extension and in the provider extension. The provider extension consumes `@jupyter-ai/jupyternaut-lite` as a shared singleton in its `package.json`, and its Python package depends on `jupyternaut-lite`:
 
 ```json
 {
   "jupyterlab": {
     "sharedPackages": {
-      "@jupyter-ai/jupyternaut-persona": {
+      "@jupyter-ai/jupyternaut-lite": {
         "bundled": false,
         "singleton": true
       }
@@ -85,7 +85,7 @@ The provider registry token must be the same object in the Jupyternaut extension
 ## Hiding the Built-In Settings UI
 
 If your extension ships a fully configured provider and you do not want users to
-edit provider settings, disable the `@jupyter-ai/jupyternaut-persona:settings-panel` plugin.
+edit provider settings, disable the `@jupyter-ai/jupyternaut-lite:settings-panel` plugin.
 This hides the AI settings panel and its command without disabling the rest of
 Jupyternaut.
 
@@ -93,7 +93,7 @@ For example, in your `jupyter-config-data` or `page_config.json`:
 
 ```json
 {
-  "disabledExtensions": ["@jupyter-ai/jupyternaut-persona:settings-panel"]
+  "disabledExtensions": ["@jupyter-ai/jupyternaut-lite:settings-panel"]
 }
 ```
 

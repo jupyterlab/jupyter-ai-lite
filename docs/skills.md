@@ -117,7 +117,7 @@ By default, skills are loaded from two directories (in order of priority):
 1. `.agents/skills` — follows the convention used by other AI coding tools
 2. `_agents/skills` — visible by default in the Jupyter file browser
 
-You can add or remove paths in the AI settings: open the AI settings, go to the **Behavior** tab and edit the **Skills Paths** list. To change the order of the paths, open **Settings** > **Settings Editor** > **AI Persona Kit**.
+You can add or remove paths in the AI settings: open the AI settings, go to the **Behavior** tab and edit the **Skills Paths** list. To change the order of the paths, open **Settings** > **Settings Editor** > **AI Agent**.
 
 This is useful if you keep skills in additional locations, such as `.claude/skills/` for compatibility with Claude Code. When the same skill name appears in multiple directories, the first occurrence wins (based on the order of the paths list).
 
@@ -168,7 +168,7 @@ import type {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
-import { ISkillRegistry } from '@jupyter-ai/persona-kit';
+import { ISkillRegistry } from '@jupyter-ai/agent-lite';
 
 // Bundled resource files (scripts, references, templates)
 const resources: Record<string, string> = {
@@ -202,7 +202,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 };
 ```
 
-The extension must consume `@jupyter-ai/persona-kit` as a shared singleton, and its Python package must depend on `jupyter-ai-persona-kit`. Otherwise the extension bundles its own copy of the kit, and the tokens do not match. See [Depending on the kit](./personas.md#depending-on-the-kit).
+The extension must consume `@jupyter-ai/agent-lite` as a shared singleton, and its Python package must depend on `jupyter-ai-agent-lite`. Otherwise the extension bundles its own copy of `@jupyter-ai/agent-lite`, and the tokens do not match. See [Depending on `@jupyter-ai/agent-lite`](./personas.md#depending-on-agent-lite).
 
 The registry follows progressive disclosure: `load_skill` returns instructions and a list of resource **paths**, and the agent loads individual resources on demand via the `resource` argument. This keeps token usage low for skills with large bundled files.
 

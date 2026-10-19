@@ -36,8 +36,8 @@ jobs:
           python scripts/dev_install.py test
 
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/persona-kit.*OK"
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-persona.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/agent-lite.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-lite.*OK"
           python -m jupyterlab.browser_check
 
       - name: Package the extension
@@ -45,10 +45,10 @@ jobs:
           set -eux
 
           pip install build
-          python -m build python/jupyter-ai-persona-kit --outdir dist
-          python -m build python/jupyternaut-persona --outdir dist
+          python -m build python/jupyter-ai-agent-lite --outdir dist
+          python -m build python/jupyternaut-lite --outdir dist
           python -m build python/jupyter-ai-lite --outdir dist
-          pip uninstall -y "jupyter_ai_lite" "jupyternaut_persona" "jupyter_ai_persona_kit" jupyterlab
+          pip uninstall -y "jupyter_ai_lite" "jupyternaut_lite" "jupyter_ai_agent_lite" jupyterlab
 
       - name: Upload extension packages
         uses: actions/upload-artifact@v7
@@ -56,7 +56,7 @@ jobs:
           name: extension-artifacts
           path: |
             dist/jupyter_ai_lite*
-            dist/jupyter_ai_persona_kit*
+            dist/jupyter_ai_agent_lite*
             dist/jupyternaut*
           if-no-files-found: error
 
@@ -83,15 +83,15 @@ jobs:
           sudo rm -rf $(which node)
           sudo rm -rf $(which node)
 
-          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_persona_kit*.whl jupyternaut_persona*.whl jupyter_ai_lite*.whl
+          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_agent_lite*.whl jupyternaut_lite*.whl jupyter_ai_lite*.whl
 
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/persona-kit.*OK"
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-persona.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/agent-lite.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/jupyternaut-lite.*OK"
           python -m jupyterlab.browser_check --no-browser-test
 
-  test_kit_alone:
-    name: Install the kit alone
+  test_agent_lite_alone:
+    name: Install agent-lite alone
     needs: build
     runs-on: ubuntu-latest
 
@@ -103,14 +103,14 @@ jobs:
       - uses: actions/download-artifact@v8
         with:
           name: extension-artifacts
-      - name: Install and check the kit without Jupyternaut
+      - name: Install and check agent-lite without Jupyternaut
         run: |
           set -eux
-          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_persona_kit*.whl
-          python -c "import jupyter_ai_persona_kit"
+          pip install "jupyterlab>=4.0.0,<5" jupyter_ai_agent_lite*.whl
+          python -c "import jupyter_ai_agent_lite"
 
           jupyter labextension list
-          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/persona-kit.*OK"
+          jupyter labextension list 2>&1 | grep -ie "@jupyter-ai/agent-lite.*OK"
           if jupyter labextension list 2>&1 | grep -i "jupyternaut"; then exit 1; fi
           python -m jupyterlab.browser_check --no-browser-test
 

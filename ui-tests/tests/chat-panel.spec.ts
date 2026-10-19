@@ -144,11 +144,11 @@ TEST_PROVIDERS.forEach(({ name, settings }) =>
 
       await page.evaluate(async () => {
         await window.jupyterapp.commands.execute(
-          '@jupyter-ai/jupyternaut-persona:open-settings'
+          '@jupyter-ai/jupyternaut-lite:open-settings'
         );
       });
 
-      const aiSettingsWidget = page.locator('#jupyternaut-persona-settings');
+      const aiSettingsWidget = page.locator('#jupyternaut-lite-settings');
       await expect(aiSettingsWidget).toBeVisible();
 
       // Remove the existing default provider for this test only

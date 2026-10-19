@@ -13,7 +13,7 @@ const EXPECT_TIMEOUT = 120000;
 const EXPECTED_SKILL_NAME = 'agent-helper';
 const BASE_SETTINGS =
   DEFAULT_GENERIC_PROVIDER_SETTINGS[
-    '@jupyter-ai/jupyternaut-persona:settings-model'
+    '@jupyter-ai/jupyternaut-lite:settings-model'
   ];
 const PROVIDERS = BASE_SETTINGS.providers.map(provider => {
   if (provider.id !== 'generic-functiongemma') {
@@ -37,7 +37,7 @@ test.use({
       fetchNews: 'false',
       doNotDisturbMode: true
     },
-    '@jupyter-ai/jupyternaut-persona:settings-model': {
+    '@jupyter-ai/jupyternaut-lite:settings-model': {
       ...BASE_SETTINGS,
       providers: PROVIDERS,
       toolsEnabled: true,
@@ -45,7 +45,7 @@ test.use({
       systemPrompt:
         'Call the load_skill tool with name "agent-helper" to get skill information. Do not ask follow-up questions.'
     },
-    '@jupyter-ai/persona-kit:settings': {
+    '@jupyter-ai/agent-lite:settings': {
       skillsPaths: ['.agents/skills']
     }
   }

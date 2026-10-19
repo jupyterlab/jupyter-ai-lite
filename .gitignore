@@ -10,8 +10,8 @@ packages/*/tsconfig.tsbuildinfo
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
-python/jupyter-ai-persona-kit/jupyter_ai_persona_kit/labextension
-python/jupyternaut-persona/jupyternaut_persona/labextension
+python/jupyter-ai-agent-lite/jupyter_ai_agent_lite/labextension
+python/jupyternaut-lite/jupyternaut_lite/labextension
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python

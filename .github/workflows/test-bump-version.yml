@@ -48,11 +48,11 @@ jobs:
           python scripts/bump_version.py 1.2.3
           # Check Python version files
           grep '__version__ = "1.2.3"' python/jupyter-ai-lite/jupyter_ai_lite/_version.py
-          grep '__version__ = "1.2.3"' python/jupyter-ai-persona-kit/jupyter_ai_persona_kit/_version.py
-          grep '__version__ = "1.2.3"' python/jupyternaut-persona/jupyternaut_persona/_version.py
+          grep '__version__ = "1.2.3"' python/jupyter-ai-agent-lite/jupyter_ai_agent_lite/_version.py
+          grep '__version__ = "1.2.3"' python/jupyternaut-lite/jupyternaut_lite/_version.py
           # Check intra-monorepo dependency constraint
-          grep 'jupyternaut-persona ==1.2.3' python/jupyter-ai-lite/pyproject.toml
-          grep 'jupyter-ai-persona-kit ==1.2.3' python/jupyternaut-persona/pyproject.toml
+          grep 'jupyternaut-lite ==1.2.3' python/jupyter-ai-lite/pyproject.toml
+          grep 'jupyter-ai-agent-lite ==1.2.3' python/jupyternaut-lite/pyproject.toml
           # Check root package.json
           python3 <<'PY'
           import json
@@ -69,8 +69,8 @@ jobs:
               assert data['version'] == '1.2.3', f"{pkg_file}: Expected 1.2.3, got {data['version']}"
           PY
           # Check demo uv.lock: the local package specifiers updated, nothing else changed
-          grep 'name = "jupyter-ai-persona-kit", specifier = "==1.2.3"' demo/uv.lock
-          grep 'name = "jupyternaut-persona", specifier = "==1.2.3"' demo/uv.lock
+          grep 'name = "jupyter-ai-agent-lite", specifier = "==1.2.3"' demo/uv.lock
+          grep 'name = "jupyternaut-lite", specifier = "==1.2.3"' demo/uv.lock
           diff_lines=$(git diff -- demo/uv.lock | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -v 'specifier = "==' | wc -l)
           [ "$diff_lines" -eq 0 ]
 
@@ -81,10 +81,10 @@ jobs:
           git checkout .
           python scripts/bump_version.py 2.0.0a1
           grep '__version__ = "2.0.0a1"' python/jupyter-ai-lite/jupyter_ai_lite/_version.py
-          grep '__version__ = "2.0.0a1"' python/jupyter-ai-persona-kit/jupyter_ai_persona_kit/_version.py
-          grep '__version__ = "2.0.0a1"' python/jupyternaut-persona/jupyternaut_persona/_version.py
-          grep 'jupyternaut-persona ==2.0.0a1' python/jupyter-ai-lite/pyproject.toml
-          grep 'jupyter-ai-persona-kit ==2.0.0a1' python/jupyternaut-persona/pyproject.toml
+          grep '__version__ = "2.0.0a1"' python/jupyter-ai-agent-lite/jupyter_ai_agent_lite/_version.py
+          grep '__version__ = "2.0.0a1"' python/jupyternaut-lite/jupyternaut_lite/_version.py
+          grep 'jupyternaut-lite ==2.0.0a1' python/jupyter-ai-lite/pyproject.toml
+          grep 'jupyter-ai-agent-lite ==2.0.0a1' python/jupyternaut-lite/pyproject.toml
           python3 <<'PY'
           import json
           with open('package.json') as f:

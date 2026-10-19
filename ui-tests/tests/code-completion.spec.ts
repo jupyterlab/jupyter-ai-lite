@@ -101,7 +101,7 @@ test.describe('#CompletionStatus', () => {
   test('completion status indicator should be enabled', async ({ page }) => {
     const model =
       DEFAULT_GENERIC_PROVIDER_SETTINGS[
-        '@jupyter-ai/jupyternaut-persona:settings-model'
+        '@jupyter-ai/jupyternaut-lite:settings-model'
       ].providers[0].model;
     const component = page.locator(
       '.jp-ai-completion-status > div:first-child'
@@ -116,25 +116,25 @@ test.describe('#CompletionStatus', () => {
   test('completion status should toggle', async ({ page }) => {
     const model =
       DEFAULT_GENERIC_PROVIDER_SETTINGS[
-        '@jupyter-ai/jupyternaut-persona:settings-model'
+        '@jupyter-ai/jupyternaut-lite:settings-model'
       ].providers[0].model;
     const name =
       DEFAULT_GENERIC_PROVIDER_SETTINGS[
-        '@jupyter-ai/jupyternaut-persona:settings-model'
+        '@jupyter-ai/jupyternaut-lite:settings-model'
       ].providers[0].name;
     const component = page.locator(
       '.jp-ai-completion-status > div:first-child'
     );
 
     // Open the settings panel
-    const settingsPanel = page.locator('#jupyternaut-persona-settings');
+    const settingsPanel = page.locator('#jupyternaut-lite-settings');
     // The palette command works on every platform, unlike the shortcut.
     await page.evaluate(() =>
       window.jupyterapp.commands.execute('apputils:activate-command-palette')
     );
     await page
       .locator(
-        '#modal-command-palette li[data-command="@jupyter-ai/jupyternaut-persona:open-settings"]'
+        '#modal-command-palette li[data-command="@jupyter-ai/jupyternaut-lite:open-settings"]'
       )
       .click();
     // Do not use the same provider for chat and completion

@@ -10,7 +10,7 @@ export const QWEN_MODEL_NAME = 'Qwen2.5';
 export const FUNCTIONGEMMA_MODEL_NAME = 'Functiongemma';
 
 export const DEFAULT_GENERIC_PROVIDER_SETTINGS = {
-  '@jupyter-ai/jupyternaut-persona:settings-model': {
+  '@jupyter-ai/jupyternaut-lite:settings-model': {
     defaultProvider: 'generic-qwen',
     providers: [
       {
@@ -79,11 +79,11 @@ export const openSettings = async (
 ): Promise<Locator> => {
   await page.evaluate(async () => {
     await window.jupyterapp.commands.execute(
-      '@jupyter-ai/jupyternaut-persona:open-settings'
+      '@jupyter-ai/jupyternaut-lite:open-settings'
     );
   });
 
-  const settingsWidget = page.locator('#jupyternaut-persona-settings');
+  const settingsWidget = page.locator('#jupyternaut-lite-settings');
   await page.waitForCondition(() => settingsWidget.isVisible());
   return settingsWidget;
 };

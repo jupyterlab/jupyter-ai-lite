@@ -2364,9 +2364,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyter-ai/jupyternaut-persona@workspace:packages/jupyternaut-persona":
+"@jupyter-ai/agent-lite@^0.20.1, @jupyter-ai/agent-lite@workspace:packages/agent-lite":
   version: 0.0.0-use.local
-  resolution: "@jupyter-ai/jupyternaut-persona@workspace:packages/jupyternaut-persona"
+  resolution: "@jupyter-ai/agent-lite@workspace:packages/agent-lite"
+  dependencies:
+    "@jupyter/builder": ^1.2.2
+    "@jupyterlab/application": ^4.5.8
+    "@jupyterlab/apputils": ^4.6.8
+    "@jupyterlab/coreutils": ^6.5.8
+    "@jupyterlab/docmanager": ^4.5.8
+    "@jupyterlab/rendermime": ^4.5.8
+    "@jupyterlab/services": ^7.5.8
+    "@jupyterlab/settingregistry": ^4.5.8
+    "@jupyterlab/translation": ^4.5.8
+    "@lumino/commands": ^2.3.2
+    "@lumino/coreutils": ^2.2.1
+    "@lumino/disposable": ^2.1.4
+    "@lumino/signaling": ^2.1.4
+    "@lumino/widgets": ^2.7.1
+    "@types/node": ^24.3.0
+    css-loader: ^6.7.1
+    npm-run-all2: ^7.0.1
+    rimraf: ^5.0.1
+    source-map-loader: ^1.0.2
+    typescript: ~5.8.0
+    yaml: ^2.8.1
+    zod: ^4.3.6
+  languageName: unknown
+  linkType: soft
+
+"@jupyter-ai/jupyternaut-lite@workspace:packages/jupyternaut-lite":
+  version: 0.0.0-use.local
+  resolution: "@jupyter-ai/jupyternaut-lite@workspace:packages/jupyternaut-lite"
   dependencies:
     "@ai-sdk/anthropic": ^4.0.57
     "@ai-sdk/google": ^4.0.75
@@ -2374,7 +2403,7 @@ __metadata:
     "@ai-sdk/mistral": ^4.0.47
     "@ai-sdk/openai": ^4.0.70
     "@ai-sdk/openai-compatible": ^3.0.52
-    "@jupyter-ai/persona-kit": ^0.20.1
+    "@jupyter-ai/agent-lite": ^0.20.1
     "@jupyter-ai/persona-manager": 0.3.0-a0
     "@jupyter/builder": ^1.2.2
     "@jupyter/chat": ^0.25.2
@@ -2413,35 +2442,6 @@ __metadata:
     rimraf: ^5.0.1
     source-map-loader: ^1.0.2
     typescript: ~5.8.0
-    zod: ^4.3.6
-  languageName: unknown
-  linkType: soft
-
-"@jupyter-ai/persona-kit@^0.20.1, @jupyter-ai/persona-kit@workspace:packages/persona-kit":
-  version: 0.0.0-use.local
-  resolution: "@jupyter-ai/persona-kit@workspace:packages/persona-kit"
-  dependencies:
-    "@jupyter/builder": ^1.2.2
-    "@jupyterlab/application": ^4.5.8
-    "@jupyterlab/apputils": ^4.6.8
-    "@jupyterlab/coreutils": ^6.5.8
-    "@jupyterlab/docmanager": ^4.5.8
-    "@jupyterlab/rendermime": ^4.5.8
-    "@jupyterlab/services": ^7.5.8
-    "@jupyterlab/settingregistry": ^4.5.8
-    "@jupyterlab/translation": ^4.5.8
-    "@lumino/commands": ^2.3.2
-    "@lumino/coreutils": ^2.2.1
-    "@lumino/disposable": ^2.1.4
-    "@lumino/signaling": ^2.1.4
-    "@lumino/widgets": ^2.7.1
-    "@types/node": ^24.3.0
-    css-loader: ^6.7.1
-    npm-run-all2: ^7.0.1
-    rimraf: ^5.0.1
-    source-map-loader: ^1.0.2
-    typescript: ~5.8.0
-    yaml: ^2.8.1
     zod: ^4.3.6
   languageName: unknown
   linkType: soft

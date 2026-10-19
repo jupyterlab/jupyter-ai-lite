@@ -38,7 +38,7 @@ project:
 site:
   template: book-theme
   options:
-    logo: packages/jupyternaut-persona/style/icons/jupyternaut-lite.svg
+    logo: packages/jupyternaut-lite/style/icons/jupyternaut-lite.svg
     logo_text: Jupyter AI Lite
     favicon: docs/favicon.ico
     style: docs/custom.css

@@ -41,7 +41,7 @@ For detailed usage instructions, including how to configure AI providers, see th
 To remove the extension, execute:
 
 ```bash
-pip uninstall jupyter-ai-lite jupyternaut-persona jupyter-ai-persona-kit
+pip uninstall jupyter-ai-lite jupyternaut-lite jupyter-ai-agent-lite
 ```
 
 ## Contributing
