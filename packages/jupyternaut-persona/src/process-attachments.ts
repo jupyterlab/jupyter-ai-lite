@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import type { IAttachment } from '@jupyter/chat';
 import { YNotebook } from '@jupyter/ydoc';
 import { PathExt } from '@jupyterlab/coreutils';

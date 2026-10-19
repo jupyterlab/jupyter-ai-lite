@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import { createMCPClient, type MCPClient } from '@ai-sdk/mcp';
 import { IRenderMimeRegistry } from '@jupyterlab/rendermime';
 import { PromiseDelegate } from '@lumino/coreutils';

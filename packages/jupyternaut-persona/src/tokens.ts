@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import { IChatModel, IUser } from '@jupyter/chat';
 import { IDocumentManager } from '@jupyterlab/docmanager';
 import type {

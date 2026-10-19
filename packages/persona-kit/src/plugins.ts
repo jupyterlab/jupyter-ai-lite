@@ -1,4 +1,9 @@
 /*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
+/*
  * The plugins provide the registries and the settings at activation, so their
  * modules load with the application either way.
  */

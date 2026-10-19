@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import type { LanguageModel } from 'ai';
 import type { IProviderRegistry } from '../tokens';
 

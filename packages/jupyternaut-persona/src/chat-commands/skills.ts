@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import { ChatCommand, IChatCommandProvider, IInputModel } from '@jupyter/chat';
 import { CommandIds, type ISkillRegistry } from '@jupyter-ai/persona-kit';
 import { CommandRegistry } from '@lumino/commands';

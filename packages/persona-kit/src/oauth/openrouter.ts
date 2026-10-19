@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import { computeCodeChallenge, generateCodeVerifier } from './pkce';
 
 const AUTH_URL = 'https://openrouter.ai/auth';

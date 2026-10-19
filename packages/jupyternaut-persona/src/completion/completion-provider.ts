@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import { createCompletionModel } from '../providers/models';
 import { IProviderRegistry, SECRETS_NAMESPACE } from '../tokens';
 import type { IAISettingsModel } from '../tokens';

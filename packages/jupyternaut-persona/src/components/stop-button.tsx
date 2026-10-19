@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
 import StopIcon from '@mui/icons-material/Stop';
 import { InputToolbarRegistry, TooltippedIconButton } from '@jupyter/chat';
 import React, { useEffect, useState } from 'react';
