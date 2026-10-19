@@ -33,6 +33,7 @@ project:
       children:
         - file: docs/contributing.md
         - file: docs/release.md
+    - file: docs/migration.md
     - file: docs/changelog.md
 site:
   template: book-theme
