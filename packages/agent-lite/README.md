@@ -49,4 +49,4 @@ const plugin: JupyterFrontEndPlugin<void> = {
 };
 ```
 
-See [Building an in-browser persona](https://jupyterlite-ai.readthedocs.io/en/latest/personas/) for the complete guide.
+See [Building an in-browser persona](https://jupyter-ai-lite.readthedocs.io/en/latest/personas/) for the complete guide.

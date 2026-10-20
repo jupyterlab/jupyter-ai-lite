@@ -14,4 +14,4 @@ pip install jupyter-ai-agent-lite
 
 ## Documentation
 
-See the [documentation](https://jupyterlite-ai.readthedocs.io/).
+See the [documentation](https://jupyter-ai-lite.readthedocs.io/).

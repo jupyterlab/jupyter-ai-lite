@@ -15,7 +15,7 @@ are impacted by these changes.
 
 The npm packages move to the `@jupyter-ai` scope, and the `@jupyternaut/agent` library
 is split into `@jupyter-ai/agent-lite`, the building blocks of in-browser personas, and
-the Jupyternaut persona ([#393](https://github.com/jupyterlite/ai/pull/393)). On PyPI,
+the Jupyternaut persona ([#393](https://github.com/jupyterlab/jupyter-ai-lite/pull/393)). On PyPI,
 `jupyterlite-ai` becomes `jupyter-ai-lite` and `jupyternaut-persona` becomes
 `jupyternaut-lite`:
 
@@ -39,7 +39,7 @@ pip install jupyter-ai-lite
 ### Chat
 
 The `@jupyterlite/ai` extension and its chat are removed
-([#387](https://github.com/jupyterlite/ai/pull/387)). Jupyternaut now answers in the
+([#387](https://github.com/jupyterlab/jupyter-ai-lite/pull/387)). Jupyternaut now answers in the
 chats of [jupyterlab-chat](https://github.com/jupyterlab/jupyter-chat), and the persona
 and the model are selected with the persona manager of Jupyter AI
 (`jupyter-ai-persona-manager`), in JupyterLab and in JupyterLite alike. The user
@@ -164,7 +164,7 @@ Jupyter AI Lite 0.20.0 adds a second extension, `@jupyternaut/persona` (PyPI
 `jupyternaut-persona`), which provides Jupyternaut as a persona of the chats tracked by
 the chat tracker, including the chats of
 [Jupyter AI](https://github.com/jupyterlab/jupyter-ai)
-([#356](https://github.com/jupyterlite/ai/pull/356)). `jupyterlite-ai` depends on it and
+([#356](https://github.com/jupyterlab/jupyter-ai-lite/pull/356)). `jupyterlite-ai` depends on it and
 keeps its chat interface. In a chat of Jupyter AI, mention `@jupyternaut-frontend` to get
 an answer from the in-browser persona.
 
@@ -183,7 +183,7 @@ The API keys stored in the secrets manager are kept.
 
 The MCP servers are managed by the
 [jupyter-mcp-manager](https://github.com/brichet/jupyter-mcp-manager) extension,
-installed with `jupyternaut-persona` ([#360](https://github.com/jupyterlite/ai/pull/360)).
+installed with `jupyternaut-persona` ([#360](https://github.com/jupyterlab/jupyter-ai-lite/pull/360)).
 The `mcpServers` key is removed from the settings: add the servers again in the **MCP
 Servers** tab of the settings panel, which saves them in the `jupyter-mcp-manager:manager`
 settings.
@@ -211,13 +211,13 @@ providers (`anthropic-provider`, `generic-provider`, `google-provider`,
 ### AI SDK 7
 
 The agent and the providers use the [AI SDK](https://ai-sdk.dev) 7
-([#358](https://github.com/jupyterlite/ai/pull/358)): `ai` 7 and the `@ai-sdk/*` provider
+([#358](https://github.com/jupyterlab/jupyter-ai-lite/pull/358)): `ai` 7 and the `@ai-sdk/*` provider
 packages 4. [Custom providers](./custom-providers.md) must update their AI SDK packages.
 
 ### JupyterLite 0.8
 
 The `jupyterlite-ai[jupyter]` extra installs JupyterLite 0.8
-([#370](https://github.com/jupyterlite/ai/pull/370)). See the
+([#370](https://github.com/jupyterlab/jupyter-ai-lite/pull/370)). See the
 [JupyterLite migration guide](https://jupyterlite.readthedocs.io/en/latest/migration.html)
 for the changes of JupyterLite 0.8.
 
@@ -226,7 +226,7 @@ for the changes of JupyterLite 0.8.
 ### Monorepo
 
 The JavaScript package `@jupyterlite/ai` is split in two
-([#353](https://github.com/jupyterlite/ai/pull/353)):
+([#353](https://github.com/jupyterlab/jupyter-ai-lite/pull/353)):
 
 - `@jupyternaut/agent`, a library with the AI SDK agent, the providers, the tools, the
   skills and their tokens;

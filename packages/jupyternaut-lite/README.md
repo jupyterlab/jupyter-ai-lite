@@ -27,4 +27,4 @@ It consumes `@jupyter-ai/jupyternaut-lite` as a shared singleton, so that the to
 
 Its Python package depends on `jupyternaut-lite`, so that the Jupyternaut extension is installed.
 
-See [Custom Providers](https://jupyterlite-ai.readthedocs.io/en/latest/custom-providers/) for the complete guide.
+See [Custom Providers](https://jupyter-ai-lite.readthedocs.io/en/latest/custom-providers/) for the complete guide.

@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/jupyterlite/ai",
+  "homepage": "https://github.com/jupyterlab/jupyter-ai-lite",
   "bugs": {
-    "url": "https://github.com/jupyterlite/ai/issues"
+    "url": "https://github.com/jupyterlab/jupyter-ai-lite/issues"
   },
   "license": "BSD-3-Clause",
   "author": "JupyterLite Contributors",
@@ -24,7 +24,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jupyterlite/ai.git",
+    "url": "https://github.com/jupyterlab/jupyter-ai-lite.git",
     "directory": "packages/agent-lite"
   },
   "scripts": {

@@ -1,7 +1,7 @@
 # Jupyter AI Lite
 
-[![Github Actions Status](https://github.com/jupyterlite/ai/workflows/Build/badge.svg)](https://github.com/jupyterlite/ai/actions/workflows/build.yml)
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/ai/lab/index.html)
+[![Github Actions Status](https://github.com/jupyterlab/jupyter-ai-lite/workflows/Build/badge.svg)](https://github.com/jupyterlab/jupyter-ai-lite/actions/workflows/build.yml)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html)
 
 AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite, with the Jupyternaut persona of [Jupyter AI](https://github.com/jupyterlab/jupyter-ai) running in the browser.
 
@@ -20,6 +20,6 @@ A screencast showing the Jupyter AI Lite extension in JupyterLite.
 
 You can try the extension in your browser using JupyterLite:
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/ai/lab/index.html)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html)
 
 See the [Usage](./usage.md) section for more information on how to provide your API key.

@@ -2,9 +2,9 @@
 
 The Jupyternaut persona of [Jupyter AI](https://github.com/jupyterlab/jupyter-ai), running in the browser.
 
-[![Github Actions Status](https://github.com/jupyterlite/ai/workflows/Build/badge.svg)](https://github.com/jupyterlite/ai/actions/workflows/build.yml)
-[![Documentation Status](https://readthedocs.org/projects/jupyterlite-ai/badge/?version=latest)](https://jupyterlite-ai.readthedocs.io/en/latest/?badge=latest)
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/ai/lab/index.html)
+[![Github Actions Status](https://github.com/jupyterlab/jupyter-ai-lite/workflows/Build/badge.svg)](https://github.com/jupyterlab/jupyter-ai-lite/actions/workflows/build.yml)
+[![Documentation Status](https://readthedocs.org/projects/jupyter-ai-lite/badge/?version=latest)](https://jupyter-ai-lite.readthedocs.io/en/latest/?badge=latest)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html)
 
 AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite.
 
@@ -18,7 +18,7 @@ AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite.
 
 You can try the extension in your browser using JupyterLite:
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/ai/lab/index.html)
+[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html)
 
 ## Install
 
@@ -36,7 +36,7 @@ pip install jupyternaut-lite[jupyter]
 
 ## Documentation
 
-For detailed usage instructions, including how to configure AI providers, see the [documentation](https://jupyterlite-ai.readthedocs.io/).
+For detailed usage instructions, including how to configure AI providers, see the [documentation](https://jupyter-ai-lite.readthedocs.io/).
 
 ## Uninstall
 
@@ -48,4 +48,4 @@ pip uninstall jupyternaut-lite jupyter-ai-agent-lite
 
 ## Contributing
 
-See [CONTRIBUTING](https://github.com/jupyterlite/ai/blob/main/CONTRIBUTING.md)
+See [CONTRIBUTING](https://github.com/jupyterlab/jupyter-ai-lite/blob/main/CONTRIBUTING.md)

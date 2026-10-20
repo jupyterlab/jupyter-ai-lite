@@ -24,7 +24,7 @@ build:
           mkdir -p demo/contents
           cp demo/README.md demo/contents/
           uv run --directory=demo jupyter lite build
-          sed -i "s|https://jupyterlite.github.io/ai/lab/index.html|/lite/lab/index.html|g" docs/index.md
+          sed -i "s|https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html|/lite/lab/index.html|g" docs/index.md
         fi
 
     # Build documentation

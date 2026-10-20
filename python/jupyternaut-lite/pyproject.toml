@@ -39,12 +39,12 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://jupyterlite-ai.readthedocs.io/en/latest/"
-Repository = "https://github.com/jupyterlite/ai"
-Changelog = "https://jupyterlite-ai.readthedocs.io/en/latest/changelog/"
-Source = "https://github.com/jupyterlite/ai/tree/main"
-Issues = "https://github.com/jupyterlite/ai/issues/new/choose"
-"Try it" = "https://jupyterlite.github.io/ai/lab/index.html"
+Documentation = "https://jupyter-ai-lite.readthedocs.io/en/latest/"
+Repository = "https://github.com/jupyterlab/jupyter-ai-lite"
+Changelog = "https://jupyter-ai-lite.readthedocs.io/en/latest/changelog/"
+Source = "https://github.com/jupyterlab/jupyter-ai-lite/tree/main"
+Issues = "https://github.com/jupyterlab/jupyter-ai-lite/issues/new/choose"
+"Try it" = "https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html"
 
 [project.optional-dependencies]
 jupyter = [

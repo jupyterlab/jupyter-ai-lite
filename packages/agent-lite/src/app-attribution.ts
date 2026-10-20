@@ -22,7 +22,7 @@ const APP_ATTRIBUTION_OPTION = 'appAttribution';
 
 const DEFAULT_APP_ATTRIBUTION: IAppAttribution = {
   name: 'Jupyter AI Lite',
-  url: 'https://github.com/jupyterlite/ai'
+  url: 'https://github.com/jupyterlab/jupyter-ai-lite'
 };
 
 /**

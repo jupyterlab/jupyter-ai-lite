@@ -12,7 +12,7 @@ project:
     - llm
     - code-completion
     - chat
-  github: https://github.com/jupyterlite/ai
+  github: https://github.com/jupyterlab/jupyter-ai-lite
   toc:
     - file: docs/index.md
     - file: docs/install.md
