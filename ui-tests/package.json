@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "jupyter-ai-lite Integration Tests",
   "private": true,
+  "packageManager": "yarn@3.5.0",
   "scripts": {
     "start": "jupyter lab --config jupyter_server_test_config.py",
     "test": "jlpm playwright test",
