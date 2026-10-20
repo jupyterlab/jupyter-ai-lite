@@ -4,829 +4,829 @@
 
 ## 0.20.1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/@jupyterlite/ai@0.20.0...00013ac714ca14ece6a9ec189d3d8ca6bdea2882))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/@jupyterlite/ai@0.20.0...00013ac714ca14ece6a9ec189d3d8ca6bdea2882))
 
 ### Enhancements made
 
-- Move 'skills' command and tool call callbacks to persona [#377](https://github.com/jupyterlite/ai/pull/377) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Move 'skills' command and tool call callbacks to persona [#377](https://github.com/jupyterlab/jupyter-ai-lite/pull/377) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Fix: set the chat as ready when messages are loaded only [#381](https://github.com/jupyterlite/ai/pull/381) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Fix: set the chat as ready when messages are loaded only [#381](https://github.com/jupyterlab/jupyter-ai-lite/pull/381) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Pin the uv version in a release dependency group [#379](https://github.com/jupyterlite/ai/pull/379) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Bump jupyternaut-persona in demo lock file [#378](https://github.com/jupyterlite/ai/pull/378) ([@brichet](https://github.com/brichet), [@Copilot](https://github.com/Copilot), [@jtpio](https://github.com/jtpio))
-- update the uv lock file in demo with latest jupyternaut-persona version [#375](https://github.com/jupyterlite/ai/pull/375) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Pin the uv version in a release dependency group [#379](https://github.com/jupyterlab/jupyter-ai-lite/pull/379) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump jupyternaut-persona in demo lock file [#378](https://github.com/jupyterlab/jupyter-ai-lite/pull/378) ([@brichet](https://github.com/brichet), [@Copilot](https://github.com/Copilot), [@jtpio](https://github.com/jtpio))
+- update the uv lock file in demo with latest jupyternaut-persona version [#375](https://github.com/jupyterlab/jupyter-ai-lite/pull/375) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-09-18&to=2026-09-28&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-09-18&to=2026-09-28&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-09-18..2026-09-28&type=Issues)) | @Copilot ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3ACopilot+updated%3A2026-09-18..2026-09-28&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-09-18..2026-09-28&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-09-18..2026-09-28&type=Issues)) | @Copilot ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3ACopilot+updated%3A2026-09-18..2026-09-28&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-09-18..2026-09-28&type=Issues))
 
 <!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.20.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/@jupyterlite/ai@0.19.0...8ade260d199288bec26543f67b68997bb0ed2371))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/@jupyterlite/ai@0.19.0...8ade260d199288bec26543f67b68997bb0ed2371))
 
 ### Enhancements made
 
-- Expose `additionalInstructions`, fix tool call handling [#371](https://github.com/jupyterlite/ai/pull/371) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Jupyternaut persona extension [#356](https://github.com/jupyterlite/ai/pull/356) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Expose `additionalInstructions`, fix tool call handling [#371](https://github.com/jupyterlab/jupyter-ai-lite/pull/371) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Jupyternaut persona extension [#356](https://github.com/jupyterlab/jupyter-ai-lite/pull/356) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Add jupyternaut-persona as dependency of jupyterlite-ai [#367](https://github.com/jupyterlite/ai/pull/367) ([@brichet](https://github.com/brichet))
-- Explicitly request file/directory content from the contents manager [#361](https://github.com/jupyterlite/ai/pull/361) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Fix default system prompt to prevent stopping before tool calls [#357](https://github.com/jupyterlite/ai/pull/357) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Add jupyternaut-persona as dependency of jupyterlite-ai [#367](https://github.com/jupyterlab/jupyter-ai-lite/pull/367) ([@brichet](https://github.com/brichet))
+- Explicitly request file/directory content from the contents manager [#361](https://github.com/jupyterlab/jupyter-ai-lite/pull/361) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Fix default system prompt to prevent stopping before tool calls [#357](https://github.com/jupyterlab/jupyter-ai-lite/pull/357) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Skip check-python step in jupyter-releaser [#374](https://github.com/jupyterlite/ai/pull/374) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update AI SDK packages [#372](https://github.com/jupyterlite/ai/pull/372) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Update to JupyterLite 0.8 [#370](https://github.com/jupyterlite/ai/pull/370) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Bump @jupyter/chat to 0.25 [#368](https://github.com/jupyterlite/ai/pull/368) ([@brichet](https://github.com/brichet), [@dlqqq](https://github.com/dlqqq), [@jtpio](https://github.com/jtpio))
-- Remove the message output rerender [#364](https://github.com/jupyterlite/ai/pull/364) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Bump to @jupyter/chat 0.24 stable [#362](https://github.com/jupyterlite/ai/pull/362) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Use the jupyter MCP manager extension [#360](https://github.com/jupyterlite/ai/pull/360) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Bump jupyter chat 0.24 [#359](https://github.com/jupyterlite/ai/pull/359) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update to AI SDK v7 [#358](https://github.com/jupyterlite/ai/pull/358) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Python monorepo [#354](https://github.com/jupyterlite/ai/pull/354) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Skip check-python step in jupyter-releaser [#374](https://github.com/jupyterlab/jupyter-ai-lite/pull/374) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update AI SDK packages [#372](https://github.com/jupyterlab/jupyter-ai-lite/pull/372) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Update to JupyterLite 0.8 [#370](https://github.com/jupyterlab/jupyter-ai-lite/pull/370) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump @jupyter/chat to 0.25 [#368](https://github.com/jupyterlab/jupyter-ai-lite/pull/368) ([@brichet](https://github.com/brichet), [@dlqqq](https://github.com/dlqqq), [@jtpio](https://github.com/jtpio))
+- Remove the message output rerender [#364](https://github.com/jupyterlab/jupyter-ai-lite/pull/364) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump to @jupyter/chat 0.24 stable [#362](https://github.com/jupyterlab/jupyter-ai-lite/pull/362) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Use the jupyter MCP manager extension [#360](https://github.com/jupyterlab/jupyter-ai-lite/pull/360) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump jupyter chat 0.24 [#359](https://github.com/jupyterlab/jupyter-ai-lite/pull/359) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update to AI SDK v7 [#358](https://github.com/jupyterlab/jupyter-ai-lite/pull/358) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Python monorepo [#354](https://github.com/jupyterlab/jupyter-ai-lite/pull/354) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-06-15&to=2026-09-18&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-06-15&to=2026-09-18&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-06-15..2026-09-18&type=Issues)) | @dlqqq ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Adlqqq+updated%3A2026-06-15..2026-09-18&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-06-15..2026-09-18&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-06-15..2026-09-18&type=Issues)) | @dlqqq ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Adlqqq+updated%3A2026-06-15..2026-09-18&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-06-15..2026-09-18&type=Issues))
 
 ## 0.19.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.18.0...0b3dff1a9d141de2f15d3efc907acb859c0cb3ed))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.18.0...0b3dff1a9d141de2f15d3efc907acb859c0cb3ed))
 
 ### Enhancements made
 
-- Enable prompt caching for Anthropic models [#347](https://github.com/jupyterlite/ai/pull/347) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet))
-- Title requested for the 5 firsts user messages [#340](https://github.com/jupyterlite/ai/pull/340) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Improve message queue component [#334](https://github.com/jupyterlite/ai/pull/334) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
+- Enable prompt caching for Anthropic models [#347](https://github.com/jupyterlab/jupyter-ai-lite/pull/347) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet))
+- Title requested for the 5 firsts user messages [#340](https://github.com/jupyterlab/jupyter-ai-lite/pull/340) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Improve message queue component [#334](https://github.com/jupyterlab/jupyter-ai-lite/pull/334) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Monorepo with agent and extension [#353](https://github.com/jupyterlite/ai/pull/353) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update UI tests dependencies [#346](https://github.com/jupyterlite/ai/pull/346) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- feat: Use grouped callbacks [#343](https://github.com/jupyterlite/ai/pull/343) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
+- Monorepo with agent and extension [#353](https://github.com/jupyterlab/jupyter-ai-lite/pull/353) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update UI tests dependencies [#346](https://github.com/jupyterlab/jupyter-ai-lite/pull/346) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- feat: Use grouped callbacks [#343](https://github.com/jupyterlab/jupyter-ai-lite/pull/343) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-05-15&to=2026-06-15&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-05-15&to=2026-06-15&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-05-15..2026-06-15&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-05-15..2026-06-15&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AMUFFANUJ+updated%3A2026-05-15..2026-06-15&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AYahiewi+updated%3A2026-05-15..2026-06-15&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-05-15..2026-06-15&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-05-15..2026-06-15&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AMUFFANUJ+updated%3A2026-05-15..2026-06-15&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AYahiewi+updated%3A2026-05-15..2026-06-15&type=Issues))
 
 ## 0.18.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.17.0...2307a5230c43ece0e01793182ca42ebe953d1ffe))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.17.0...2307a5230c43ece0e01793182ca42ebe953d1ffe))
 
 ### Enhancements made
 
-- Title follow up [#337](https://github.com/jupyterlite/ai/pull/337) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Implement error component [#333](https://github.com/jupyterlite/ai/pull/333) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
-- Implement queue component [#331](https://github.com/jupyterlite/ai/pull/331) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Use grouped tool calls component [#328](https://github.com/jupyterlite/ai/pull/328) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Improve attachment input handling and history [#323](https://github.com/jupyterlite/ai/pull/323) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
+- Title follow up [#337](https://github.com/jupyterlab/jupyter-ai-lite/pull/337) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Implement error component [#333](https://github.com/jupyterlab/jupyter-ai-lite/pull/333) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
+- Implement queue component [#331](https://github.com/jupyterlab/jupyter-ai-lite/pull/331) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Use grouped tool calls component [#328](https://github.com/jupyterlab/jupyter-ai-lite/pull/328) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Improve attachment input handling and history [#323](https://github.com/jupyterlab/jupyter-ai-lite/pull/323) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
 
 ### Bugs fixed
 
-- Save the chat when autosave is updated [#336](https://github.com/jupyterlite/ai/pull/336) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Save the chat when autosave is updated [#336](https://github.com/jupyterlab/jupyter-ai-lite/pull/336) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Export an interface for the ai chat model [#335](https://github.com/jupyterlite/ai/pull/335) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Export an interface for the ai chat model [#335](https://github.com/jupyterlab/jupyter-ai-lite/pull/335) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-04-23&to=2026-05-15&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-04-23&to=2026-05-15&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-04-23..2026-05-15&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-04-23..2026-05-15&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2026-04-23..2026-05-15&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AYahiewi+updated%3A2026-04-23..2026-05-15&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-04-23..2026-05-15&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-04-23..2026-05-15&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2026-04-23..2026-05-15&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AYahiewi+updated%3A2026-04-23..2026-05-15&type=Issues))
 
 ## 0.17.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.16.0...48e65a88b6da6626f8d100be4a242bbaa83370eb))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.16.0...48e65a88b6da6626f8d100be4a242bbaa83370eb))
 
 ### Enhancements made
 
-- Add Open-or-Reveal Chat Command with Prompt Prefill Support [#329](https://github.com/jupyterlite/ai/pull/329) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Chat model title [#327](https://github.com/jupyterlite/ai/pull/327) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Add Open-or-Reveal Chat Command with Prompt Prefill Support [#329](https://github.com/jupyterlab/jupyter-ai-lite/pull/329) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Chat model title [#327](https://github.com/jupyterlab/jupyter-ai-lite/pull/327) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Await for chat messages to be cleared before setting history [#325](https://github.com/jupyterlite/ai/pull/325) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Add support for images and pdf files [#306](https://github.com/jupyterlite/ai/pull/306) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
+- Await for chat messages to be cleared before setting history [#325](https://github.com/jupyterlab/jupyter-ai-lite/pull/325) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Add support for images and pdf files [#306](https://github.com/jupyterlab/jupyter-ai-lite/pull/306) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Remove INotebookTracker from IChatTracker plugin dependencies [#324](https://github.com/jupyterlite/ai/pull/324) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Remove INotebookTracker from IChatTracker plugin dependencies [#324](https://github.com/jupyterlab/jupyter-ai-lite/pull/324) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-04-14&to=2026-04-23&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-04-14&to=2026-04-23&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-04-14..2026-04-23&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-04-14..2026-04-23&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AMUFFANUJ+updated%3A2026-04-14..2026-04-23&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AYahiewi+updated%3A2026-04-14..2026-04-23&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-04-14..2026-04-23&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-04-14..2026-04-23&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AMUFFANUJ+updated%3A2026-04-14..2026-04-23&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AYahiewi+updated%3A2026-04-14..2026-04-23&type=Issues))
 
 ## 0.16.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.15.0...40e4fb9fc8866ea3011341c9b1ef30ed70de408b))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.15.0...40e4fb9fc8866ea3011341c9b1ef30ed70de408b))
 
 ### Enhancements made
 
-- Show context window usage [#262](https://github.com/jupyterlite/ai/pull/262) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Show context window usage [#262](https://github.com/jupyterlab/jupyter-ai-lite/pull/262) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Specify chat file format (backup) when fetching content [#320](https://github.com/jupyterlite/ai/pull/320) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Align plugin token naming [#319](https://github.com/jupyterlite/ai/pull/319) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet))
+- Specify chat file format (backup) when fetching content [#320](https://github.com/jupyterlab/jupyter-ai-lite/pull/320) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Align plugin token naming [#319](https://github.com/jupyterlab/jupyter-ai-lite/pull/319) ([@MUFFANUJ](https://github.com/MUFFANUJ), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update to the latest `fastmcp` [#318](https://github.com/jupyterlite/ai/pull/318) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Update to the latest `fastmcp` [#318](https://github.com/jupyterlab/jupyter-ai-lite/pull/318) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-04-10&to=2026-04-14&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-04-10&to=2026-04-14&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-04-10..2026-04-14&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-04-10..2026-04-14&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AMUFFANUJ+updated%3A2026-04-10..2026-04-14&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-04-10..2026-04-14&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-04-10..2026-04-14&type=Issues)) | @MUFFANUJ ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AMUFFANUJ+updated%3A2026-04-10..2026-04-14&type=Issues))
 
 ## 0.15.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.14.0...5f196b5529b489025f836069fcffba39b1ece905))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.14.0...5f196b5529b489025f836069fcffba39b1ece905))
 
 ### Enhancements made
 
-- Save and restore chat [#303](https://github.com/jupyterlite/ai/pull/303) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update to `jupyterlab-ai-commands` 0.3.1 [#301](https://github.com/jupyterlite/ai/pull/301) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Allow arbitrary model ids in provider dialog [#293](https://github.com/jupyterlite/ai/pull/293) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Improve history sanitization [#290](https://github.com/jupyterlite/ai/pull/290) ([@brichet](https://github.com/brichet), [@Yahiewi](https://github.com/Yahiewi), [@jtpio](https://github.com/jtpio))
-- Use jupyter-chat-components for tool call components [#276](https://github.com/jupyterlite/ai/pull/276) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Save and restore chat [#303](https://github.com/jupyterlab/jupyter-ai-lite/pull/303) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update to `jupyterlab-ai-commands` 0.3.1 [#301](https://github.com/jupyterlab/jupyter-ai-lite/pull/301) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Allow arbitrary model ids in provider dialog [#293](https://github.com/jupyterlab/jupyter-ai-lite/pull/293) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Improve history sanitization [#290](https://github.com/jupyterlab/jupyter-ai-lite/pull/290) ([@brichet](https://github.com/brichet), [@Yahiewi](https://github.com/Yahiewi), [@jtpio](https://github.com/jtpio))
+- Use jupyter-chat-components for tool call components [#276](https://github.com/jupyterlab/jupyter-ai-lite/pull/276) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Update the list of available chats by listening to settings changes [#308](https://github.com/jupyterlite/ai/pull/308) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update the list of available chats by listening to settings changes [#308](https://github.com/jupyterlab/jupyter-ai-lite/pull/308) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Fix timeout in tests on save and restore chat [#316](https://github.com/jupyterlite/ai/pull/316) ([@brichet](https://github.com/brichet))
-- Pin fakeredis\<0.35.0 [#314](https://github.com/jupyterlite/ai/pull/314) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Bump @jupyter/chat to 0.21.1 [#309](https://github.com/jupyterlite/ai/pull/309) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Exporting more interfaces [#300](https://github.com/jupyterlite/ai/pull/300) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update dependencies [#294](https://github.com/jupyterlite/ai/pull/294) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Fix timeout in tests on save and restore chat [#316](https://github.com/jupyterlab/jupyter-ai-lite/pull/316) ([@brichet](https://github.com/brichet))
+- Pin fakeredis\<0.35.0 [#314](https://github.com/jupyterlab/jupyter-ai-lite/pull/314) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump @jupyter/chat to 0.21.1 [#309](https://github.com/jupyterlab/jupyter-ai-lite/pull/309) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Exporting more interfaces [#300](https://github.com/jupyterlab/jupyter-ai-lite/pull/300) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update dependencies [#294](https://github.com/jupyterlab/jupyter-ai-lite/pull/294) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-03-13&to=2026-04-10&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-03-13&to=2026-04-10&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-03-13..2026-04-10&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-03-13..2026-04-10&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AYahiewi+updated%3A2026-03-13..2026-04-10&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-03-13..2026-04-10&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-03-13..2026-04-10&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AYahiewi+updated%3A2026-03-13..2026-04-10&type=Issues))
 
 ## 0.14.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.13.0...565b3a02e70706022dde4c2ee9394bed35ac7137))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.13.0...565b3a02e70706022dde4c2ee9394bed35ac7137))
 
 ### Enhancements made
 
-- Improve command discovery [#287](https://github.com/jupyterlite/ai/pull/287) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Improve command discovery [#287](https://github.com/jupyterlab/jupyter-ai-lite/pull/287) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Fix the attachment of the secrets field to the secrets manager [#289](https://github.com/jupyterlite/ai/pull/289) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Sanitize history to prevent chat errors [#284](https://github.com/jupyterlite/ai/pull/284) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
+- Fix the attachment of the secrets field to the secrets manager [#289](https://github.com/jupyterlab/jupyter-ai-lite/pull/289) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Sanitize history to prevent chat errors [#284](https://github.com/jupyterlab/jupyter-ai-lite/pull/284) ([@Yahiewi](https://github.com/Yahiewi), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Settings panel plugin [#286](https://github.com/jupyterlite/ai/pull/286) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Bump dependencies [#282](https://github.com/jupyterlite/ai/pull/282) ([@jtpio](https://github.com/jtpio))
+- Settings panel plugin [#286](https://github.com/jupyterlab/jupyter-ai-lite/pull/286) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump dependencies [#282](https://github.com/jupyterlab/jupyter-ai-lite/pull/282) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-03-02&to=2026-03-13&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-03-02&to=2026-03-13&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-03-02..2026-03-13&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-03-02..2026-03-13&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3AYahiewi+updated%3A2026-03-02..2026-03-13&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-03-02..2026-03-13&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-03-02..2026-03-13&type=Issues)) | @Yahiewi ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3AYahiewi+updated%3A2026-03-02..2026-03-13&type=Issues))
 
 ## 0.13.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.12.0...c5abe843988546c920ae4a963b6342bfb8419280))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.12.0...c5abe843988546c920ae4a963b6342bfb8419280))
 
 ### Enhancements made
 
-- Bumping @jupyter/chat to use the new sidepanel [#278](https://github.com/jupyterlite/ai/pull/278) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Providing a chat tracker [#277](https://github.com/jupyterlite/ai/pull/277) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Adding icon for JupyterLite AI setting [#274](https://github.com/jupyterlite/ai/pull/274) ([@nakul-py](https://github.com/nakul-py), [@jtpio](https://github.com/jtpio))
-- Support displaying mime bundles in the chat [#272](https://github.com/jupyterlite/ai/pull/272) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Web fetch and search tools [#265](https://github.com/jupyterlite/ai/pull/265) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bumping @jupyter/chat to use the new sidepanel [#278](https://github.com/jupyterlab/jupyter-ai-lite/pull/278) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Providing a chat tracker [#277](https://github.com/jupyterlab/jupyter-ai-lite/pull/277) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Adding icon for JupyterLite AI setting [#274](https://github.com/jupyterlab/jupyter-ai-lite/pull/274) ([@nakul-py](https://github.com/nakul-py), [@jtpio](https://github.com/jtpio))
+- Support displaying mime bundles in the chat [#272](https://github.com/jupyterlab/jupyter-ai-lite/pull/272) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Web fetch and search tools [#265](https://github.com/jupyterlab/jupyter-ai-lite/pull/265) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Fix `maxOutputTokens` in the settings [#269](https://github.com/jupyterlite/ai/pull/269) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Bump secrets manager [#267](https://github.com/jupyterlite/ai/pull/267) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update the style of the selected model in the dropdown [#266](https://github.com/jupyterlite/ai/pull/266) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio), [@nakul-py](https://github.com/nakul-py))
+- Fix `maxOutputTokens` in the settings [#269](https://github.com/jupyterlab/jupyter-ai-lite/pull/269) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump secrets manager [#267](https://github.com/jupyterlab/jupyter-ai-lite/pull/267) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update the style of the selected model in the dropdown [#266](https://github.com/jupyterlab/jupyter-ai-lite/pull/266) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio), [@nakul-py](https://github.com/nakul-py))
 
 ### Maintenance and upkeep improvements
 
-- Bump to jupyter-chat 0.20.0 [#281](https://github.com/jupyterlite/ai/pull/281) ([@jtpio](https://github.com/jtpio))
-- Drop python 3.9 and add 3.14 [#279](https://github.com/jupyterlite/ai/pull/279) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Bump @jupyter/chat to 0.20.0-alpha.1 [#268](https://github.com/jupyterlite/ai/pull/268) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump to jupyter-chat 0.20.0 [#281](https://github.com/jupyterlab/jupyter-ai-lite/pull/281) ([@jtpio](https://github.com/jtpio))
+- Drop python 3.9 and add 3.14 [#279](https://github.com/jupyterlab/jupyter-ai-lite/pull/279) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump @jupyter/chat to 0.20.0-alpha.1 [#268](https://github.com/jupyterlab/jupyter-ai-lite/pull/268) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Expand MCP docs [#275](https://github.com/jupyterlite/ai/pull/275) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Include lite deployment in doc [#270](https://github.com/jupyterlite/ai/pull/270) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Expand MCP docs [#275](https://github.com/jupyterlab/jupyter-ai-lite/pull/275) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Include lite deployment in doc [#270](https://github.com/jupyterlab/jupyter-ai-lite/pull/270) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-02-11&to=2026-03-02&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-02-11&to=2026-03-02&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-02-11..2026-03-02&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-02-11..2026-03-02&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2026-02-11..2026-03-02&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-02-11..2026-03-02&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-02-11..2026-03-02&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2026-02-11..2026-03-02&type=Issues))
 
 ## 0.12.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.11.1...56fc91778c2109b984aaeb193c593a5fefdff4b2))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.11.1...56fc91778c2109b984aaeb193c593a5fefdff4b2))
 
 ### Enhancements made
 
-- Add the chat command registry [#261](https://github.com/jupyterlite/ai/pull/261) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Support skills [#259](https://github.com/jupyterlite/ai/pull/259) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Add the chat command registry [#261](https://github.com/jupyterlab/jupyter-ai-lite/pull/261) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Support skills [#259](https://github.com/jupyterlab/jupyter-ai-lite/pull/259) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Bump @jupyter/chat [#264](https://github.com/jupyterlite/ai/pull/264) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
-- Update dependencies and available models [#263](https://github.com/jupyterlite/ai/pull/263) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump @jupyter/chat [#264](https://github.com/jupyterlab/jupyter-ai-lite/pull/264) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Update dependencies and available models [#263](https://github.com/jupyterlab/jupyter-ai-lite/pull/263) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-02-02&to=2026-02-11&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-02-02&to=2026-02-11&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-02-02..2026-02-11&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-02-02..2026-02-11&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-02-02..2026-02-11&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-02-02..2026-02-11&type=Issues))
 
 ## 0.11.1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.11.0...ced22278deed7ddd759b09893888fa2d6381f32c))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.11.0...ced22278deed7ddd759b09893888fa2d6381f32c))
 
 ### Enhancements made
 
-- Reduce dependencies of chat model registry plugin [#258](https://github.com/jupyterlite/ai/pull/258) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Reduce dependencies of chat model registry plugin [#258](https://github.com/jupyterlab/jupyter-ai-lite/pull/258) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-01-27&to=2026-02-02&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-01-27&to=2026-02-02&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-01-27..2026-02-02&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-01-27..2026-02-02&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-01-27..2026-02-02&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-01-27..2026-02-02&type=Issues))
 
 ## 0.11.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.10.0...01f95fe0e23d1db71262d9bd0288e11cbfbc8dde))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.10.0...01f95fe0e23d1db71262d9bd0288e11cbfbc8dde))
 
 ### Enhancements made
 
-- Switch to `jupyterlab-ai-commands` [#219](https://github.com/jupyterlite/ai/pull/219) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Switch to `jupyterlab-ai-commands` [#219](https://github.com/jupyterlab/jupyter-ai-lite/pull/219) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Update system prompt to support more languages [#255](https://github.com/jupyterlite/ai/pull/255) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
+- Update system prompt to support more languages [#255](https://github.com/jupyterlab/jupyter-ai-lite/pull/255) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
 
 ### Maintenance and upkeep improvements
 
-- Bump `jupyterlab-ai-commands` [#257](https://github.com/jupyterlite/ai/pull/257) ([@jtpio](https://github.com/jtpio))
-- Export the Jupyternaut icon [#256](https://github.com/jupyterlite/ai/pull/256) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Update AI SDK dependencies [#251](https://github.com/jupyterlite/ai/pull/251) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Use the functiongemma model for tool call tests [#250](https://github.com/jupyterlite/ai/pull/250) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio), [@nakul-py](https://github.com/nakul-py))
-- Configure artifact retention for GitHub Pages demo [#249](https://github.com/jupyterlite/ai/pull/249) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Align deps on stable releases [#247](https://github.com/jupyterlite/ai/pull/247) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Using the chat with new UI/UX [#218](https://github.com/jupyterlite/ai/pull/218) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+- Bump `jupyterlab-ai-commands` [#257](https://github.com/jupyterlab/jupyter-ai-lite/pull/257) ([@jtpio](https://github.com/jtpio))
+- Export the Jupyternaut icon [#256](https://github.com/jupyterlab/jupyter-ai-lite/pull/256) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Update AI SDK dependencies [#251](https://github.com/jupyterlab/jupyter-ai-lite/pull/251) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Use the functiongemma model for tool call tests [#250](https://github.com/jupyterlab/jupyter-ai-lite/pull/250) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio), [@nakul-py](https://github.com/nakul-py))
+- Configure artifact retention for GitHub Pages demo [#249](https://github.com/jupyterlab/jupyter-ai-lite/pull/249) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Align deps on stable releases [#247](https://github.com/jupyterlab/jupyter-ai-lite/pull/247) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Using the chat with new UI/UX [#218](https://github.com/jupyterlab/jupyter-ai-lite/pull/218) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Document remote MCP servers [#248](https://github.com/jupyterlite/ai/pull/248) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Document remote MCP servers [#248](https://github.com/jupyterlab/jupyter-ai-lite/pull/248) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2026-01-13&to=2026-01-27&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-01-13&to=2026-01-27&type=c))
 
-@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2026-01-13..2026-01-27&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2026-01-13..2026-01-27&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2026-01-13..2026-01-27&type=Issues))
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-01-13..2026-01-27&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-01-13..2026-01-27&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2026-01-13..2026-01-27&type=Issues))
 
 ## 0.10.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.1...9450039f30617e388071aef0427490e986e67329))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.1...9450039f30617e388071aef0427490e986e67329))
 
 ### Enhancements made
 
-- Getting model from widget first than fallback to documentManager [#237](https://github.com/jupyterlite/ai/pull/237) ([@nakul-py](https://github.com/nakul-py), [@brichet](https://github.com/brichet))
+- Getting model from widget first than fallback to documentManager [#237](https://github.com/jupyterlab/jupyter-ai-lite/pull/237) ([@nakul-py](https://github.com/nakul-py), [@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update to AI SDK v6 [#245](https://github.com/jupyterlite/ai/pull/245) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Localize user facing strings [#238](https://github.com/jupyterlite/ai/pull/238) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Update to AI SDK v6 [#245](https://github.com/jupyterlab/jupyter-ai-lite/pull/245) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Localize user facing strings [#238](https://github.com/jupyterlab/jupyter-ai-lite/pull/238) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
 
 ### Documentation improvements
 
-- Add favicon to the docs [#244](https://github.com/jupyterlite/ai/pull/244) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
-- Add docs to use the any-llm docker image without downloading source [#242](https://github.com/jupyterlite/ai/pull/242) ([@angpt](https://github.com/angpt), [@jtpio](https://github.com/jtpio))
-- Add documentation [#241](https://github.com/jupyterlite/ai/pull/241) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
-- Document the any-llm gateway usage [#239](https://github.com/jupyterlite/ai/pull/239) ([@jtpio](https://github.com/jtpio), [@angpt](https://github.com/angpt), [@brichet](https://github.com/brichet))
+- Add favicon to the docs [#244](https://github.com/jupyterlab/jupyter-ai-lite/pull/244) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet), [@nakul-py](https://github.com/nakul-py))
+- Add docs to use the any-llm docker image without downloading source [#242](https://github.com/jupyterlab/jupyter-ai-lite/pull/242) ([@angpt](https://github.com/angpt), [@jtpio](https://github.com/jtpio))
+- Add documentation [#241](https://github.com/jupyterlab/jupyter-ai-lite/pull/241) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Document the any-llm gateway usage [#239](https://github.com/jupyterlab/jupyter-ai-lite/pull/239) ([@jtpio](https://github.com/jtpio), [@angpt](https://github.com/angpt), [@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
 The following people contributed discussions, new ideas, code and documentation contributions, and review.
 See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/#how-does-this-tool-define-contributions-in-the-reports).
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-11-20&to=2026-01-13&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-11-20&to=2026-01-13&type=c))
 
-@angpt ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Aangpt+updated%3A2025-11-20..2026-01-13&type=Issues)) | @brichet ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-11-20..2026-01-13&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-11-20..2026-01-13&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2025-11-20..2026-01-13&type=Issues))
+@angpt ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Aangpt+updated%3A2025-11-20..2026-01-13&type=Issues)) | @brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-11-20..2026-01-13&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-11-20..2026-01-13&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2025-11-20..2026-01-13&type=Issues))
 
 ## 0.9.1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0...3a915f27824d2a4963abd22d3d6239c8da861907))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0...3a915f27824d2a4963abd22d3d6239c8da861907))
 
 ### Bugs fixed
 
-- Avoid opening a chat if the expected provider is not in settings [#235](https://github.com/jupyterlite/ai/pull/235) ([@brichet](https://github.com/brichet))
+- Avoid opening a chat if the expected provider is not in settings [#235](https://github.com/jupyterlab/jupyter-ai-lite/pull/235) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-11-17&to=2025-11-20&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-11-17&to=2025-11-20&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-11-17..2025-11-20&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-11-17..2025-11-20&type=Issues)
 
 ## 0.9.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0a4...d3ffd58075cb495aeea2fce70f4ccd9b276a8c49))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0a4...d3ffd58075cb495aeea2fce70f4ccd9b276a8c49))
 
 ### Enhancements made
 
-- Add optional URL suggestions to provider info [#230](https://github.com/jupyterlite/ai/pull/230) ([@brichet](https://github.com/brichet))
-- Adding Cell Outputs as a part of attachments [#226](https://github.com/jupyterlite/ai/pull/226) ([@nakul-py](https://github.com/nakul-py))
-- Completion indicator [#224](https://github.com/jupyterlite/ai/pull/224) ([@brichet](https://github.com/brichet))
-- Use OpenAI compatible provider [#221](https://github.com/jupyterlite/ai/pull/221) ([@brichet](https://github.com/brichet))
+- Add optional URL suggestions to provider info [#230](https://github.com/jupyterlab/jupyter-ai-lite/pull/230) ([@brichet](https://github.com/brichet))
+- Adding Cell Outputs as a part of attachments [#226](https://github.com/jupyterlab/jupyter-ai-lite/pull/226) ([@nakul-py](https://github.com/nakul-py))
+- Completion indicator [#224](https://github.com/jupyterlab/jupyter-ai-lite/pull/224) ([@brichet](https://github.com/brichet))
+- Use OpenAI compatible provider [#221](https://github.com/jupyterlab/jupyter-ai-lite/pull/221) ([@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Settings UI improvements [#225](https://github.com/jupyterlite/ai/pull/225) ([@brichet](https://github.com/brichet))
-- Save empty field in the provider settings [#223](https://github.com/jupyterlite/ai/pull/223) ([@brichet](https://github.com/brichet))
-- Fix the type of response for the generic provider [#220](https://github.com/jupyterlite/ai/pull/220) ([@jtpio](https://github.com/jtpio))
+- Settings UI improvements [#225](https://github.com/jupyterlab/jupyter-ai-lite/pull/225) ([@brichet](https://github.com/brichet))
+- Save empty field in the provider settings [#223](https://github.com/jupyterlab/jupyter-ai-lite/pull/223) ([@brichet](https://github.com/brichet))
+- Fix the type of response for the generic provider [#220](https://github.com/jupyterlab/jupyter-ai-lite/pull/220) ([@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Use the generic provider for Ollama [#233](https://github.com/jupyterlite/ai/pull/233) ([@jtpio](https://github.com/jtpio))
-- Restore `strictNullChecks` [#217](https://github.com/jupyterlite/ai/pull/217) ([@jtpio](https://github.com/jtpio))
-- Improve handling of dependencies for the demo [#216](https://github.com/jupyterlite/ai/pull/216) ([@jtpio](https://github.com/jtpio))
+- Use the generic provider for Ollama [#233](https://github.com/jupyterlab/jupyter-ai-lite/pull/233) ([@jtpio](https://github.com/jtpio))
+- Restore `strictNullChecks` [#217](https://github.com/jupyterlab/jupyter-ai-lite/pull/217) ([@jtpio](https://github.com/jtpio))
+- Improve handling of dependencies for the demo [#216](https://github.com/jupyterlab/jupyter-ai-lite/pull/216) ([@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Adding separate contributing documentation file. [#228](https://github.com/jupyterlite/ai/pull/228) ([@nakul-py](https://github.com/nakul-py))
+- Adding separate contributing documentation file. [#228](https://github.com/jupyterlab/jupyter-ai-lite/pull/228) ([@nakul-py](https://github.com/nakul-py))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-10-24&to=2025-11-17&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-10-24&to=2025-11-17&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-10-24..2025-11-17&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-10-24..2025-11-17&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2025-10-24..2025-11-17&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-10-24..2025-11-17&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-10-24..2025-11-17&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2025-10-24..2025-11-17&type=Issues)
 
 ## 0.9.0a4
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0a3...72563be35fc0f3fbfb31b6391516660f2ba3b9f2))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0a3...72563be35fc0f3fbfb31b6391516660f2ba3b9f2))
 
 ### Enhancements made
 
-- Split and unified cell diffs [#213](https://github.com/jupyterlite/ai/pull/213) ([@jtpio](https://github.com/jtpio))
-- Making Ai Agent able to Reading content for attached cells [#209](https://github.com/jupyterlite/ai/pull/209) ([@nakul-py](https://github.com/nakul-py))
-- Better file tools [#206](https://github.com/jupyterlite/ai/pull/206) ([@jtpio](https://github.com/jtpio))
-- Show completion prompt in the AI Settings panel [#203](https://github.com/jupyterlite/ai/pull/203) ([@jtpio](https://github.com/jtpio))
-- Support Claude Haiku 4.5 [#202](https://github.com/jupyterlite/ai/pull/202) ([@jtpio](https://github.com/jtpio))
-- Move the secrets manager toggle below the providers [#200](https://github.com/jupyterlite/ai/pull/200) ([@jtpio](https://github.com/jtpio))
-- Better format tool calls that need approval [#198](https://github.com/jupyterlite/ai/pull/198) ([@jtpio](https://github.com/jtpio))
-- Support discovering commands with a query [#195](https://github.com/jupyterlite/ai/pull/195) ([@jtpio](https://github.com/jtpio))
+- Split and unified cell diffs [#213](https://github.com/jupyterlab/jupyter-ai-lite/pull/213) ([@jtpio](https://github.com/jtpio))
+- Making Ai Agent able to Reading content for attached cells [#209](https://github.com/jupyterlab/jupyter-ai-lite/pull/209) ([@nakul-py](https://github.com/nakul-py))
+- Better file tools [#206](https://github.com/jupyterlab/jupyter-ai-lite/pull/206) ([@jtpio](https://github.com/jtpio))
+- Show completion prompt in the AI Settings panel [#203](https://github.com/jupyterlab/jupyter-ai-lite/pull/203) ([@jtpio](https://github.com/jtpio))
+- Support Claude Haiku 4.5 [#202](https://github.com/jupyterlab/jupyter-ai-lite/pull/202) ([@jtpio](https://github.com/jtpio))
+- Move the secrets manager toggle below the providers [#200](https://github.com/jupyterlab/jupyter-ai-lite/pull/200) ([@jtpio](https://github.com/jtpio))
+- Better format tool calls that need approval [#198](https://github.com/jupyterlab/jupyter-ai-lite/pull/198) ([@jtpio](https://github.com/jtpio))
+- Support discovering commands with a query [#195](https://github.com/jupyterlab/jupyter-ai-lite/pull/195) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Fixing attachments attaches to old messages bug [#208](https://github.com/jupyterlite/ai/pull/208) ([@nakul-py](https://github.com/nakul-py))
-- Debounce settings updates when editing the system prompt [#204](https://github.com/jupyterlite/ai/pull/204) ([@jtpio](https://github.com/jtpio))
-- Copy the keys to secrets manager when switching [#201](https://github.com/jupyterlite/ai/pull/201) ([@brichet](https://github.com/brichet))
-- Fixing clear attachments bug [#196](https://github.com/jupyterlite/ai/pull/196) ([@nakul-py](https://github.com/nakul-py))
+- Fixing attachments attaches to old messages bug [#208](https://github.com/jupyterlab/jupyter-ai-lite/pull/208) ([@nakul-py](https://github.com/nakul-py))
+- Debounce settings updates when editing the system prompt [#204](https://github.com/jupyterlab/jupyter-ai-lite/pull/204) ([@jtpio](https://github.com/jtpio))
+- Copy the keys to secrets manager when switching [#201](https://github.com/jupyterlab/jupyter-ai-lite/pull/201) ([@brichet](https://github.com/brichet))
+- Fixing clear attachments bug [#196](https://github.com/jupyterlab/jupyter-ai-lite/pull/196) ([@nakul-py](https://github.com/nakul-py))
 
 ### Maintenance and upkeep improvements
 
-- Drop `skipLibCheck` [#214](https://github.com/jupyterlite/ai/pull/214) ([@jtpio](https://github.com/jtpio))
-- Increase timeout for the code completion tests [#212](https://github.com/jupyterlite/ai/pull/212) ([@jtpio](https://github.com/jtpio))
-- Minor fixes and clean up [#197](https://github.com/jupyterlite/ai/pull/197) ([@jtpio](https://github.com/jtpio))
+- Drop `skipLibCheck` [#214](https://github.com/jupyterlab/jupyter-ai-lite/pull/214) ([@jtpio](https://github.com/jtpio))
+- Increase timeout for the code completion tests [#212](https://github.com/jupyterlab/jupyter-ai-lite/pull/212) ([@jtpio](https://github.com/jtpio))
+- Minor fixes and clean up [#197](https://github.com/jupyterlab/jupyter-ai-lite/pull/197) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-10-15&to=2025-10-24&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-10-15&to=2025-10-24&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-10-15..2025-10-24&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-10-15..2025-10-24&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2025-10-15..2025-10-24&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-10-15..2025-10-24&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-10-15..2025-10-24&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2025-10-15..2025-10-24&type=Issues)
 
 ## 0.9.0a3
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0a2...3fbe54ef55d08c0d4042804fe98774ed9b9efc1f))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0a2...3fbe54ef55d08c0d4042804fe98774ed9b9efc1f))
 
 ### Enhancements made
 
-- Add Google Generative AI provider [#185](https://github.com/jupyterlite/ai/pull/185) ([@jtpio](https://github.com/jtpio))
-- Allow specifying an API key for the generic OpenAI compatible provider [#179](https://github.com/jupyterlite/ai/pull/179) ([@jtpio](https://github.com/jtpio))
-- Switch to ai-sdk and openai-agent [#176](https://github.com/jupyterlite/ai/pull/176) ([@brichet](https://github.com/brichet))
-- Add multichat panel [#169](https://github.com/jupyterlite/ai/pull/169) ([@brichet](https://github.com/brichet))
-- Custom base URL and generic provider (OpenAI compatible) [#171](https://github.com/jupyterlite/ai/pull/171) ([@jtpio](https://github.com/jtpio))
+- Add Google Generative AI provider [#185](https://github.com/jupyterlab/jupyter-ai-lite/pull/185) ([@jtpio](https://github.com/jtpio))
+- Allow specifying an API key for the generic OpenAI compatible provider [#179](https://github.com/jupyterlab/jupyter-ai-lite/pull/179) ([@jtpio](https://github.com/jtpio))
+- Switch to ai-sdk and openai-agent [#176](https://github.com/jupyterlab/jupyter-ai-lite/pull/176) ([@brichet](https://github.com/brichet))
+- Add multichat panel [#169](https://github.com/jupyterlab/jupyter-ai-lite/pull/169) ([@brichet](https://github.com/brichet))
+- Custom base URL and generic provider (OpenAI compatible) [#171](https://github.com/jupyterlab/jupyter-ai-lite/pull/171) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Token usage accumulation [#175](https://github.com/jupyterlite/ai/pull/175) ([@brichet](https://github.com/brichet))
+- Token usage accumulation [#175](https://github.com/jupyterlab/jupyter-ai-lite/pull/175) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Single provider registry [#191](https://github.com/jupyterlite/ai/pull/191) ([@jtpio](https://github.com/jtpio))
-- Drop Python 3.8 [#183](https://github.com/jupyterlite/ai/pull/183) ([@jtpio](https://github.com/jtpio))
-- Add `PWVIDEO` and `PWSLOWMO` to record videos from UI tests [#181](https://github.com/jupyterlite/ai/pull/181) ([@jtpio](https://github.com/jtpio))
-- Add UI tests for remote MCP servers [#180](https://github.com/jupyterlite/ai/pull/180) ([@jtpio](https://github.com/jtpio))
-- Update dependencies and default models [#174](https://github.com/jupyterlite/ai/pull/174) ([@jtpio](https://github.com/jtpio))
-- Re-enable UI tests [#172](https://github.com/jupyterlite/ai/pull/172) ([@jtpio](https://github.com/jtpio))
+- Single provider registry [#191](https://github.com/jupyterlab/jupyter-ai-lite/pull/191) ([@jtpio](https://github.com/jtpio))
+- Drop Python 3.8 [#183](https://github.com/jupyterlab/jupyter-ai-lite/pull/183) ([@jtpio](https://github.com/jtpio))
+- Add `PWVIDEO` and `PWSLOWMO` to record videos from UI tests [#181](https://github.com/jupyterlab/jupyter-ai-lite/pull/181) ([@jtpio](https://github.com/jtpio))
+- Add UI tests for remote MCP servers [#180](https://github.com/jupyterlab/jupyter-ai-lite/pull/180) ([@jtpio](https://github.com/jtpio))
+- Update dependencies and default models [#174](https://github.com/jupyterlab/jupyter-ai-lite/pull/174) ([@jtpio](https://github.com/jtpio))
+- Re-enable UI tests [#172](https://github.com/jupyterlab/jupyter-ai-lite/pull/172) ([@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Document Ollama and generic, remove ChromeAI [#189](https://github.com/jupyterlite/ai/pull/189) ([@jtpio](https://github.com/jtpio))
-- Documentation about secrets manager [#188](https://github.com/jupyterlite/ai/pull/188) ([@brichet](https://github.com/brichet))
-- Add documentation for custom providers [#184](https://github.com/jupyterlite/ai/pull/184) ([@jtpio](https://github.com/jtpio))
-- Update README to reflect the latest iterations [#178](https://github.com/jupyterlite/ai/pull/178) ([@jtpio](https://github.com/jtpio))
+- Document Ollama and generic, remove ChromeAI [#189](https://github.com/jupyterlab/jupyter-ai-lite/pull/189) ([@jtpio](https://github.com/jtpio))
+- Documentation about secrets manager [#188](https://github.com/jupyterlab/jupyter-ai-lite/pull/188) ([@brichet](https://github.com/brichet))
+- Add documentation for custom providers [#184](https://github.com/jupyterlab/jupyter-ai-lite/pull/184) ([@jtpio](https://github.com/jtpio))
+- Update README to reflect the latest iterations [#178](https://github.com/jupyterlab/jupyter-ai-lite/pull/178) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-09-26&to=2025-10-15&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-09-26&to=2025-10-15&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-09-26..2025-10-15&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-09-26..2025-10-15&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-09-26..2025-10-15&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-09-26..2025-10-15&type=Issues)
 
 ## 0.9.0a2
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0a1...0a63b33304b70c8fa8461a2e36bba97d12f3d2d9))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0a1...0a63b33304b70c8fa8461a2e36bba97d12f3d2d9))
 
 ### Bugs fixed
 
-- Bump @jupyter/chat to 0.18.1 [#168](https://github.com/jupyterlite/ai/pull/168) ([@brichet](https://github.com/brichet))
-- Fix token usage [#167](https://github.com/jupyterlite/ai/pull/167) ([@jtpio](https://github.com/jtpio))
-- Disable tracing when creating a new `Runner` [#166](https://github.com/jupyterlite/ai/pull/166) ([@jtpio](https://github.com/jtpio))
+- Bump @jupyter/chat to 0.18.1 [#168](https://github.com/jupyterlab/jupyter-ai-lite/pull/168) ([@brichet](https://github.com/brichet))
+- Fix token usage [#167](https://github.com/jupyterlab/jupyter-ai-lite/pull/167) ([@jtpio](https://github.com/jtpio))
+- Disable tracing when creating a new `Runner` [#166](https://github.com/jupyterlab/jupyter-ai-lite/pull/166) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-09-25&to=2025-09-26&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-09-25&to=2025-09-26&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-09-25..2025-09-26&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-09-25..2025-09-26&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-09-25..2025-09-26&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-09-25..2025-09-26&type=Issues)
 
 ## 0.9.0a1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.9.0a0...59b5a7c9f4d61cd4ef9e23e7a3cf504878881d07))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.9.0a0...59b5a7c9f4d61cd4ef9e23e7a3cf504878881d07))
 
 ### Enhancements made
 
-- Call the diff command directly when setting the cell content [#162](https://github.com/jupyterlite/ai/pull/162) ([@jtpio](https://github.com/jtpio))
-- Add the secrets manager [#159](https://github.com/jupyterlite/ai/pull/159) ([@brichet](https://github.com/brichet))
-- Re-add OpenAI [#147](https://github.com/jupyterlite/ai/pull/147) ([@jtpio](https://github.com/jtpio))
+- Call the diff command directly when setting the cell content [#162](https://github.com/jupyterlab/jupyter-ai-lite/pull/162) ([@jtpio](https://github.com/jtpio))
+- Add the secrets manager [#159](https://github.com/jupyterlab/jupyter-ai-lite/pull/159) ([@brichet](https://github.com/brichet))
+- Re-add OpenAI [#147](https://github.com/jupyterlab/jupyter-ai-lite/pull/147) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Get active cell info [#161](https://github.com/jupyterlite/ai/pull/161) ([@brichet](https://github.com/brichet))
+- Get active cell info [#161](https://github.com/jupyterlab/jupyter-ai-lite/pull/161) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update @jupyter/chat and @mui dependencies [#164](https://github.com/jupyterlite/ai/pull/164) ([@brichet](https://github.com/brichet))
+- Update @jupyter/chat and @mui dependencies [#164](https://github.com/jupyterlab/jupyter-ai-lite/pull/164) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-09-18&to=2025-09-25&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-09-18&to=2025-09-25&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-09-18..2025-09-25&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-09-18..2025-09-25&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-09-18..2025-09-25&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-09-18..2025-09-25&type=Issues)
 
 ## 0.9.0a0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.8.1...01723cd4d0ffa484afb560b085bd26ab033d7c75))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.8.1...01723cd4d0ffa484afb560b085bd26ab033d7c75))
 
 ### New features added
 
-- Add `jupyterlab-cell-diff` [#153](https://github.com/jupyterlite/ai/pull/153) ([@jtpio](https://github.com/jtpio))
-- Agent workflows [#145](https://github.com/jupyterlite/ai/pull/145) ([@jtpio](https://github.com/jtpio))
+- Add `jupyterlab-cell-diff` [#153](https://github.com/jupyterlab/jupyter-ai-lite/pull/153) ([@jtpio](https://github.com/jtpio))
+- Agent workflows [#145](https://github.com/jupyterlab/jupyter-ai-lite/pull/145) ([@jtpio](https://github.com/jtpio))
 
 ### Enhancements made
 
-- Add `supportsToolCalling` provider setting [#151](https://github.com/jupyterlite/ai/pull/151) ([@jtpio](https://github.com/jtpio))
+- Add `supportsToolCalling` provider setting [#151](https://github.com/jupyterlab/jupyter-ai-lite/pull/151) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Fix parameters for `discover_commands` [#157](https://github.com/jupyterlite/ai/pull/157) ([@jtpio](https://github.com/jtpio))
-- Fix valid model check [#149](https://github.com/jupyterlite/ai/pull/149) ([@jtpio](https://github.com/jtpio))
+- Fix parameters for `discover_commands` [#157](https://github.com/jupyterlab/jupyter-ai-lite/pull/157) ([@jtpio](https://github.com/jtpio))
+- Fix valid model check [#149](https://github.com/jupyterlab/jupyter-ai-lite/pull/149) ([@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Expose settings model and tool registry tokens, and use chat context [#152](https://github.com/jupyterlite/ai/pull/152) ([@brichet](https://github.com/brichet))
-- Bump dependencies, disable tracing for now [#150](https://github.com/jupyterlite/ai/pull/150) ([@jtpio](https://github.com/jtpio))
-- More cleanup [#148](https://github.com/jupyterlite/ai/pull/148) ([@jtpio](https://github.com/jtpio))
+- Expose settings model and tool registry tokens, and use chat context [#152](https://github.com/jupyterlab/jupyter-ai-lite/pull/152) ([@brichet](https://github.com/brichet))
+- Bump dependencies, disable tracing for now [#150](https://github.com/jupyterlab/jupyter-ai-lite/pull/150) ([@jtpio](https://github.com/jtpio))
+- More cleanup [#148](https://github.com/jupyterlab/jupyter-ai-lite/pull/148) ([@jtpio](https://github.com/jtpio))
 
 ### API and Breaking Changes
 
-- Agent workflows [#145](https://github.com/jupyterlite/ai/pull/145) ([@jtpio](https://github.com/jtpio))
+- Agent workflows [#145](https://github.com/jupyterlab/jupyter-ai-lite/pull/145) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-08-04&to=2025-09-18&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-08-04&to=2025-09-18&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-08-04..2025-09-18&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-08-04..2025-09-18&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Anakul-py+updated%3A2025-08-04..2025-09-18&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-08-04..2025-09-18&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-08-04..2025-09-18&type=Issues) | [@nakul-py](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2025-08-04..2025-09-18&type=Issues)
 
 ## 0.8.1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.8.0...6627589bb83cfb1ab891d9ce3f3e4df8336f9a62))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.8.0...6627589bb83cfb1ab891d9ce3f3e4df8336f9a62))
 
 ### Bugs fixed
 
-- Fix deferred providers on first load [#127](https://github.com/jupyterlite/ai/pull/127) ([@brichet](https://github.com/brichet))
+- Fix deferred providers on first load [#127](https://github.com/jupyterlab/jupyter-ai-lite/pull/127) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-07-09&to=2025-08-04&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-07-09&to=2025-08-04&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-07-09..2025-08-04&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-07-09..2025-08-04&type=Issues)
 
 ## 0.8.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.7.0...c736eca4e55cf491105aee04c01de8e9f7982b4a))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.7.0...c736eca4e55cf491105aee04c01de8e9f7982b4a))
 
 ### Enhancements made
 
-- Update to `@jupyter/chat` 0.14.0 [#108](https://github.com/jupyterlite/ai/pull/108) ([@jtpio](https://github.com/jtpio))
-- Allow different providers for the chat and the completer [#105](https://github.com/jupyterlite/ai/pull/105) ([@brichet](https://github.com/brichet))
-- Open the settings from the chat panel [#101](https://github.com/jupyterlite/ai/pull/101) ([@jtpio](https://github.com/jtpio))
-- Gemini [#100](https://github.com/jupyterlite/ai/pull/100) ([@jtpio](https://github.com/jtpio))
-- System prompt configurable [#96](https://github.com/jupyterlite/ai/pull/96) ([@brichet](https://github.com/brichet))
-- Chat panel tweaks [#92](https://github.com/jupyterlite/ai/pull/92) ([@jtpio](https://github.com/jtpio))
-- Improve Mistral completions [#85](https://github.com/jupyterlite/ai/pull/85) ([@jtpio](https://github.com/jtpio))
+- Update to `@jupyter/chat` 0.14.0 [#108](https://github.com/jupyterlab/jupyter-ai-lite/pull/108) ([@jtpio](https://github.com/jtpio))
+- Allow different providers for the chat and the completer [#105](https://github.com/jupyterlab/jupyter-ai-lite/pull/105) ([@brichet](https://github.com/brichet))
+- Open the settings from the chat panel [#101](https://github.com/jupyterlab/jupyter-ai-lite/pull/101) ([@jtpio](https://github.com/jtpio))
+- Gemini [#100](https://github.com/jupyterlab/jupyter-ai-lite/pull/100) ([@jtpio](https://github.com/jtpio))
+- System prompt configurable [#96](https://github.com/jupyterlab/jupyter-ai-lite/pull/96) ([@brichet](https://github.com/brichet))
+- Chat panel tweaks [#92](https://github.com/jupyterlab/jupyter-ai-lite/pull/92) ([@jtpio](https://github.com/jtpio))
+- Improve Mistral completions [#85](https://github.com/jupyterlab/jupyter-ai-lite/pull/85) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Fix secret fields initialization when using the secrets manager [#120](https://github.com/jupyterlite/ai/pull/120) ([@brichet](https://github.com/brichet))
-- Fix the notification in settings [#119](https://github.com/jupyterlite/ai/pull/119) ([@brichet](https://github.com/brichet))
-- Fix the messages datetime [#94](https://github.com/jupyterlite/ai/pull/94) ([@brichet](https://github.com/brichet))
+- Fix secret fields initialization when using the secrets manager [#120](https://github.com/jupyterlab/jupyter-ai-lite/pull/120) ([@brichet](https://github.com/brichet))
+- Fix the notification in settings [#119](https://github.com/jupyterlab/jupyter-ai-lite/pull/119) ([@brichet](https://github.com/brichet))
+- Fix the messages datetime [#94](https://github.com/jupyterlab/jupyter-ai-lite/pull/94) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update langchain packages [#117](https://github.com/jupyterlite/ai/pull/117) ([@jtpio](https://github.com/jtpio))
-- Remove provider settings check/generation [#113](https://github.com/jupyterlite/ai/pull/113) ([@brichet](https://github.com/brichet))
-- Deduplicate npm dependencies [#109](https://github.com/jupyterlite/ai/pull/109) ([@brichet](https://github.com/brichet))
-- Add UI tests [#97](https://github.com/jupyterlite/ai/pull/97) ([@brichet](https://github.com/brichet))
+- Update langchain packages [#117](https://github.com/jupyterlab/jupyter-ai-lite/pull/117) ([@jtpio](https://github.com/jtpio))
+- Remove provider settings check/generation [#113](https://github.com/jupyterlab/jupyter-ai-lite/pull/113) ([@brichet](https://github.com/brichet))
+- Deduplicate npm dependencies [#109](https://github.com/jupyterlab/jupyter-ai-lite/pull/109) ([@brichet](https://github.com/brichet))
+- Add UI tests [#97](https://github.com/jupyterlab/jupyter-ai-lite/pull/97) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-06-05&to=2025-07-09&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-06-05&to=2025-07-09&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-06-05..2025-07-09&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-06-05..2025-07-09&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-06-05..2025-07-09&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-06-05..2025-07-09&type=Issues)
 
 ## 0.7.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.6.2...317fedd438232fb3add50e28037adb637cbc0814))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.6.2...317fedd438232fb3add50e28037adb637cbc0814))
 
 ### Enhancements made
 
-- Add a welcome message [#89](https://github.com/jupyterlite/ai/pull/89) ([@brichet](https://github.com/brichet))
-- Handle compatibility with chromeAI and WebLLM [#87](https://github.com/jupyterlite/ai/pull/87) ([@brichet](https://github.com/brichet))
-- Do not expose providers api [#84](https://github.com/jupyterlite/ai/pull/84) ([@brichet](https://github.com/brichet))
-- Remove the custom settings connector [#81](https://github.com/jupyterlite/ai/pull/81) ([@brichet](https://github.com/brichet))
-- Upgrade secrets manager [#75](https://github.com/jupyterlite/ai/pull/75) ([@brichet](https://github.com/brichet))
-- Better handling of default values in settings [#73](https://github.com/jupyterlite/ai/pull/73) ([@brichet](https://github.com/brichet))
-- Add Ollama provider [#69](https://github.com/jupyterlite/ai/pull/69) ([@brichet](https://github.com/brichet))
-- WebLLM [#47](https://github.com/jupyterlite/ai/pull/47) ([@jtpio](https://github.com/jtpio))
+- Add a welcome message [#89](https://github.com/jupyterlab/jupyter-ai-lite/pull/89) ([@brichet](https://github.com/brichet))
+- Handle compatibility with chromeAI and WebLLM [#87](https://github.com/jupyterlab/jupyter-ai-lite/pull/87) ([@brichet](https://github.com/brichet))
+- Do not expose providers api [#84](https://github.com/jupyterlab/jupyter-ai-lite/pull/84) ([@brichet](https://github.com/brichet))
+- Remove the custom settings connector [#81](https://github.com/jupyterlab/jupyter-ai-lite/pull/81) ([@brichet](https://github.com/brichet))
+- Upgrade secrets manager [#75](https://github.com/jupyterlab/jupyter-ai-lite/pull/75) ([@brichet](https://github.com/brichet))
+- Better handling of default values in settings [#73](https://github.com/jupyterlab/jupyter-ai-lite/pull/73) ([@brichet](https://github.com/brichet))
+- Add Ollama provider [#69](https://github.com/jupyterlab/jupyter-ai-lite/pull/69) ([@brichet](https://github.com/brichet))
+- WebLLM [#47](https://github.com/jupyterlab/jupyter-ai-lite/pull/47) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Export the IAIProviderRegistry token [#88](https://github.com/jupyterlite/ai/pull/88) ([@brichet](https://github.com/brichet))
-- Update `@langchain/community` to fix ChromeAI [#76](https://github.com/jupyterlite/ai/pull/76) ([@jtpio](https://github.com/jtpio))
+- Export the IAIProviderRegistry token [#88](https://github.com/jupyterlab/jupyter-ai-lite/pull/88) ([@brichet](https://github.com/brichet))
+- Update `@langchain/community` to fix ChromeAI [#76](https://github.com/jupyterlab/jupyter-ai-lite/pull/76) ([@jtpio](https://github.com/jtpio))
 
 ### Maintenance and upkeep improvements
 
-- Pin PyPI version of jupyter-secrets-manager [#86](https://github.com/jupyterlite/ai/pull/86) ([@brichet](https://github.com/brichet))
-- Install `ipywidgets` for the demo deployed on GitHub Pages [#79](https://github.com/jupyterlite/ai/pull/79) ([@jtpio](https://github.com/jtpio))
+- Pin PyPI version of jupyter-secrets-manager [#86](https://github.com/jupyterlab/jupyter-ai-lite/pull/86) ([@brichet](https://github.com/brichet))
+- Install `ipywidgets` for the demo deployed on GitHub Pages [#79](https://github.com/jupyterlab/jupyter-ai-lite/pull/79) ([@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Mention JupyterLab 4.4 and Notebook 7.4 final in the README [#83](https://github.com/jupyterlite/ai/pull/83) ([@jtpio](https://github.com/jtpio))
-- Update Ollama instructions [#82](https://github.com/jupyterlite/ai/pull/82) ([@brichet](https://github.com/brichet))
+- Mention JupyterLab 4.4 and Notebook 7.4 final in the README [#83](https://github.com/jupyterlab/jupyter-ai-lite/pull/83) ([@jtpio](https://github.com/jtpio))
+- Update Ollama instructions [#82](https://github.com/jupyterlab/jupyter-ai-lite/pull/82) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-05-13&to=2025-06-05&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-05-13&to=2025-06-05&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-05-13..2025-06-05&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-05-13..2025-06-05&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Atrungleduc+updated%3A2025-05-13..2025-06-05&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-05-13..2025-06-05&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-05-13..2025-06-05&type=Issues) | [@trungleduc](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Atrungleduc+updated%3A2025-05-13..2025-06-05&type=Issues)
 
 ## 0.6.2
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.6.1...8cf12919ab5922b2ec7ed8f284299725a493d349))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.6.1...8cf12919ab5922b2ec7ed8f284299725a493d349))
 
 ### Bugs fixed
 
-- Fix completer settings [#70](https://github.com/jupyterlite/ai/pull/70) ([@brichet](https://github.com/brichet))
-- Fix the API keys in provider when using the secrets manager [#68](https://github.com/jupyterlite/ai/pull/68) ([@brichet](https://github.com/brichet))
+- Fix completer settings [#70](https://github.com/jupyterlab/jupyter-ai-lite/pull/70) ([@brichet](https://github.com/brichet))
+- Fix the API keys in provider when using the secrets manager [#68](https://github.com/jupyterlab/jupyter-ai-lite/pull/68) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Align the version of rjsf dependencies [#72](https://github.com/jupyterlite/ai/pull/72) ([@brichet](https://github.com/brichet))
+- Align the version of rjsf dependencies [#72](https://github.com/jupyterlab/jupyter-ai-lite/pull/72) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-05-02&to=2025-05-13&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-05-02&to=2025-05-13&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-05-02..2025-05-13&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-05-02..2025-05-13&type=Issues)
 
 ## 0.6.1
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.6.0...52376d7823635a8561eda88d6fcd7acd615c50c8))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.6.0...52376d7823635a8561eda88d6fcd7acd615c50c8))
 
 ### Enhancements made
 
-- Allow to avoid displaying the secret fields of the settings UI [#65](https://github.com/jupyterlite/ai/pull/65) ([@brichet](https://github.com/brichet))
-- Update secrets manager to >=0.3.0 [#63](https://github.com/jupyterlite/ai/pull/63) ([@brichet](https://github.com/brichet))
+- Allow to avoid displaying the secret fields of the settings UI [#65](https://github.com/jupyterlab/jupyter-ai-lite/pull/65) ([@brichet](https://github.com/brichet))
+- Update secrets manager to >=0.3.0 [#63](https://github.com/jupyterlab/jupyter-ai-lite/pull/63) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update secrets manager to >=0.3.0 [#63](https://github.com/jupyterlite/ai/pull/63) ([@brichet](https://github.com/brichet))
-- Update to jupyterlab>=4.4.0 [#62](https://github.com/jupyterlite/ai/pull/62) ([@brichet](https://github.com/brichet))
+- Update secrets manager to >=0.3.0 [#63](https://github.com/jupyterlab/jupyter-ai-lite/pull/63) ([@brichet](https://github.com/brichet))
+- Update to jupyterlab>=4.4.0 [#62](https://github.com/jupyterlab/jupyter-ai-lite/pull/62) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-03-31&to=2025-05-02&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-03-31&to=2025-05-02&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-03-31..2025-05-02&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-03-31..2025-05-02&type=Issues)
 
 ## 0.6.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.5.0...15b6de565429273e0b159fa1a66712575449605d))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.5.0...15b6de565429273e0b159fa1a66712575449605d))
 
 ### Enhancements made
 
-- Stop streaming [#61](https://github.com/jupyterlite/ai/pull/61) ([@brichet](https://github.com/brichet))
-- Do not store passwords to server settings [#60](https://github.com/jupyterlite/ai/pull/60) ([@brichet](https://github.com/brichet))
+- Stop streaming [#61](https://github.com/jupyterlab/jupyter-ai-lite/pull/61) ([@brichet](https://github.com/brichet))
+- Do not store passwords to server settings [#60](https://github.com/jupyterlab/jupyter-ai-lite/pull/60) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-03-21&to=2025-03-31&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-03-21&to=2025-03-31&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-03-21..2025-03-31&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2025-03-21..2025-03-31&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-03-21..2025-03-31&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2025-03-21..2025-03-31&type=Issues)
 
 ## 0.5.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.4.0...f37fb548ee1c49f5600495ccb6be35ab976a3bce))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.4.0...f37fb548ee1c49f5600495ccb6be35ab976a3bce))
 
 ### Enhancements made
 
-- Default providers refactoring [#58](https://github.com/jupyterlite/ai/pull/58) ([@brichet](https://github.com/brichet))
-- Use the secrets manager [#53](https://github.com/jupyterlite/ai/pull/53) ([@brichet](https://github.com/brichet))
+- Default providers refactoring [#58](https://github.com/jupyterlab/jupyter-ai-lite/pull/58) ([@brichet](https://github.com/brichet))
+- Use the secrets manager [#53](https://github.com/jupyterlab/jupyter-ai-lite/pull/53) ([@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Avoid building settings schemas when building javascript [#59](https://github.com/jupyterlite/ai/pull/59) ([@brichet](https://github.com/brichet))
+- Avoid building settings schemas when building javascript [#59](https://github.com/jupyterlab/jupyter-ai-lite/pull/59) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Default providers refactoring [#58](https://github.com/jupyterlite/ai/pull/58) ([@brichet](https://github.com/brichet))
-- Update @jupyter/chat to v0.8.1 [#57](https://github.com/jupyterlite/ai/pull/57) ([@brichet](https://github.com/brichet))
+- Default providers refactoring [#58](https://github.com/jupyterlab/jupyter-ai-lite/pull/58) ([@brichet](https://github.com/brichet))
+- Update @jupyter/chat to v0.8.1 [#57](https://github.com/jupyterlab/jupyter-ai-lite/pull/57) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-03-10&to=2025-03-21&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-03-10&to=2025-03-21&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-03-10..2025-03-21&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-03-10..2025-03-21&type=Issues)
 
 ## 0.4.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.3.0...bd9c07a7fec2bfb62c6863a0aacdaefbf22bcd82))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.3.0...bd9c07a7fec2bfb62c6863a0aacdaefbf22bcd82))
 
 ### Enhancements made
 
-- Provider registry [#50](https://github.com/jupyterlite/ai/pull/50) ([@brichet](https://github.com/brichet))
-- Completer plugin [#49](https://github.com/jupyterlite/ai/pull/49) ([@brichet](https://github.com/brichet))
-- Settings UI improvement [#48](https://github.com/jupyterlite/ai/pull/48) ([@brichet](https://github.com/brichet))
+- Provider registry [#50](https://github.com/jupyterlab/jupyter-ai-lite/pull/50) ([@brichet](https://github.com/brichet))
+- Completer plugin [#49](https://github.com/jupyterlab/jupyter-ai-lite/pull/49) ([@brichet](https://github.com/brichet))
+- Settings UI improvement [#48](https://github.com/jupyterlab/jupyter-ai-lite/pull/48) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2025-02-19&to=2025-03-10&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2025-02-19&to=2025-03-10&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2025-02-19..2025-03-10&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2025-02-19..2025-03-10&type=Issues)
 
 ## 0.3.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.2.0...1b482ade692e42ad8885aaf3211502720cadeecf))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.2.0...1b482ade692e42ad8885aaf3211502720cadeecf))
 
 ### Enhancements made
 
-- Add chat autocompletion and the `/clear` command [#41](https://github.com/jupyterlite/ai/pull/41) ([@jtpio](https://github.com/jtpio))
-- Add icon and name for the AI assistant [#40](https://github.com/jupyterlite/ai/pull/40) ([@jtpio](https://github.com/jtpio))
-- Stream responses [#39](https://github.com/jupyterlite/ai/pull/39) ([@jtpio](https://github.com/jtpio))
-- Use a chat model instead of LLM for codestral completion [#31](https://github.com/jupyterlite/ai/pull/31) ([@brichet](https://github.com/brichet))
-- Add initial system prompt in ChatHandler and completion [#28](https://github.com/jupyterlite/ai/pull/28) ([@brichet](https://github.com/brichet))
-- Add `ChromeAI` [#27](https://github.com/jupyterlite/ai/pull/27) ([@jtpio](https://github.com/jtpio))
-- Anthropic (Claude) provider [#22](https://github.com/jupyterlite/ai/pull/22) ([@brichet](https://github.com/brichet))
-- Add OpenAI provider [#19](https://github.com/jupyterlite/ai/pull/19) ([@brichet](https://github.com/brichet))
-- Dynamic settings for providers [#14](https://github.com/jupyterlite/ai/pull/14) ([@brichet](https://github.com/brichet))
+- Add chat autocompletion and the `/clear` command [#41](https://github.com/jupyterlab/jupyter-ai-lite/pull/41) ([@jtpio](https://github.com/jtpio))
+- Add icon and name for the AI assistant [#40](https://github.com/jupyterlab/jupyter-ai-lite/pull/40) ([@jtpio](https://github.com/jtpio))
+- Stream responses [#39](https://github.com/jupyterlab/jupyter-ai-lite/pull/39) ([@jtpio](https://github.com/jtpio))
+- Use a chat model instead of LLM for codestral completion [#31](https://github.com/jupyterlab/jupyter-ai-lite/pull/31) ([@brichet](https://github.com/brichet))
+- Add initial system prompt in ChatHandler and completion [#28](https://github.com/jupyterlab/jupyter-ai-lite/pull/28) ([@brichet](https://github.com/brichet))
+- Add `ChromeAI` [#27](https://github.com/jupyterlab/jupyter-ai-lite/pull/27) ([@jtpio](https://github.com/jtpio))
+- Anthropic (Claude) provider [#22](https://github.com/jupyterlab/jupyter-ai-lite/pull/22) ([@brichet](https://github.com/brichet))
+- Add OpenAI provider [#19](https://github.com/jupyterlab/jupyter-ai-lite/pull/19) ([@brichet](https://github.com/brichet))
+- Dynamic settings for providers [#14](https://github.com/jupyterlab/jupyter-ai-lite/pull/14) ([@brichet](https://github.com/brichet))
 
 ### Bugs fixed
 
-- Update to a newer `@langchain/community` to fix ChromeAI integration [#43](https://github.com/jupyterlite/ai/pull/43) ([@jtpio](https://github.com/jtpio))
-- Upgrade the jupyterlite-core package in deployment [#30](https://github.com/jupyterlite/ai/pull/30) ([@brichet](https://github.com/brichet))
+- Update to a newer `@langchain/community` to fix ChromeAI integration [#43](https://github.com/jupyterlab/jupyter-ai-lite/pull/43) ([@jtpio](https://github.com/jtpio))
+- Upgrade the jupyterlite-core package in deployment [#30](https://github.com/jupyterlab/jupyter-ai-lite/pull/30) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Deployment with prereleased jupyterlite-pyodide-kernel [#33](https://github.com/jupyterlite/ai/pull/33) ([@brichet](https://github.com/brichet))
-- Fix installation of pre-released jupyterlite in deployment [#32](https://github.com/jupyterlite/ai/pull/32) ([@brichet](https://github.com/brichet))
-- Upgrade the jupyterlite-core package in deployment [#30](https://github.com/jupyterlite/ai/pull/30) ([@brichet](https://github.com/brichet))
+- Deployment with prereleased jupyterlite-pyodide-kernel [#33](https://github.com/jupyterlab/jupyter-ai-lite/pull/33) ([@brichet](https://github.com/brichet))
+- Fix installation of pre-released jupyterlite in deployment [#32](https://github.com/jupyterlab/jupyter-ai-lite/pull/32) ([@brichet](https://github.com/brichet))
+- Upgrade the jupyterlite-core package in deployment [#30](https://github.com/jupyterlab/jupyter-ai-lite/pull/30) ([@brichet](https://github.com/brichet))
 
 ### Documentation improvements
 
-- Update README.md [#26](https://github.com/jupyterlite/ai/pull/26) ([@jtpio](https://github.com/jtpio))
+- Update README.md [#26](https://github.com/jupyterlab/jupyter-ai-lite/pull/26) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2024-12-04&to=2025-02-19&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2024-12-04&to=2025-02-19&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2024-12-04..2025-02-19&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2024-12-04..2025-02-19&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2024-12-04..2025-02-19&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2024-12-04..2025-02-19&type=Issues)
 
 ## 0.2.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/v0.1.0...8c41100bf87c99e377fd4752c50853dace7667e1))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/v0.1.0...8c41100bf87c99e377fd4752c50853dace7667e1))
 
 ### Enhancements made
 
-- Refactoring AIProvider and handling errors [#15](https://github.com/jupyterlite/ai/pull/15) ([@brichet](https://github.com/brichet))
-- Making the LLM providers more generics [#10](https://github.com/jupyterlite/ai/pull/10) ([@brichet](https://github.com/brichet))
-- Use a throttler instead of a debouncer for code completion [#8](https://github.com/jupyterlite/ai/pull/8) ([@brichet](https://github.com/brichet))
-- Update @jupyter/chat to 0.5.0 [#7](https://github.com/jupyterlite/ai/pull/7) ([@brichet](https://github.com/brichet))
-- Switch to using langchain.js [#6](https://github.com/jupyterlite/ai/pull/6) ([@jtpio](https://github.com/jtpio))
+- Refactoring AIProvider and handling errors [#15](https://github.com/jupyterlab/jupyter-ai-lite/pull/15) ([@brichet](https://github.com/brichet))
+- Making the LLM providers more generics [#10](https://github.com/jupyterlab/jupyter-ai-lite/pull/10) ([@brichet](https://github.com/brichet))
+- Use a throttler instead of a debouncer for code completion [#8](https://github.com/jupyterlab/jupyter-ai-lite/pull/8) ([@brichet](https://github.com/brichet))
+- Update @jupyter/chat to 0.5.0 [#7](https://github.com/jupyterlab/jupyter-ai-lite/pull/7) ([@brichet](https://github.com/brichet))
+- Switch to using langchain.js [#6](https://github.com/jupyterlab/jupyter-ai-lite/pull/6) ([@jtpio](https://github.com/jtpio))
 
 ### Bugs fixed
 
-- Improves the relevance of codestral completion [#18](https://github.com/jupyterlite/ai/pull/18) ([@brichet](https://github.com/brichet))
+- Improves the relevance of codestral completion [#18](https://github.com/jupyterlab/jupyter-ai-lite/pull/18) ([@brichet](https://github.com/brichet))
 
 ### Maintenance and upkeep improvements
 
-- Update references to the repo after the rename [#21](https://github.com/jupyterlite/ai/pull/21) ([@jtpio](https://github.com/jtpio))
-- Rename the extension `jupyterlite_ai` [#20](https://github.com/jupyterlite/ai/pull/20) ([@brichet](https://github.com/brichet))
+- Update references to the repo after the rename [#21](https://github.com/jupyterlab/jupyter-ai-lite/pull/21) ([@jtpio](https://github.com/jtpio))
+- Rename the extension `jupyterlite_ai` [#20](https://github.com/jupyterlab/jupyter-ai-lite/pull/20) ([@brichet](https://github.com/brichet))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2024-06-24&to=2024-12-04&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2024-06-24&to=2024-12-04&type=c))
 
-[@brichet](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Abrichet+updated%3A2024-06-24..2024-12-04&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2024-06-24..2024-12-04&type=Issues)
+[@brichet](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2024-06-24..2024-12-04&type=Issues) | [@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2024-06-24..2024-12-04&type=Issues)
 
 ## 0.1.0
 
-([Full Changelog](https://github.com/jupyterlite/ai/compare/9c8d350b8876ad3a9ffe8dbe723ca093bb680681...b77e9e9a563cda3b9d37972248e738746f7370a8))
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/9c8d350b8876ad3a9ffe8dbe723ca093bb680681...b77e9e9a563cda3b9d37972248e738746f7370a8))
 
 ### Maintenance and upkeep improvements
 
-- Reset version [#4](https://github.com/jupyterlite/ai/pull/4) ([@jtpio](https://github.com/jtpio))
+- Reset version [#4](https://github.com/jupyterlab/jupyter-ai-lite/pull/4) ([@jtpio](https://github.com/jtpio))
 
 ### Documentation improvements
 
-- Add disclaimer [#3](https://github.com/jupyterlite/ai/pull/3) ([@jtpio](https://github.com/jtpio))
-- Update links to the repo [#2](https://github.com/jupyterlite/ai/pull/2) ([@jtpio](https://github.com/jtpio))
-- Add files for a JupyterLite demo [#1](https://github.com/jupyterlite/ai/pull/1) ([@jtpio](https://github.com/jtpio))
+- Add disclaimer [#3](https://github.com/jupyterlab/jupyter-ai-lite/pull/3) ([@jtpio](https://github.com/jtpio))
+- Update links to the repo [#2](https://github.com/jupyterlab/jupyter-ai-lite/pull/2) ([@jtpio](https://github.com/jtpio))
+- Add files for a JupyterLite demo [#1](https://github.com/jupyterlab/jupyter-ai-lite/pull/1) ([@jtpio](https://github.com/jtpio))
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterlite/ai/graphs/contributors?from=2024-06-10&to=2024-06-24&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2024-06-10&to=2024-06-24&type=c))
 
-[@jtpio](https://github.com/search?q=repo%3Ajupyterlite%2Fai+involves%3Ajtpio+updated%3A2024-06-10..2024-06-24&type=Issues)
+[@jtpio](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2024-06-10..2024-06-24&type=Issues)
