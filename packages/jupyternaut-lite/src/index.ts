@@ -57,7 +57,11 @@ import { ISecretsManager, SecretsManager } from 'jupyter-secrets-manager';
 // eslint-disable-next-line jupyter/prefer-lazy-imports
 import { AgentManagerFactory } from './agent';
 
-import { MentionCommandProvider, SkillsCommandProvider } from './chat-commands';
+import {
+  MentionCommandProvider,
+  SkillsCommandProvider,
+  SummarizeCommandProvider
+} from './chat-commands';
 
 // The completion provider is registered when the agent manager plugin activates.
 // eslint-disable-next-line jupyter/prefer-lazy-imports
@@ -546,6 +550,46 @@ const skillsCommandPlugin: JupyterFrontEndPlugin<void> = {
   }
 };
 
+/*
+ * Summarize chat command plugin.
+ */
+const summarizeCommandPlugin: JupyterFrontEndPlugin<void> = {
+  id: '@jupyter-ai/jupyternaut-lite:summarize',
+  description: 'Register the /summarize chat command.',
+  autoStart: true,
+  requires: [IChatCommandRegistry, IPersonaRegistry],
+  optional: [IChatTracker],
+  activate: (
+    app: JupyterFrontEnd,
+    registry: IChatCommandRegistry,
+    personaRegistry: IPersonaRegistry,
+    chatTracker: IChatTracker | null
+  ) => {
+    const findModel = (chatName: string) =>
+      chatTracker?.find(c => c.model.name === chatName)?.model;
+
+    const isDefault = (chatName: string) => {
+      const model = findModel(chatName);
+      if (!model) {
+        return false;
+      }
+      const persona = personaRegistry.get(model);
+      return persona ? !persona.requireMention : false;
+    };
+
+    const summarize = async (chatName: string) => {
+      const model = findModel(chatName);
+      if (model) {
+        await personaRegistry.get(model)?.summarize();
+      }
+    };
+
+    registry.addProvider(
+      new SummarizeCommandProvider({ isDefault, summarize })
+    );
+  }
+};
+
 /**
  * A plugin to provide the agent manager factory and completion provider.
  * These objects require the secrets manager token with the same namespace.
@@ -836,6 +880,7 @@ export default [
   chatComponentsCallbacks,
   mentionCommandPlugin,
   skillsCommandPlugin,
+  summarizeCommandPlugin,
   // Settings
   settingsModel,
   settingsPanelPlugin
