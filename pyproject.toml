@@ -10,7 +10,7 @@ license = { file = "LICENSE" }
 dynamic = ["version"]
 
 [dependency-groups]
-release = ["uv==0.12.17"]
+release = ["uv==0.13.4"]
 
 [tool.hatch.version]
 source = "nodejs"
