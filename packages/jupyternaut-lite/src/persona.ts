@@ -106,11 +106,6 @@ export class Persona implements IPersona {
     this._documentManager = options.documentManager;
 
     this._agent.agentEvent.connect(this._onAgentEvent, this);
-    this._agent.activeProviderChanged.connect(
-      this._onActiveProviderChanged,
-      this
-    );
-    this._settingsModel.stateChanged.connect(this._onSettingsChanged, this);
 
     // Wait for the chat to be ready before connect to message update.
     this._model.ready.then(() => {
@@ -125,11 +120,6 @@ export class Persona implements IPersona {
 
   dispose(): void {
     this._agent.agentEvent.disconnect(this._onAgentEvent, this);
-    this._agent.activeProviderChanged.disconnect(
-      this._onActiveProviderChanged,
-      this
-    );
-    this._settingsModel.stateChanged.disconnect(this._onSettingsChanged, this);
     this._model.messagesUpdated.disconnect(this._onMessagesUpdated, this);
   }
 
@@ -172,6 +162,7 @@ export class Persona implements IPersona {
       const personaMention = `@${this._persona.mention_name}`;
       const body = message.body.replace(personaMention, '').trim();
       await this._respond(
+        message.id,
         body || message.body,
         message.attachments,
         // Model (provider in Jupyternaut) explicitly targeted in metadata (jupyter-ai compatibility)
@@ -181,6 +172,7 @@ export class Persona implements IPersona {
   }
 
   private async _respond(
+    messageId: string,
     body: string,
     attachments?: IAttachment[],
     provider?: string
@@ -197,6 +189,8 @@ export class Persona implements IPersona {
       ) {
         await this._agent.setActiveProvider(provider);
       }
+
+      await this._syncHistory(messageId);
 
       let content: UserContent = body;
       if (attachments && attachments.length > 0) {
@@ -228,32 +222,35 @@ export class Persona implements IPersona {
   }
 
   /**
-   * Load the chat history once a model is available, for a chat opened before
-   * a provider was set up or the settings loaded.
+   * Rebuild the history from the chat messages before the given one, on the
+   * first response (e.g. for a restored chat) and when the model changes.
+   * It runs before the response because a rebuild stops the streaming.
    */
-  private _onSettingsChanged(): void {
-    // A rebuild drops the tool calls from the history and stops the streaming.
-    if (this._currentModelKey === undefined && !this._busy) {
-      this._onActiveProviderChanged();
-    }
-  }
-
-  private _onActiveProviderChanged(): void {
+  private async _syncHistory(messageId: string): Promise<void> {
     const providerConfig = this._settingsModel.getProvider(
       this._agent.activeProvider
     );
     const modelKey = providerConfig
       ? `${providerConfig.provider}:${providerConfig.model}`
       : undefined;
-    if (modelKey && modelKey !== this._currentModelKey) {
-      this._currentModelKey = modelKey;
-      this._rebuildHistory().catch(e =>
-        console.warn('Failed to rebuild history on model change:', e)
+    if (!modelKey || modelKey === this._currentModelKey) {
+      return;
+    }
+    this._currentModelKey = modelKey;
+    const messages = this._model.messages;
+    const index = messages.findIndex(m => m.id === messageId);
+    try {
+      await this._rebuildHistory(
+        index === -1 ? messages : messages.slice(0, index)
       );
+    } catch (e) {
+      console.warn('Failed to rebuild history on model change:', e);
     }
   }
 
-  private async _rebuildHistory(): Promise<void> {
+  private async _rebuildHistory(
+    messages: IMessage[] = this._model.messages
+  ): Promise<void> {
     const providerConfig = this._settingsModel.getProvider(
       this._agent.activeProvider
     );
@@ -271,7 +268,7 @@ export class Persona implements IPersona {
     );
 
     const modelMessages: ModelMessage[] = [];
-    for (const msg of this._model.messages) {
+    for (const msg of messages) {
       const isAI = msg.sender.bot === true;
       if (!isAI && msg.attachments?.length) {
         const enhancedContent = await processAttachments(
