@@ -110,6 +110,7 @@ export class Persona implements IPersona {
       this._onActiveProviderChanged,
       this
     );
+    this._settingsModel.stateChanged.connect(this._onSettingsChanged, this);
 
     // Wait for the chat to be ready before connect to message update.
     this._model.ready.then(() => {
@@ -128,6 +129,7 @@ export class Persona implements IPersona {
       this._onActiveProviderChanged,
       this
     );
+    this._settingsModel.stateChanged.disconnect(this._onSettingsChanged, this);
     this._model.messagesUpdated.disconnect(this._onMessagesUpdated, this);
   }
 
@@ -223,6 +225,17 @@ export class Persona implements IPersona {
 
   rebuildHistory(): Promise<void> {
     return this._rebuildHistory();
+  }
+
+  /**
+   * Load the chat history once a model is available, for a chat opened before
+   * a provider was set up or the settings loaded.
+   */
+  private _onSettingsChanged(): void {
+    // A rebuild drops the tool calls from the history and stops the streaming.
+    if (this._currentModelKey === undefined && !this._busy) {
+      this._onActiveProviderChanged();
+    }
   }
 
   private _onActiveProviderChanged(): void {

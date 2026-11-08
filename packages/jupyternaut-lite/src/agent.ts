@@ -431,15 +431,20 @@ export class AgentManager implements IAgentManager {
 
   /**
    * The active provider for this agent.
+   * Falls back to the default provider when the selected one is not configured,
+   * e.g. for a chat opened before a provider was set up or the settings loaded.
    */
   get activeProvider(): string {
-    return this._activeProvider;
+    if (this._settingsModel.getProvider(this._activeProvider)) {
+      return this._activeProvider;
+    }
+    return this._settingsModel.config.defaultProvider;
   }
   async setActiveProvider(value: string): Promise<void> {
     if (this._activeProvider === value) {
       return;
     }
-    const previousProvider = this._activeProvider;
+    const previousProvider = this.activeProvider;
     this._activeProvider = value;
 
     // Reset request-level context estimate only when switching between providers.
@@ -451,7 +456,7 @@ export class AgentManager implements IAgentManager {
 
     this._tokenUsageChanged.emit(this._tokenUsage);
     return this.initializeAgent().then(() => {
-      this._activeProviderChanged.emit(this._activeProvider);
+      this._activeProviderChanged.emit(this.activeProvider);
     });
   }
 
@@ -494,7 +499,7 @@ export class AgentManager implements IAgentManager {
    */
   hasValidConfig(): boolean {
     const activeProviderConfig = this._settingsModel.getProvider(
-      this._activeProvider
+      this.activeProvider
     );
     if (!activeProviderConfig) {
       return false;
@@ -784,7 +789,7 @@ export class AgentManager implements IAgentManager {
    */
   private _getActiveContextWindow(): number | undefined {
     const activeProviderConfig = this._settingsModel.getProvider(
-      this._activeProvider
+      this.activeProvider
     );
     return getEffectiveContextWindow(
       activeProviderConfig,
@@ -846,7 +851,7 @@ export class AgentManager implements IAgentManager {
       : {};
 
     const activeProviderConfig = this._settingsModel.getProvider(
-      this._activeProvider
+      this.activeProvider
     );
     const activeProviderInfo =
       activeProviderConfig && this._providerRegistry
@@ -1223,7 +1228,7 @@ ${richOutputWorkflowInstruction}${this._additionalInstructions ? `\n\n${this._ad
    */
   private _supportsToolCalling(): boolean {
     const activeProviderConfig = this._settingsModel.getProvider(
-      this._activeProvider
+      this.activeProvider
     );
     if (!activeProviderConfig || !this._providerRegistry) {
       return false;
@@ -1242,11 +1247,8 @@ ${richOutputWorkflowInstruction}${this._additionalInstructions ? `\n\n${this._ad
    * @returns The configured model instance for the agent
    */
   private async _createModel() {
-    if (!this._activeProvider) {
-      throw new Error('No active provider configured');
-    }
     const activeProviderConfig = this._settingsModel.getProvider(
-      this._activeProvider
+      this.activeProvider
     );
     if (!activeProviderConfig) {
       throw new Error('No active provider configured');
