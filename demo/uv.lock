@@ -826,7 +826,7 @@ requires-dist = [
 
 [[package]]
 name = "jupyter-ai-persona-manager"
-version = "0.3.0a0"
+version = "0.4.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "importlib-metadata" },
@@ -835,9 +835,9 @@ dependencies = [
     { name = "jupyterlab-chat" },
     { name = "pydantic" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/16/10/2b4b0852664da0b8fc70ec62c3c2cc6f544f9aba599d177c3285200cbe3d/jupyter_ai_persona_manager-0.3.0a0.tar.gz", hash = "sha256:ce5aaa7b05cab99d4396cc231377bdbae191d3b5c42dd63ca39e1a0db07bf74f", size = 426338, upload-time = "2026-09-30T10:27:29.55Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3b/3b/f376651b35d699c0fe3c190180ae837014f090f8b07c9db8596853ee24b1/jupyter_ai_persona_manager-0.4.0.tar.gz", hash = "sha256:a301087bb0349e4519441d08105ed5bf07e6542224a1aceb7abe9ca3257a2b39", size = 419563, upload-time = "2026-11-09T11:13:13.038Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ee/62/06c415e47d2e8434f5e363a5e717a68eab5245eaa09957910cdb3ebf8d9a/jupyter_ai_persona_manager-0.3.0a0-py3-none-any.whl", hash = "sha256:49cd63a7dc977ab7fa839f06de9449c47af03ba95ab5c88324b7b4dc0711de9a", size = 166472, upload-time = "2026-09-30T10:27:27.802Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/2f/a36faca64f3451a468cf29a451aac13af2cbebd0b4b80bcf2fedbf2183c3/jupyter_ai_persona_manager-0.4.0-py3-none-any.whl", hash = "sha256:a42fe3bcc9f7227023b40e7789bc878b859e4c5d2cda93f64217f8a031c93dab", size = 170750, upload-time = "2026-11-09T11:13:08.909Z" },
 ]
 
 [[package]]
@@ -1054,7 +1054,7 @@ wheels = [
 
 [[package]]
 name = "jupyterlab-chat"
-version = "0.25.2"
+version = "0.26.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jupyter-events" },
@@ -1062,9 +1062,9 @@ dependencies = [
     { name = "jupyter-ydoc" },
     { name = "pycrdt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/12/98/d723c21cbc465aaae80b5a120798c61274e8a5c8b81f3c6fa68730665b70/jupyterlab_chat-0.25.2.tar.gz", hash = "sha256:657fa110452e3c5e838c117213ddf6d9934dc73a75f0c39fbaf3e44ee6e738db", size = 370909, upload-time = "2026-10-13T07:28:02.148Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/61/68/e961b40ec853f402ce5e25351a9d74d2c639d967d04cb4d98ae430b5bd6d/jupyterlab_chat-0.26.0.tar.gz", hash = "sha256:b1a23a89138bf0b136fd42bcc8553f6447cf6e1773f90144cc0a72b14efa29dd", size = 372498, upload-time = "2026-11-03T17:26:42.306Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0a/e3/45b8d402e64a95d6be56174ebfafee254532b3f94111f055adbc42481e22/jupyterlab_chat-0.25.2-py3-none-any.whl", hash = "sha256:e3120c46025fbcab68835071c4a187b0a90ef4300ef9f76cb0102fea0a13c1e9", size = 219784, upload-time = "2026-10-13T07:28:00.428Z" },
+    { url = "https://files.pythonhosted.org/packages/53/f4/60b75711bd3ce9ba5bf7ea9917d70715812b7df6e0b1fa757bd2baacd79b/jupyterlab_chat-0.26.0-py3-none-any.whl", hash = "sha256:f0a6f61cc1b3660c14d5873555e596b076a9c5632bccbe7f754a7739b41cfed0", size = 221369, upload-time = "2026-11-03T17:26:40.163Z" },
 ]
 
 [[package]]
@@ -1187,14 +1187,14 @@ dependencies = [
 requires-dist = [
     { name = "fastmcp", marker = "extra == 'test'", specifier = ">=3.2.3,<4" },
     { name = "jupyter-ai-agent-lite", specifier = "==0.21.0" },
-    { name = "jupyter-ai-persona-manager", specifier = ">=0.3.0a0,<0.4" },
+    { name = "jupyter-ai-persona-manager", specifier = ">=0.4.0,<0.5" },
     { name = "jupyter-book", marker = "extra == 'docs'" },
     { name = "jupyter-chat-components", specifier = ">=0.7.0,<0.8" },
     { name = "jupyter-mcp-manager", specifier = ">=0.2.0,<0.3" },
     { name = "jupyter-secrets-manager", specifier = ">=0.5,<0.6" },
     { name = "jupyterlab", marker = "extra == 'jupyter'", specifier = ">=4.5.0" },
     { name = "jupyterlab-ai-commands", specifier = ">=0.4.0,<0.5" },
-    { name = "jupyterlab-chat", specifier = ">=0.25.2,<0.26" },
+    { name = "jupyterlab-chat", specifier = ">=0.26.0,<0.27" },
     { name = "jupyterlite", marker = "extra == 'jupyter'", specifier = ">=0.8.0" },
     { name = "notebook", marker = "extra == 'jupyter'", specifier = ">=7.5.0" },
     { name = "starlette", marker = "extra == 'test'", specifier = ">=0.48.0,<0.49" },
