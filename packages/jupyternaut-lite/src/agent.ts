@@ -431,14 +431,11 @@ export class AgentManager implements IAgentManager {
 
   /**
    * The active provider for this agent.
-   * Falls back to the default provider when the selected one is not configured,
-   * e.g. for a chat opened before a provider was set up or the settings loaded.
+   * Falls back to the default provider when none was set, e.g. for a chat
+   * opened before a provider was set up or the settings loaded.
    */
   get activeProvider(): string {
-    if (this._settingsModel.getProvider(this._activeProvider)) {
-      return this._activeProvider;
-    }
-    return this._settingsModel.config.defaultProvider;
+    return this._activeProvider || this._settingsModel.config.defaultProvider;
   }
   async setActiveProvider(value: string): Promise<void> {
     if (this._activeProvider === value) {
