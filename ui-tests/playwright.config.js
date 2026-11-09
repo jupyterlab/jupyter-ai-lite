@@ -8,6 +8,17 @@ module.exports = {
   use: {
     ...baseConfig.use,
     video: process.env.PWVIDEO || 'retain-on-failure',
+    // Do not load the app with `?reset`, otherwise the mocked workspace below
+    // is discarded.
+    resetWorkspace: false,
+    // Mock the workspace to widen the left side panel (where the chat is
+    // opened), so that the chat input toolbar fits.
+    mockState: {
+      'layout-restorer:data': {
+        // [left, main, right] areas of the main split panel.
+        relativeSizes: [0.35, 0.65, 0]
+      }
+    },
     launchOptions: {
       slowMo: process.env.PWSLOWMO ? parseInt(process.env.PWSLOWMO) : 0
     }
