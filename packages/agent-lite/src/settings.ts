@@ -77,7 +77,10 @@ export class AgentSettings implements IAgentSettings {
     ],
     commandsAutoRenderMimeBundles: ['jupyterlab-ai-commands:execute-in-kernel'],
     trustedMimeTypesForAutoRender: ['text/html'],
-    skillsPaths: ['.agents/skills', '_agents/skills']
+    skillsPaths: ['.agents/skills', '_agents/skills'],
+    showCellDiff: true,
+    showFileDiff: true,
+    diffDisplayMode: 'unified'
   };
   private _registry: ISettingRegistry;
   private _settings: ISettingRegistry.ISettings | null = null;

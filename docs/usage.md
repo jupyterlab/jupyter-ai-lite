@@ -54,3 +54,13 @@ Default:
 
 This helps avoid side effects where inspection commands return existing notebook
 outputs that you do not want replayed in chat.
+
+## Controlling the diffs
+
+When the AI model changes the content of a cell or a file, a diff view shows the change.
+The settings control the diff view, and the model cannot change them:
+
+1. Open AI settings and go to **Behavior Settings**
+2. Use **Show Cell Diff** and **Show File Diff** to show or hide the diffs
+3. In **Diff Display Mode**, select **Split View** or **Unified View** for the cell
+   diffs (default: unified). The file diffs always use the unified view.

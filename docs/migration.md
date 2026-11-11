@@ -73,8 +73,8 @@ the API keys must be entered again as well.
 | Settings of `@jupyternaut/persona:settings-model`                                                                                                                              | New id                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | `providers`, `defaultProvider`, `activeCompleterProvider`, `useSameProviderForChatAndCompleter`, `systemPrompt`, `completionSystemPrompt`, `toolsEnabled`, `useSecretsManager` | `@jupyter-ai/jupyternaut-lite:settings-model`                            |
-| `commandsRequiringApproval`, `commandsAutoRenderMimeBundles`, `trustedMimeTypesForAutoRender`, `skillsPaths`                                                                   | `@jupyter-ai/agent-lite:settings`, shared by all the in-browser personas |
-| `codeExecution`, `contextAwareness`, `diffDisplayMode`, `showCellDiff`, `showFileDiff`                                                                                         | Removed (unused)                                                         |
+| `commandsRequiringApproval`, `commandsAutoRenderMimeBundles`, `trustedMimeTypesForAutoRender`, `skillsPaths`, `diffDisplayMode`, `showCellDiff`, `showFileDiff`                | `@jupyter-ai/agent-lite:settings`, shared by all the in-browser personas |
+| `codeExecution`, `contextAwareness`                                                                                                                                            | Removed (unused)                                                         |
 
 The identifier of the inline completion provider changes from
 `@jupyternaut/persona:completer` to `@jupyter-ai/jupyternaut-lite:completer`. If you

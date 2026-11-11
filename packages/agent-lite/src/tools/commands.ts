@@ -8,7 +8,44 @@ import { CommandRegistry } from '@lumino/commands';
 import { Widget } from '@lumino/widgets';
 import { z } from 'zod';
 
-import type { ITool } from '../tokens';
+import type { IAgentConfig, IAgentSettings, ITool } from '../tokens';
+
+/**
+ * The command arguments that the agent settings control. The tools hide them
+ * from the model and set them at execution, so the model cannot change them.
+ */
+const SETTINGS_ARGS: Record<
+  string,
+  (config: IAgentConfig) => Record<string, unknown>
+> = {
+  'jupyterlab-ai-commands:set-cell-content': config => ({
+    showDiff: config.showCellDiff,
+    diffMode: config.diffDisplayMode
+  }),
+  'jupyterlab-ai-commands:set-file-content': config => ({
+    showDiff: config.showFileDiff
+  })
+};
+
+/**
+ * The argument schema of a command, without the arguments that the agent
+ * settings control.
+ */
+function hideSettingsArgs(
+  id: string,
+  args: any,
+  settings?: IAgentSettings
+): any {
+  const controlled = settings && SETTINGS_ARGS[id]?.(settings.config);
+  if (!controlled || !args?.properties) {
+    return args;
+  }
+  const properties = { ...args.properties };
+  for (const name of Object.keys(controlled)) {
+    delete properties[name];
+  }
+  return { ...args, properties };
+}
 
 interface ICommandEntry {
   id: string;
@@ -100,7 +137,8 @@ function searchCommands(
  */
 export function createDiscoverCommandsTool(
   commands: CommandRegistry,
-  translator?: ITranslator
+  translator?: ITranslator,
+  settings?: IAgentSettings
 ): ITool {
   const trans = (translator ?? nullTranslator).load('jupyter_ai_agent_lite');
   return {
@@ -134,7 +172,7 @@ export function createDiscoverCommandsTool(
           label: label || undefined,
           caption: caption || undefined,
           description: usage || undefined,
-          args: description?.args || undefined
+          args: hideSettingsArgs(id, description?.args, settings) || undefined
         });
       }
 
@@ -158,7 +196,8 @@ export function createDiscoverCommandsTool(
  */
 export function createExecuteCommandTool(
   commands: CommandRegistry,
-  translator?: ITranslator
+  translator?: ITranslator,
+  settings?: IAgentSettings
 ): ITool {
   const trans = (translator ?? nullTranslator).load('jupyter_ai_agent_lite');
   return {
@@ -185,8 +224,12 @@ export function createExecuteCommandTool(
         };
       }
 
-      // Execute the command
-      const result = await commands.execute(commandId, args);
+      const controlled =
+        settings && SETTINGS_ARGS[commandId]?.(settings.config);
+      const result = await commands.execute(
+        commandId,
+        controlled ? { ...args, ...controlled } : args
+      );
 
       // Handle actual Lumino widgets specially by extracting id and title.
       // Avoid collapsing plain command results that happen to contain an `id` field.

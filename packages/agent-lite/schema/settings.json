@@ -1,6 +1,6 @@
 {
   "title": "AI Agent",
-  "description": "Settings shared by the in-browser AI personas: command approvals, chat rendering of command outputs and agent skills",
+  "description": "Settings shared by the in-browser AI personas: command approvals, chat rendering of command outputs, agent skills and diffs",
   "type": "object",
   "properties": {
     "commandsRequiringApproval": {
@@ -53,6 +53,34 @@
         "type": "string"
       },
       "default": [".agents/skills", "_agents/skills"]
+    },
+    "showCellDiff": {
+      "title": "Show Cell Diff",
+      "description": "Show diff view when AI modifies cell content",
+      "type": "boolean",
+      "default": true
+    },
+    "showFileDiff": {
+      "title": "Show File Diff",
+      "description": "Show diff view when AI modifies file content",
+      "type": "boolean",
+      "default": true
+    },
+    "diffDisplayMode": {
+      "title": "Diff Display Mode",
+      "description": "How to display cell diffs (split or unified view)",
+      "type": "string",
+      "oneOf": [
+        {
+          "const": "split",
+          "title": "Split"
+        },
+        {
+          "const": "unified",
+          "title": "Unified"
+        }
+      ],
+      "default": "unified"
     }
   },
   "additionalProperties": false
