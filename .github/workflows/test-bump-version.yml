@@ -68,10 +68,11 @@ jobs:
               data = json.loads(pkg_file.read_text())
               assert data['version'] == '1.2.3', f"{pkg_file}: Expected 1.2.3, got {data['version']}"
           PY
-          # Check demo uv.lock: the local package specifiers updated, nothing else changed
+          # Check demo uv.lock: the local package specifiers updated, nothing else changed.
+          # Ignore the lock revision: Dependabot can write the lock with a different uv version.
           grep 'name = "jupyter-ai-agent-lite", specifier = "==1.2.3"' demo/uv.lock
           grep 'name = "jupyternaut-lite", specifier = "==1.2.3"' demo/uv.lock
-          diff_lines=$(git diff -- demo/uv.lock | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -v 'specifier = "==' | wc -l)
+          diff_lines=$(git diff -- demo/uv.lock | grep '^[+-]' | grep -v '^[+-][+-][+-]' | grep -v 'specifier = "==' | grep -v '^[+-]revision = ' | wc -l)
           [ "$diff_lines" -eq 0 ]
 
       - name: Test bump with a pre-release version
