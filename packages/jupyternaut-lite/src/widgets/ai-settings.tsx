@@ -875,8 +875,11 @@ const AISettingsComponent: React.FC<IAISettingsComponentProps> = ({
 
                 {agentConfig.showCellDiff && (
                   <FormControl sx={{ ml: 4 }}>
-                    <InputLabel>{trans.__('Diff Display Mode')}</InputLabel>
+                    <InputLabel id="jp-jupyternaut-diff-display-mode-label">
+                      {trans.__('Diff Display Mode')}
+                    </InputLabel>
                     <Select
+                      labelId="jp-jupyternaut-diff-display-mode-label"
                       value={agentConfig.diffDisplayMode}
                       label={trans.__('Diff Display Mode')}
                       onChange={e =>

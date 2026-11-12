@@ -24,6 +24,7 @@ const CHAT_URL = 'http://localhost:11434/v1/chat/completions';
 const MODEL_REPLY = 'The cell is updated.';
 const SPLIT_DIFF = '.jp-SplitDiffView';
 const UNIFIED_DIFF = '.cm-deletedChunk';
+const DIFF_MODE = 'Diff Display Mode';
 
 test.use({
   mockSettings: {
@@ -136,7 +137,9 @@ test.describe('#diffSettings', () => {
     await expect(
       settings.getByRole('switch', { name: 'Show File Diff' })
     ).toBeChecked();
-    await expect(settings.getByRole('combobox')).toHaveText('Unified View');
+    await expect(
+      settings.getByRole('combobox', { name: DIFF_MODE })
+    ).toHaveText('Unified View');
 
     await changeCell(page);
 
@@ -151,9 +154,10 @@ test.describe('#diffSettings', () => {
     await mockModel(page, { showDiff: true, diffMode: 'unified' });
 
     const settings = await openBehaviorSettings(page);
-    await settings.getByRole('combobox').click();
+    const mode = settings.getByRole('combobox', { name: DIFF_MODE });
+    await mode.click();
     await page.getByRole('option', { name: 'Split View' }).click();
-    await expect(settings.getByRole('combobox')).toHaveText('Split View');
+    await expect(mode).toHaveText('Split View');
 
     await changeCell(page);
 
@@ -169,7 +173,9 @@ test.describe('#diffSettings', () => {
 
     const settings = await openBehaviorSettings(page);
     await settings.getByRole('switch', { name: 'Show Cell Diff' }).click();
-    await expect(settings.getByRole('combobox')).toHaveCount(0);
+    await expect(
+      settings.getByRole('combobox', { name: DIFF_MODE })
+    ).toHaveCount(0);
 
     await changeCell(page);
 

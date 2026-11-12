@@ -224,6 +224,7 @@ export function createExecuteCommandTool(
         };
       }
 
+      await settings?.ready;
       const controlled =
         settings && SETTINGS_ARGS[commandId]?.(settings.config);
       const result = await commands.execute(
