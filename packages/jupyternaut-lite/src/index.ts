@@ -12,6 +12,7 @@ import {
 } from '@jupyter-ai/agent-lite';
 
 import {
+  IPersonaControlRegistry,
   IPersonaSessionRegistry,
   PersonaSessionRegistry
 } from '@jupyter-ai/persona-manager';
@@ -63,7 +64,12 @@ import { MentionCommandProvider, SkillsCommandProvider } from './chat-commands';
 // eslint-disable-next-line jupyter/prefer-lazy-imports
 import { AICompletionProvider } from './completion';
 
-import { CompletionStatusWidget, JupyternautStopButton } from './components';
+import {
+  CompletionStatusWidget,
+  createSettingsButtonControl,
+  createToolSelectControl,
+  JupyternautStopButton
+} from './components';
 
 // The settings model is the value provided by the settings model plugin.
 // eslint-disable-next-line jupyter/prefer-lazy-imports
@@ -817,6 +823,62 @@ const stopButtonPlugin: JupyterFrontEndPlugin<void> = {
   }
 };
 
+/**
+ * Registers the settings button control into the persona manager's control registry.
+ */
+const settingsButtonPlugin: JupyterFrontEndPlugin<void> = {
+  id: '@jupyter-ai/jupyternaut-lite:settings-button',
+  description: 'Register settings button control in the persona manager',
+  autoStart: true,
+  requires: [IPersonaControlRegistry],
+  optional: [ITranslator],
+  activate: (
+    app: JupyterFrontEnd,
+    personaControlRegistry: IPersonaControlRegistry,
+    translator?: ITranslator
+  ): void => {
+    const trans = (translator ?? nullTranslator).load('jupyterlite_ai');
+    const control = createSettingsButtonControl(app.commands, trans);
+    personaControlRegistry.addControl(control);
+  }
+};
+
+/**
+ * Registers the tool select control into the persona manager's control registry.
+ */
+const toolSelectPlugin: JupyterFrontEndPlugin<void> = {
+  id: '@jupyter-ai/jupyternaut-lite:tool-select',
+  description: 'Register tool select control in the persona manager',
+  autoStart: true,
+  requires: [
+    IPersonaControlRegistry,
+    IAISettingsModel,
+    IToolRegistry,
+    IProviderRegistry,
+    IPersonaRegistry
+  ],
+  optional: [ITranslator],
+  activate: (
+    _app: JupyterFrontEnd,
+    personaControlRegistry: IPersonaControlRegistry,
+    settingsModel: IAISettingsModel,
+    toolRegistry: IToolRegistry,
+    providerRegistry: IProviderRegistry,
+    personaRegistry: IPersonaRegistry,
+    translator?: ITranslator
+  ): void => {
+    const trans = (translator ?? nullTranslator).load('jupyterlite_ai');
+    const control = createToolSelectControl(
+      toolRegistry,
+      settingsModel,
+      providerRegistry,
+      trans,
+      personaRegistry
+    );
+    personaControlRegistry.addControl(control);
+  }
+};
+
 export default [
   // Provider registry and builtin providers
   providerRegistryPlugin,
@@ -829,6 +891,8 @@ export default [
   // Agent
   agentManagerFactory,
   completionStatus,
+  // Tools
+  toolSelectPlugin,
   // Persona
   personaRegistry,
   stopButtonPlugin,
@@ -837,6 +901,7 @@ export default [
   mentionCommandPlugin,
   skillsCommandPlugin,
   // Settings
+  settingsButtonPlugin,
   settingsModel,
   settingsPanelPlugin
 ];
