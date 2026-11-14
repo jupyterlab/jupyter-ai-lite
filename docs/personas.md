@@ -13,8 +13,11 @@
   - `commandsAutoRenderMimeBundles`: the commands whose `execute_command` outputs may render MIME bundles in the chat
   - `trustedMimeTypesForAutoRender`: the MIME types marked as trusted when those outputs render
   - `skillsPaths`: the directories that hold agent skills
+  - `showCellDiff`, `showFileDiff`, `diffDisplayMode`: whether to show a diff when a persona changes a cell or a file, and the mode of the cell diffs (`split` or `unified`)
 
   The `execute_command` tool does not ask for approval itself: the agent reads `settings.config.commandsRequiringApproval` before each call of the tool and asks the user when the command is listed (Jupyternaut uses the `toolApproval` option of the AI SDK for this).
+
+  The `execute_command` tool sets the `showDiff` and `diffMode` arguments of the `jupyterlab-ai-commands:set-cell-content` and `jupyterlab-ai-commands:set-file-content` commands from the diff settings, and `discover_commands` hides them, so the model cannot change them.
 
 The package also exports helpers:
 

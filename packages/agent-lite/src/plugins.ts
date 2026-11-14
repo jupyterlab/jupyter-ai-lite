@@ -88,23 +88,26 @@ const toolRegistry: JupyterFrontEndPlugin<IToolRegistry> = {
   id: '@jupyter-ai/agent-lite:tool-registry',
   description: 'Provide the AI tool registry',
   autoStart: true,
-  optional: [ISkillRegistry, ITranslator],
+  optional: [ISkillRegistry, ITranslator, IAgentSettings],
   provides: IToolRegistry,
   activate: (
     app: JupyterFrontEnd,
     skillRegistry?: ISkillRegistry,
-    translator?: ITranslator
+    translator?: ITranslator,
+    settings?: IAgentSettings
   ) => {
     const toolRegistry = new ToolRegistry();
 
     // Add command operation tools
     const discoverCommandsTool = createDiscoverCommandsTool(
       app.commands,
-      translator
+      translator,
+      settings
     );
     const executeCommandTool = createExecuteCommandTool(
       app.commands,
-      translator
+      translator,
+      settings
     );
 
     toolRegistry.add('discover_commands', discoverCommandsTool);
