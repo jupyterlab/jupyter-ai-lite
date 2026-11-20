@@ -11,6 +11,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # uv >=0.13 installs Python 3.15 by default, and some locked packages have no 3.15 wheels
+      UV_PYTHON: '3.14'
     steps:
       - name: Checkout
         uses: actions/checkout@v7
