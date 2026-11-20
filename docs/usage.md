@@ -57,8 +57,8 @@ outputs that you do not want replayed in chat.
 
 ## Controlling the diffs
 
-When the AI model changes the content of a cell or a file, a diff view shows the change.
-The settings control the diff view, and the model cannot change them:
+When the AI model changes the content of a cell or a file, a diff view can show the change.
+The diff view can be controlled with a settings:
 
 1. Open AI settings and go to **Behavior Settings**
 2. Use **Show Cell Diff** and **Show File Diff** to show or hide the diffs
