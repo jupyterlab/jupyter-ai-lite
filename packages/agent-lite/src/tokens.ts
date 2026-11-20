@@ -179,6 +179,18 @@ export interface IAgentConfig {
    * The directories that hold agent skills, relative to the server root.
    */
   skillsPaths: string[];
+  /**
+   * Whether to show a diff when a persona changes the content of a cell.
+   */
+  showCellDiff: boolean;
+  /**
+   * Whether to show a diff when a persona changes the content of a file.
+   */
+  showFileDiff: boolean;
+  /**
+   * The display mode of the cell diffs.
+   */
+  diffDisplayMode: 'split' | 'unified';
 }
 
 /**

@@ -847,6 +847,83 @@ const AISettingsComponent: React.FC<IAISettingsComponentProps> = ({
                   }
                 />
 
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={agentConfig.showCellDiff}
+                      onChange={e =>
+                        handleAgentUpdate({
+                          showCellDiff: e.target.checked
+                        })
+                      }
+                      color="primary"
+                    />
+                  }
+                  label={
+                    <Box>
+                      <Typography variant="body1">
+                        {trans.__('Show Cell Diff')}
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        {trans.__(
+                          'Show diff view when AI modifies cell content'
+                        )}
+                      </Typography>
+                    </Box>
+                  }
+                />
+
+                {agentConfig.showCellDiff && (
+                  <FormControl sx={{ ml: 4 }}>
+                    <InputLabel id="jp-jupyternaut-diff-display-mode-label">
+                      {trans.__('Diff Display Mode')}
+                    </InputLabel>
+                    <Select
+                      labelId="jp-jupyternaut-diff-display-mode-label"
+                      value={agentConfig.diffDisplayMode}
+                      label={trans.__('Diff Display Mode')}
+                      onChange={e =>
+                        handleAgentUpdate({
+                          diffDisplayMode: e.target.value as 'split' | 'unified'
+                        })
+                      }
+                    >
+                      <MenuItem value="split">
+                        {trans.__('Split View')}
+                      </MenuItem>
+                      <MenuItem value="unified">
+                        {trans.__('Unified View')}
+                      </MenuItem>
+                    </Select>
+                  </FormControl>
+                )}
+
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={agentConfig.showFileDiff}
+                      onChange={e =>
+                        handleAgentUpdate({
+                          showFileDiff: e.target.checked
+                        })
+                      }
+                      color="primary"
+                    />
+                  }
+                  label={
+                    <Box>
+                      <Typography variant="body1">
+                        {trans.__('Show File Diff')}
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        {trans.__(
+                          'Show diff view when AI modifies file content'
+                        )}
+                      </Typography>
+                    </Box>
+                  }
+                />
+
                 <Divider sx={{ my: 1 }} />
 
                 <TextField
