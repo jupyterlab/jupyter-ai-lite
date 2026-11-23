@@ -39,9 +39,9 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://jupyter-ai-lite.readthedocs.io/en/latest/"
+Documentation = "https://jupyterlite-ai.readthedocs.io/en/latest/"
 Repository = "https://github.com/jupyterlab/jupyter-ai-lite"
-Changelog = "https://jupyter-ai-lite.readthedocs.io/en/latest/changelog/"
+Changelog = "https://jupyterlite-ai.readthedocs.io/en/latest/changelog/"
 Source = "https://github.com/jupyterlab/jupyter-ai-lite/tree/main"
 Issues = "https://github.com/jupyterlab/jupyter-ai-lite/issues/new/choose"
 "Try it" = "https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html"

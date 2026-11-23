@@ -31,7 +31,7 @@ build:
     build:
       html:
         - pip install jupyter-book
-        - npm run docs:build
+        - BASE_URL="/en/$READTHEDOCS_VERSION" npm run docs:build
 
         # Copy documentation output
         - mkdir -p $READTHEDOCS_OUTPUT/html

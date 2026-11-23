@@ -1,7 +1,7 @@
 # jupyter-ai-lite
 
 [![Github Actions Status](https://github.com/jupyterlab/jupyter-ai-lite/workflows/Build/badge.svg)](https://github.com/jupyterlab/jupyter-ai-lite/actions/workflows/build.yml)
-[![Documentation Status](https://readthedocs.org/projects/jupyter-ai-lite/badge/?version=latest)](https://jupyter-ai-lite.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/jupyterlite-ai/badge/?version=latest)](https://jupyterlite-ai.readthedocs.io/en/latest/?badge=latest)
 [![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlab.github.io/jupyter-ai-lite/lab/index.html)
 
 AI code completions and chat for JupyterLab, Notebook 7 and JupyterLite.
@@ -34,7 +34,7 @@ pip install jupyter-ai-lite[jupyter]
 
 ## Documentation
 
-For detailed usage instructions, including how to configure AI providers, see the [documentation](https://jupyter-ai-lite.readthedocs.io/).
+For detailed usage instructions, including how to configure AI providers, see the [documentation](https://jupyterlite-ai.readthedocs.io/).
 
 ## Uninstall
 
