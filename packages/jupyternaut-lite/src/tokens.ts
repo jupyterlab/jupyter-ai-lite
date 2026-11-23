@@ -3,7 +3,7 @@
  * Distributed under the terms of the Modified BSD License.
  */
 
-import { IChatModel, IUser } from '@jupyter/chat';
+import { IChatModel, IMessageMetadata, IUser } from '@jupyter/chat';
 import { IDocumentManager } from '@jupyterlab/docmanager';
 import type {
   IAgentSettings,
@@ -19,6 +19,15 @@ import { ISecretsManager } from 'jupyter-secrets-manager';
 
 import { AI_AVATAR } from './icons';
 import type { IModelOptions } from './providers/models';
+
+/**
+ * Add the jupyternaut property to the chat message metadata.
+ */
+declare module '@jupyter/chat' {
+  interface IMessageMetadata {
+    jupyternaut?: { type: 'summary' };
+  }
+}
 
 /**
  * A map of AI SDK tools.
@@ -85,7 +94,14 @@ export interface IPersona {
   /**
    * Adds an assistant message to the chat (used by chat commands).
    */
-  sendSystemMessage(body: string): void;
+  sendSystemMessage(
+    body: string,
+    metadata?: IMessageMetadata
+  ): Promise<string | null>;
+  /**
+   * Summarizes the conversation history and saves the result as a system message.
+   */
+  summarize(): Promise<void>;
 }
 
 /**
@@ -603,6 +619,10 @@ export interface IAgentManager {
    * Clears conversation history and resets agent state.
    */
   clearHistory(): Promise<void>;
+  /**
+   * Returns the current conversation history.
+   */
+  getHistory(): ModelMessage[];
   /**
    * Sets the history from already-processed model messages.
    * @param messages Pre-built model messages (may include binary content)
