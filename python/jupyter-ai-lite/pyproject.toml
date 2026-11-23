@@ -28,7 +28,7 @@ classifiers = [
     "Programming Language :: Python :: 3.14"
 ]
 dependencies = [
-    "jupyternaut-lite ==0.21.0",
+    "jupyternaut-lite ==0.22.0",
 ]
 dynamic = ["version"]
 

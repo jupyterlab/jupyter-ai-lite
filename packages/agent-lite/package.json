@@ -1,6 +1,6 @@
 {
   "name": "@jupyter-ai/agent-lite",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "The building blocks of in-browser AI personas for Jupyter AI: tools, skills, settings and sign-in helpers",
   "keywords": [
     "jupyter",

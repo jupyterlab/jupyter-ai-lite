@@ -1,6 +1,6 @@
 {
   "name": "jupyter-ai-lite-monorepo",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "private": true,
   "packageManager": "yarn@3.5.0",
   "description": "Monorepo for Jupyter AI Lite: the in-browser agent package and the Jupyternaut persona",

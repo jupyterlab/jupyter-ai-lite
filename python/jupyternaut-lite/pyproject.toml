@@ -28,7 +28,7 @@ classifiers = [
     "Programming Language :: Python :: 3.14"
 ]
 dependencies = [
-    "jupyter-ai-agent-lite ==0.21.0",
+    "jupyter-ai-agent-lite ==0.22.0",
     "jupyter-ai-persona-manager >=0.4.0,<0.5",
     "jupyter-chat-components >=0.7.0,<0.8",
     "jupyter-mcp-manager >=0.2.0,<0.3",
