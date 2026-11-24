@@ -2364,7 +2364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jupyter-ai/agent-lite@^0.21.0, @jupyter-ai/agent-lite@workspace:packages/agent-lite":
+"@jupyter-ai/agent-lite@^0.22.0, @jupyter-ai/agent-lite@workspace:packages/agent-lite":
   version: 0.0.0-use.local
   resolution: "@jupyter-ai/agent-lite@workspace:packages/agent-lite"
   dependencies:
@@ -2403,7 +2403,7 @@ __metadata:
     "@ai-sdk/mistral": ^4.0.47
     "@ai-sdk/openai": ^4.0.70
     "@ai-sdk/openai-compatible": ^3.0.52
-    "@jupyter-ai/agent-lite": ^0.21.0
+    "@jupyter-ai/agent-lite": ^0.22.0
     "@jupyter-ai/persona-manager": 0.4.0
     "@jupyter/builder": ^1.2.2
     "@jupyter/chat": ^0.26.0

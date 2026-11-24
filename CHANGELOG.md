@@ -2,6 +2,43 @@
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.22.0
+
+([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/@jupyter-ai/agent-lite@0.21.0...4aabc11cf97572f219317e96ae9c3cd71c6c68a1))
+
+### Enhancements made
+
+- Restore the diff display settings [#403](https://github.com/jupyterlab/jupyter-ai-lite/pull/403) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Tool select and setting components [#388](https://github.com/jupyterlab/jupyter-ai-lite/pull/388) ([@brichet](https://github.com/brichet), [@jtpio](https://github.com/jtpio))
+
+### Bugs fixed
+
+- Add the prebuilt extension classifier [#407](https://github.com/jupyterlab/jupyter-ai-lite/pull/407) ([@brichet](https://github.com/brichet))
+- Fall back to the default provider for chats opened before a provider was set up [#402](https://github.com/jupyterlab/jupyter-ai-lite/pull/402) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+
+### Maintenance and upkeep improvements
+
+- Remove the check-python skip from the releaser config [#401](https://github.com/jupyterlab/jupyter-ai-lite/pull/401) ([@jtpio](https://github.com/jtpio), [@brichet](https://github.com/brichet))
+- Bump the uv group across 2 directories with 15 updates [#399](https://github.com/jupyterlab/jupyter-ai-lite/pull/399) ([@jtpio](https://github.com/jtpio))
+- Pin yarn 3.5.0 via packageManager for Dependabot [#396](https://github.com/jupyterlab/jupyter-ai-lite/pull/396) ([@jtpio](https://github.com/jtpio))
+
+### Other merged PRs
+
+- Bump the uv group across 1 directory with 2 updates [#404](https://github.com/jupyterlab/jupyter-ai-lite/pull/404) ([@jtpio](https://github.com/jtpio))
+- Bump the npm_and_yarn group across 2 directories with 9 updates [#400](https://github.com/jupyterlab/jupyter-ai-lite/pull/400) ([@jtpio](https://github.com/jtpio))
+- Bump the npm_and_yarn group across 2 directories with 15 updates [#397](https://github.com/jupyterlab/jupyter-ai-lite/pull/397) ([@brichet](https://github.com/brichet))
+
+### Contributors to this release
+
+The following people contributed discussions, new ideas, code and documentation contributions, and review.
+See [our definition of contributors](https://github-activity.readthedocs.io/en/latest/use/#how-does-this-tool-define-contributions-in-the-reports).
+
+([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-10-20&to=2026-11-22&type=c))
+
+@brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-10-20..2026-11-22&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-10-20..2026-11-22&type=Issues))
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.21.0
 
 ([Full Changelog](https://github.com/jupyterlab/jupyter-ai-lite/compare/@jupyterlite/ai@0.20.1...12195a7e5a5278731211e9cfd24222116413e199))
@@ -31,8 +68,6 @@ See [our definition of contributors](https://github-activity.readthedocs.io/en/l
 ([GitHub contributors page for this release](https://github.com/jupyterlab/jupyter-ai-lite/graphs/contributors?from=2026-09-28&to=2026-10-20&type=c))
 
 @brichet ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Abrichet+updated%3A2026-09-28..2026-10-20&type=Issues)) | @Copilot ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3ACopilot+updated%3A2026-09-28..2026-10-20&type=Issues)) | @jtpio ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Ajtpio+updated%3A2026-09-28..2026-10-20&type=Issues)) | @nakul-py ([activity](https://github.com/search?q=repo%3Ajupyterlab%2Fjupyter-ai-lite+involves%3Anakul-py+updated%3A2026-09-28..2026-10-20&type=Issues))
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.20.1
 
