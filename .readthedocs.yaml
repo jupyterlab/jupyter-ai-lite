@@ -31,7 +31,8 @@ build:
     build:
       html:
         - pip install jupyter-book
-        - npm run docs:build
+        # mystmd does not pass the Read the Docs base URL to the theme renderer
+        - BASE_URL="/$READTHEDOCS_LANGUAGE/$READTHEDOCS_VERSION" npm run docs:build
 
         # Copy documentation output
         - mkdir -p $READTHEDOCS_OUTPUT/html
