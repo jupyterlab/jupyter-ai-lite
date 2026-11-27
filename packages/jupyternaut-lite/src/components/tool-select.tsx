@@ -31,6 +31,8 @@ import { createProviderTools } from '../providers/provider-tools';
 import type { IAISettingsModel, IProviderRegistry } from '../tokens';
 
 const SELECT_ITEM_CLASS = 'jp-AIToolSelect-item';
+const SELECT_MENU_CLASS = 'jp-AIToolSelect-menu';
+
 
 /**
  * Properties for the tool select component.
@@ -244,6 +246,7 @@ export function ToolSelect(props: IToolSelectProps): JSX.Element {
       </TooltippedButton>
 
       <Menu
+        className={SELECT_MENU_CLASS}
         open={menuOpen}
         onClose={closeMenu}
         anchorEl={menuAnchorEl}
