@@ -12,3 +12,19 @@
 .jp-ai-completion-status .jp-ai-completion-disabled path {
   fill: var(--jp-layout-color2);
 }
+
+/* Tool select menu, rendered in a portal outside the JupyterLab DOM */
+.jp-AIToolSelect-menu .MuiPaper-root {
+  color: var(--jp-ui-font-color1);
+  background-color: var(--jp-layout-color1);
+}
+
+.jp-AIToolSelect-menu .MuiMenuItem-root:hover,
+.jp-AIToolSelect-menu .MuiMenuItem-root:focus-visible {
+  background-color: var(--jp-layout-color2);
+}
+
+
+
+
+
